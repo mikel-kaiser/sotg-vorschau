@@ -17,7 +17,7 @@
   var T = {
     de: {
       days: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'], tomorrow: 'morgen',
-      t: function (h) { return h + ' Uhr'; },
+      t: function (h) { return h + '\u00a0Uhr'; },
       openNow: function (c, hol) { return hol ? hol + ' · heute geöffnet bis ' + c : 'Jetzt geöffnet · heute bis ' + c; },
       opensToday: function (o, hol) { return hol ? hol + ' · heute ab ' + o + ' geöffnet' : 'Heute ab ' + o + ' geöffnet'; },
       closedOpens: function (d, o) { return 'Geschlossen · öffnet ' + d + ' um ' + o; },
@@ -41,7 +41,7 @@
     },
     nl: {
       days: ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za'], tomorrow: 'morgen',
-      t: function (h) { return h + '.00 uur'; },
+      t: function (h) { return h + '.00\u00a0uur'; },
       openNow: function (c, hol) { return hol ? hol + ' · vandaag geopend tot ' + c : 'Nu geopend · vandaag tot ' + c; },
       opensToday: function (o, hol) { return hol ? hol + ' · vandaag geopend vanaf ' + o : 'Vandaag geopend vanaf ' + o; },
       closedOpens: function (d, o) { return 'Gesloten · opent ' + d + ' om ' + o; },
@@ -53,10 +53,10 @@
     },
     fr: {
       days: ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'], tomorrow: 'demain',
-      t: function (h) { return h + ' h'; },
-      openNow: function (c, hol) { return hol ? hol + ' · ouvert aujourd’hui jusqu’à ' + c : 'Ouvert · aujourd’hui jusqu’à ' + c; },
-      opensToday: function (o, hol) { return hol ? hol + ' · ouvert aujourd’hui à partir de ' + o : 'Ouvre aujourd’hui à ' + o; },
-      closedOpens: function (d, o) { return 'Fermé · ouvre ' + d + ' à ' + o; },
+      t: function (h) { return h + '\u00a0h'; },
+      openNow: function (c, hol) { return hol ? hol + ' · ouvert aujourd’hui jusqu’à\u00a0' + c : 'Ouvert · aujourd’hui jusqu’à\u00a0' + c; },
+      opensToday: function (o, hol) { return hol ? hol + ' · ouvert aujourd’hui à partir de\u00a0' + o : 'Ouvre aujourd’hui à\u00a0' + o; },
+      closedOpens: function (d, o) { return 'Fermé · ouvre ' + d + ' à\u00a0' + o; },
       pause: function (g, d) { return g + ' · réouverture le ' + d; },
       closed: 'Actuellement fermé',
       sending: 'Transmission en cours …', send: 'Envoyer le message',
@@ -691,4 +691,15 @@
       document.body.appendChild(bar); /* schwebend (CSS), schiebt keinen Inhalt */
     }
   } catch (e) {}
+})();
+
+/* QA 07.11.: Solange die Hero-Knöpfe sichtbar sind, keine Sticky-Leiste und kein
+   Kenny auf dem Handy (sonst doppelter CTA und verdeckte Knöpfe). */
+(function () {
+  var ha = document.querySelector('.hero .hero__actions');
+  if (!ha || !('IntersectionObserver' in window)) return;
+  document.body.classList.add('hero-cta-visible');
+  new IntersectionObserver(function (e) {
+    document.body.classList.toggle('hero-cta-visible', e[0].isIntersecting);
+  }).observe(ha);
 })();

@@ -47,7 +47,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 .js [data-reveal]{opacity:0;transform:translateY(28px)}
 @media (prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none}}
 </style>
-<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261127">
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261137">
 <style>
 /* Seitenspezifisch: Vermietung */
 .sheriff-panel{display:grid;place-items:center;text-align:center;gap:1.1rem;padding:2.8rem 1.8rem}
@@ -58,17 +58,20 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 .fieldset-plain legend{padding:0;margin-bottom:.45rem;font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
 .pick-intro{margin:1.9rem 0 .7rem}
 .pick-intro h3{margin-bottom:.25rem}
-.bereich-cta{margin-top:1.8rem}
+.bereich-cta{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.6rem}
+#halloween .card{display:flex;flex-direction:column}
+#halloween .price-tag{margin-top:auto;padding-top:.9rem}
+#halloween .hud-panel h3{font-size:.92rem;letter-spacing:.06em}
 .price-tag{font-family:'Orbitron',sans-serif;font-size:1.3rem;color:var(--amber);margin:.9rem 0 0}
 .price-tag small{display:block;font-family:'Inter',system-ui,sans-serif;font-size:.78rem;font-weight:400;letter-spacing:.04em;color:var(--ink-dim)}
 </style>
 <script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
-<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/main.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261137"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Museum",
 "name":"Stars of the Galaxy","url":"https://www.starsofthegalaxy.de/",
@@ -108,12 +111,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="hero hero--sub">
     <div class="wrap">
       <div class="hero__inner">
-        <p class="hud-label hero__kicker" data-reveal>Vermietung · Messen · Events · Hochzeiten · Film</p>
+        <p class="hud-label hero__kicker" data-reveal>Vermietung · Messen · Events · Hochzeiten · Film</p>
         <h1 data-reveal data-reveal-delay=".08">Die Macht für dein Event. Zum Ausleihen.</h1>
         <p class="lead" data-reveal data-reveal-delay=".16">26 lebensgroße Hollywood-Figuren, Raumschiff-Modelle, XXL-Exponate und Halloween-Kulissen, bereit für Messe, Firmenevent, Hochzeit oder Dreh. Tipp an, was dir gefällt: Deine Auswahl wandert automatisch in die Anfrage.</p>
         <div class="hero__actions" data-reveal data-reveal-delay=".24">
           <a class="btn btn--primary" href="#anfrage" data-event="cta-vermietung-hero">Jetzt anfragen</a>
-          <a class="btn btn--ghost" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog-hero">Katalog ansehen (PDF, 5&nbsp;MB)</a>
+          <a class="btn btn--ghost" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog-hero"><span class="btn__label">Katalog ansehen <span style="white-space:nowrap">(PDF, 5&nbsp;MB)</span></span></a>
         </div>
         <p class="hero__status" data-reveal data-reveal-delay=".3"><span class="status-chip" data-open-status role="status">Öffnungszeiten …</span></p>
       </div>
@@ -136,18 +139,18 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="figuren" aria-labelledby="figuren-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sektor 01 · Lifesize Figuren</p>
+        <p class="hud-label">Sektor 01 · Lifesize Figuren</p>
         <h2 id="figuren-h">26 lebensgroße Filmfiguren zum Mieten</h2>
         <p class="lead">Vom Sith-Lord bis zum berühmtesten Frosch der Welt: Jede Figur aus unserem Vermietkatalog ist ein fertiger Fotopoint. Aufstellen, Licht an. Die Handys kommen von ganz allein raus.</p>
       </div>
       <hr class="divider-beam">
       <div class="hero__actions" style="margin-top:1.2rem" data-reveal>
-        <a class="btn btn--primary" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog">Katalog ansehen (PDF, 5&nbsp;MB)</a>
+        <a class="btn btn--primary" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog"><span class="btn__label">Katalog ansehen <span style="white-space:nowrap">(PDF, 5&nbsp;MB)</span></span></a>
         <p class="form-note" style="margin:0">Alle 26 Figuren auf 16 Seiten, zum Durchblättern und Weiterleiten.</p>
       </div>
       <details class="pick-fold" data-reveal id="figuren-auswahl">
         <summary><span>Wähl deine Crew: alle 26 Figuren zum Antippen</span></summary>
-        <p class="form-note" style="margin:.8rem 0 1rem">Antippen genügt. Deine Auswahl landet automatisch unten in der Anfrage.</p>
+        <p class="form-note" style="margin-top:.8rem;margin-bottom:1rem">Antippen genügt. Deine Auswahl landet automatisch unten in der Anfrage.</p>
       <div class="pick-grid" data-pick-bereich="Lifesize Figuren" role="group" aria-label="Lifesize Figuren auswählen">
         <label class="pick-chip"><input type="checkbox" value="Darth Vader"><span>Darth Vader</span></label>
         <label class="pick-chip"><input type="checkbox" value="Yoda"><span>Yoda</span></label>
@@ -216,7 +219,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="modelle" aria-labelledby="modelle-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sektor 02 · Modelle</p>
+        <p class="hud-label">Sektor 02 · Modelle</p>
         <h2 id="modelle-h">Raumschiffe zum Aufhängen oder Hinstellen</h2>
         <p class="lead">Das Flaggschiff: ein Snowspeeder im Maßstab 1:2, hängend unter der Decke oder stehend im Raum. Weitere Schiffsmodelle auf Anfrage. </p>
       </div>
@@ -247,7 +250,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="xxl" aria-labelledby="xxl-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sektor 03 · XXL Exponate</p>
+        <p class="hud-label">Sektor 03 · XXL Exponate</p>
         <h2 id="xxl-h">XXL-Exponate: die ganz großen Kaliber</h2>
         <p class="lead">Manche Hingucker passen in kein Regal: ein originalgetreues US-Sheriff-Car, ein aufblasbarer Marshmallow Man und eine begehbare Comic-Fotobox.</p>
       </div>
@@ -321,7 +324,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="halloween" aria-labelledby="halloween-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sektor 04 · Halloween Deko</p>
+        <p class="hud-label">Sektor 04 · Halloween Deko</p>
         <h2 id="halloween-h">Halloween: Kulissen für Gruselnächte</h2>
         <p class="lead">Friedhofstor, zorniger Clown, Grabsteine im XXL-Format: komplette Kulissen und Requisiten für dein Halloween-Event, mit klaren Tagespreisen.</p>
       </div>
@@ -357,7 +360,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       </div>
       <div class="bereich-cta" data-reveal>
         <a class="btn btn--ghost" href="#anfrage" data-bereich-cta="Halloween Deko" data-event="cta-bereich-halloween">Diesen Bereich anfragen</a>
-        <a class="btn btn--ghost" href="https://express.adobe.com/page/iVBMnSYI4kVcz/" target="_blank" rel="noopener" data-event="link-halloween-katalog" style="margin-left:.6rem">Kompletter Halloween-Katalog</a>
+        <a class="btn btn--ghost" href="https://express.adobe.com/page/iVBMnSYI4kVcz/" target="_blank" rel="noopener" data-event="link-halloween-katalog">Kompletter Halloween-Katalog</a>
       </div>
     </div>
   </section>
@@ -366,8 +369,8 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="anfrage" aria-labelledby="anfrage-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sektor 05 · Anfrage</p>
-        <h2 id="anfrage-h">Eure Auswahl, unser Angebot</h2>
+        <p class="hud-label">Sektor 05 · Anfrage</p>
+        <h2 id="anfrage-h">Deine Auswahl, unser Angebot</h2>
         <p class="lead">Alles Angetippte steht schon im Formular. Eckdaten ergänzen, absenden, und wir funken mit einem konkreten Angebot zurück. Figuren, Modelle und XXL-Exponate kalkulieren wir individuell, die Halloween-Deko hat feste Tagespreise. Anfragen aus ganz Europa sind willkommen.</p>
       </div>
       <hr class="divider-beam">
@@ -390,7 +393,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             </div>
             <div>
               <label for="f-anlass">Anlass</label>
-              <input type="text" id="f-anlass" name="anlass" placeholder="Messe, Firmenevent, Hochzeit, Dreh …">
+              <input type="text" id="f-anlass" name="anlass" placeholder="Messe, Hochzeit, Dreh …">
             </div>
             <div>
               <label for="f-datum">Datum</label>
@@ -401,7 +404,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
               <input type="text" id="f-ort" name="ort" placeholder="z. B. Messehalle, Ladenlokal, Open Air …">
             </div>
             <fieldset class="fieldset-plain span-2">
-              <legend>Welche Bereiche interessieren euch?</legend>
+              <legend>Welche Bereiche interessieren dich?</legend>
               <div class="pick-grid">
                 <label class="pick-chip"><input type="checkbox" name="bereiche[]" value="Lifesize Figuren"><span>Lifesize Figuren</span></label>
                 <label class="pick-chip"><input type="checkbox" name="bereiche[]" value="Modelle"><span>Modelle</span></label>
@@ -410,7 +413,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
               </div>
             </fieldset>
             <div class="span-2">
-              <label for="f-wunsch">Eure Auswahl</label>
+              <label for="f-wunsch">Deine Auswahl</label>
               <textarea id="f-wunsch" name="wunschobjekte" readonly rows="3" placeholder="Füllt sich automatisch, wenn du oben Figuren und Objekte antippst."></textarea>
               <p class="form-note">Wird aus deiner Auswahl oben befüllt. Eigene Wünsche am besten ins Nachricht-Feld.</p>
             </div>
@@ -530,7 +533,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         <tr data-day="6"><th scope="row">Sa</th><td>10 – 18 Uhr</td></tr>
         <tr data-day="0"><th scope="row">So</th><td>12 – 17 Uhr</td></tr>
       </table>
-      <p class="form-note">Auch an Feiertagen geöffnet, zusätzlich Ostermontag und Pfingstmontag (12 – 17 Uhr).</p>
+      <p class="form-note">Auch an Feiertagen geöffnet, zusätzlich Ostermontag und Pfingstmontag <span class="nowrap">(12 – 17 Uhr)</span>.</p>
     </div>
     <div>
       <h4>Navigation</h4>
@@ -548,11 +551,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       <ul>
         <li><a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="footer-shop-tickets">Ticket-Shop</a></li>
         <li><a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="footer-shop-merch">Merch-Shop</a></li>
-        <li><a href="/sotg-vorschau/fuehrer/">Ausstellungs-Führer (5 Sprachen)</a></li>
+        <li><a href="/sotg-vorschau/fuehrer/">Ausstellungs-Führer (5 Sprachen)</a></li>
         <li><a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener">AR-App SnoopIT</a></li>
         <li><a href="https://www.facebook.com/starsofthegalaxy" target="_blank" rel="noopener" data-event="footer-facebook">Facebook</a></li>
         <li><a href="https://www.instagram.com/starsofthegalaxyde/" target="_blank" rel="noopener" data-event="footer-instagram">Instagram</a></li>
       </ul>
+      <h4 class="partner-title">Partner</h4>
       <div class="partner-row" aria-label="Partner">
         <a class="partner-chip" href="https://www.hephata-mg.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-hephata.webp" alt="Hephata Evangelische Stiftung" width="490" height="120" loading="lazy"></a>
         <a class="partner-chip" href="http://comet-cine-center.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-comet.webp" alt="Comet Cine Center" width="240" height="94" loading="lazy"></a>

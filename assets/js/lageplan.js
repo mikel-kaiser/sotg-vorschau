@@ -130,3 +130,15 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && current) close(); });
   document.addEventListener('click', function (e) { if (current && !card.contains(e.target)) close(); });
 })();
+
+/* QA 07.11.: Hinweis unter dem Lageplan auf dem Handy */
+(function () {
+  var lp = document.querySelector('.lageplan');
+  if (!lp) return;
+  var L = (document.documentElement.lang || 'de').slice(0, 2);
+  var T = { de: 'Tipp: Plan zur Seite wischen, um alles zu sehen.', en: 'Tip: swipe the plan sideways to see everything.',
+            nl: 'Tip: veeg de plattegrond opzij om alles te zien.', fr: 'Astuce\u00a0: faites glisser le plan sur le côté pour tout voir.' };
+  var p = document.createElement('p');
+  p.className = 'lageplan__swipe'; p.textContent = T[L] || T.de;
+  lp.parentNode.insertBefore(p, lp.nextSibling);
+})();

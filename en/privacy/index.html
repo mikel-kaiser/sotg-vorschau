@@ -57,14 +57,14 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 .legal ul{padding-left:1.25rem}
 .legal address{font-style:normal;line-height:1.8}
 </style>
-<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261127">
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261137">
 <script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
-<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/main.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261137"></script>
 </head>
 <body data-page="datenschutz">
 <canvas id="starfield" aria-hidden="true"></canvas>
@@ -96,10 +96,10 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" aria-labelledby="ds-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Legal document · GDPR</p>
+        <p class="hud-label">Legal document · GDPR</p>
         <h1 id="ds-h">Privacy policy</h1>
         <p class="form-note">This translation is provided for your convenience. The German version is legally binding: <a href="/sotg-vorschau/datenschutz/" lang="de">Datenschutzerklärung</a></p>
-        <p class="lead">The short version first: this website cares about the galaxy, not about your data. No tracking, no cookies, no analytics tools. Whatever does get processed is listed here. Short and sweet, with no small print hidden in the small print.</p>
+        <p class="lead">The short version first: this website cares about the galaxy, not about your data. No tracking, no analytics tools, cookies only with your consent. Whatever does get processed is listed here. Short and sweet, with no small print hidden in the small print.</p>
       </div>
       <hr class="divider-beam">
 
@@ -138,16 +138,15 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         </article>
 
         <article data-reveal aria-labelledby="ds-4">
-          <h2 id="ds-4">4. Google Maps: map only on click</h2>
-          <p>On the contact page we embed a map from Google Maps, but only <strong>after you have actively loaded it with a click</strong>. Until then, no connection to Google is made.</p>
-          <p>When you activate the map, data (including your IP address) is transferred to Google. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. The legal basis is your consent under Art. 6(1)(a) GDPR. You can withdraw it with effect for the future simply by reloading the page. The map then stays deactivated until you click again.</p>
+          <h2 id="ds-4">4. Google Maps: link only</h2>
+          <p>We do not embed a map on the contact page; we link to Google Maps instead. Only when you click the link does Google Maps open in a new window. Only then is data (including your IP address) transferred to Google, and Google’s terms apply. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland.</p>
           <p>For more details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-event="link-google-privacy">Google’s privacy policy</a>.</p>
         </article>
 
         <article data-reveal aria-labelledby="ds-5">
-          <h2 id="ds-5">5. YouTube videos: video only on click</h2>
-          <p>We embed individual videos (e.g. about the AR app SnoopIT) via <strong>youtube-nocookie.com</strong> in privacy-enhanced mode. The same rule applies here: a video only loads <strong>after you have started it with a click</strong>. Until then, no connection to YouTube is made.</p>
-          <p>When you start a video, data (including your IP address) is transferred to YouTube or Google. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. The legal basis is your consent under Art. 6(1)(a) GDPR. It applies only to the video you actually start. For more details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-event="link-google-privacy-yt">Google’s privacy policy</a>.</p>
+          <h2 id="ds-5">5. Videos: only on click</h2>
+          <p>The videos on this website (the WDR report and the guide to the AR app SnoopIT) are hosted on our own server and only play <strong>after you have started them with a click</strong>. No data is passed on to third parties. Only if a video file is ever unavailable is the <strong>youtube-nocookie.com</strong> player loaded instead, in privacy-enhanced mode and likewise only after your click.</p>
+          <p>In that case, when you start the video, data (including your IP address) is transferred to YouTube or Google. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. The legal basis is your consent under Art. 6(1)(a) GDPR. It applies only to the video you actually start. For more details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-event="link-google-privacy-yt">Google’s privacy policy</a>.</p>
         </article>
 
         <article data-reveal aria-labelledby="ds-6" id="cookies">
@@ -155,7 +154,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
           <p>On your first visit, a pop-up asks which cookies you want to allow. <strong>Necessary</strong> entries are always active: they store your cookie choice (in browser storage under “sotg-cookie-consent-v1”, which stays on your device) and use sessionStorage to stop notices from popping up again every time you change page. These entries are not sent to anyone.</p>
           <p>Cookies in the <strong>preferences, statistics and marketing</strong> categories are only set with your consent and only if a corresponding service is actually in use. There are currently <strong>no analytics or advertising tools active</strong> on this website; if you decline, everything simply stays off. Should services such as Google Tag Manager or the Meta Pixel be added in future, they will only load with your consent, and this section will be updated accordingly.</p>
           <p>You can change or withdraw your choice at any time via the <a href="/sotg-vorschau/en/privacy/#cookies" data-consent-open><strong>“Cookie settings”</strong></a> link in the footer of every page.</p>
-          <p>Separately: if you load the directions map or a video with a click (see the sections on Google Maps and YouTube), Google may set cookies within the embedded window. Your click counts as consent. Nothing happens before that.</p>
+          <p>Separately: if a video is loaded from YouTube as a fallback (see section 5), Google may set cookies within the embedded window. Your click counts as consent. Nothing happens before that.</p>
         </article>
 
         <article data-reveal aria-labelledby="ds-7">
@@ -163,7 +162,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
           <p>Some services are provided by external companies. As soon as you switch over to them, their privacy notices apply instead of this policy:</p>
           <ul>
             <li><strong>Ticket and merch shop</strong> (<a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="link-ds-shop-tickets">Ticket shop</a>, <a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="link-ds-shop-merch">Merch shop</a>): run on the Shopify platform. See <a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noopener" data-event="link-shopify-privacy">Shopify’s privacy policy</a>.</li>
-            <li><strong>Digital exhibition guide</strong> (in five languages, at /en/guide/): displayed as an Adobe Express embed directly on our site. The embed only loads when you click a language. Your click counts as consent, and from then on Adobe may set cookies within the embedded window (as with Google Maps and YouTube above). See <a href="https://www.adobe.com/de/privacy/policy.html" target="_blank" rel="noopener" data-event="link-adobe-privacy">Adobe’s privacy policy</a>.</li>
+            <li><strong>Digital exhibition guide</strong> (in five languages, at /en/guide/): displayed as an Adobe Express embed directly on our site. The embed only loads when you click a language. Your click counts as consent, and from then on Adobe may set cookies within the embedded window (as with YouTube above). See <a href="https://www.adobe.com/privacy/policy.html" target="_blank" rel="noopener" data-event="link-adobe-privacy">Adobe’s privacy policy</a>.</li>
             <li><strong>AR app “SnoopIT”</strong> (<a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener" data-event="link-ds-snoopit">download link</a>): a third-party service. The privacy notices of the app or of the respective app store apply.</li>
           </ul>
         </article>
@@ -178,7 +177,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <li><strong>Restriction of processing</strong> (Art. 18 GDPR),</li>
             <li><strong>Data portability</strong> (Art. 20 GDPR),</li>
             <li><strong>Objection</strong> to processing based on legitimate interests (Art. 21 GDPR),</li>
-            <li><strong>Withdrawal</strong> of consent given, with effect for the future (Art. 7(3) GDPR), for example for the map or videos loaded with a click.</li>
+            <li><strong>Withdrawal</strong> of consent given, with effect for the future (Art. 7(3) GDPR), for example for YouTube videos started with a click.</li>
           </ul>
           <p>You also have the right to lodge a complaint with a data protection supervisory authority. The authority responsible for us is the <strong lang="de">Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)</strong> (the North Rhine-Westphalia Commissioner for Data Protection and Freedom of Information), Kavalleriestraße 2–4, 40213 Düsseldorf, Germany, <a href="https://www.ldi.nrw.de/" target="_blank" rel="noopener" data-event="link-ldi-nrw">www.ldi.nrw.de</a>.</p>
         </article>
@@ -216,7 +215,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         <tr data-day="6"><th scope="row">Sat</th><td>10:00 – 18:00</td></tr>
         <tr data-day="0"><th scope="row">Sun</th><td>12:00 – 17:00</td></tr>
       </table>
-      <p class="form-note">Open on public holidays too, plus Easter Monday and Whit Monday (12:00 – 17:00).</p>
+      <p class="form-note">Open on public holidays too, plus Easter Monday and Whit Monday <span class="nowrap">(12:00 – 17:00)</span>.</p>
     </div>
     <div>
       <h4>Navigation</h4>
@@ -234,11 +233,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       <ul>
         <li><a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="footer-shop-tickets">Ticket shop</a></li>
         <li><a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="footer-shop-merch">Merch shop</a></li>
-        <li><a href="/sotg-vorschau/en/guide/">Exhibition guide (5 languages)</a></li>
+        <li><a href="/sotg-vorschau/en/guide/">Exhibition guide (5 languages)</a></li>
         <li><a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener">AR app SnoopIT</a></li>
         <li><a href="https://www.facebook.com/starsofthegalaxy" target="_blank" rel="noopener" data-event="footer-facebook">Facebook</a></li>
         <li><a href="https://www.instagram.com/starsofthegalaxyde/" target="_blank" rel="noopener" data-event="footer-instagram">Instagram</a></li>
       </ul>
+      <h4 class="partner-title">Partners</h4>
       <div class="partner-row" aria-label="Partners">
         <a class="partner-chip" href="https://www.hephata-mg.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-hephata.webp" alt="Hephata, a Protestant foundation" width="490" height="120" loading="lazy"></a>
         <a class="partner-chip" href="http://comet-cine-center.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-comet.webp" alt="Comet Cine Center" width="240" height="94" loading="lazy"></a>

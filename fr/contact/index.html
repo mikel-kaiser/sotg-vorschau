@@ -49,21 +49,18 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 .js [data-reveal]{opacity:0;transform:translateY(28px)}
 @media (prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none}}
 </style>
-<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261127">
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261137">
 <style>
 /* Seitenspezifisch: datenschutzfreundliches Karten-Panel */
-.map-slot{display:grid;place-items:center;min-height:340px;margin-top:1.2rem;border:1px dashed var(--line);background:rgba(10,14,31,.55);text-align:center;padding:1.5rem}
-.map-slot--loaded{display:block;min-height:0;padding:0;border-style:solid}
-.map-slot iframe{width:100%;height:420px;border:0;display:block}
 .map-coords{font-family:'Orbitron',sans-serif;font-size:.78rem;letter-spacing:.22em;color:var(--cyan);opacity:.85;margin:0 0 1rem}
 </style>
 <script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
-<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/main.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261137"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":["Museum","TouristAttraction"],
 "name":"Stars of the Galaxy","url":"https://www.starsofthegalaxy.de/fr/contact/",
@@ -122,12 +119,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
     </div>
     <div class="wrap">
       <div class="hero__inner">
-        <p class="hud-label hero__kicker" data-reveal>Contact et accès · Berliner Platz 10</p>
+        <p class="hud-label hero__kicker" data-reveal>Contact et accès · Berliner Platz 10</p>
         <h1 data-reveal data-reveal-delay=".08">Liaison radio avec la base</h1>
         <p class="lead" data-reveal data-reveal-delay=".16">Une question sur la visite guidée, une date pour votre EVJF ou EVG, ou simplement besoin de savoir où vous garer ? Voici tous les canaux : téléphone, formulaire de transmission et route d’approche vers le Berliner Platz, à deux pas de la gare centrale (Hauptbahnhof) de Mönchengladbach.</p>
         <div class="hero__actions" data-reveal data-reveal-delay=".24">
           <a class="btn btn--primary" href="#formular">Envoyer un message</a>
-          <a class="btn btn--ghost" href="https://maps.google.com/?q=Stars+of+the+Galaxy,+Berliner+Platz+10,+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps-hero">Calculer l’itinéraire</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&destination=Stars+of+the+Galaxy%2C+Berliner+Platz+10%2C+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps-hero">Calculer l’itinéraire</a>
         </div>
         <p class="hero__status" data-reveal data-reveal-delay=".3"><span class="status-chip" data-open-status role="status">Horaires …</span></p>
       </div>
@@ -138,7 +135,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" aria-labelledby="kanaele-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Secteur 01 · Ligne directe</p>
+        <p class="hud-label">Secteur 01 · Ligne directe</p>
         <h2 id="kanaele-h">Trois canaux vers le poste de commandement</h2>
         <p class="lead">Un appel pour les questions rapides, un e-mail pour tout ce qui comporte une pièce jointe, le formulaire pour écrire tranquillement depuis le canapé. Vous préférez passer en personne ? Des billets vous attendent à la caisse, à tout moment et sans attente.</p>
       </div>
@@ -149,7 +146,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
           <address style="font-style:normal;line-height:1.8">
             Stars of the Galaxy<br>
             Berliner Platz 10<br>
-            41061 Mönchengladbach, Allemagne
+            41061&nbsp;Mönchengladbach, Allemagne
           </address>
           <p style="margin-top:1rem;line-height:1.8">
             <a href="tel:+4921614063790">+49 2161 406 37 90</a><br>
@@ -165,7 +162,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <tr data-day="6"><th scope="row">sam.</th><td>10 h–18 h</td></tr>
             <tr data-day="0"><th scope="row">dim.</th><td>12 h–17 h</td></tr>
           </table>
-          <p class="form-note">Ouvert aussi les jours fériés, ainsi que le lundi de Pâques et le lundi de Pentecôte (12 h–17 h). Du lundi au mercredi, le sas reste fermé. À Noël, nous faisons une courte pause : les dates exactes s’affichent dans le statut d’ouverture, en haut de la page.</p>
+          <p class="form-note">Ouvert aussi les jours fériés, ainsi que le lundi de Pâques et le lundi de Pentecôte <span class="nowrap">(12 h–17 h)</span>. Du lundi au mercredi, le sas reste fermé. À Noël, nous faisons une courte pause : les dates exactes s’affichent dans le statut d’ouverture, en haut de la page.</p>
           <p><span class="status-chip" data-open-status role="status">Horaires …</span></p>
         </div>
         <div class="card hud-panel" data-reveal data-reveal-delay=".16">
@@ -191,21 +188,21 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" aria-labelledby="karte-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Secteur 02 · Carte d’atterrissage</p>
+        <p class="hud-label">Secteur 02 · Carte d’atterrissage</p>
         <h2 id="karte-h">Approche du Berliner Platz</h2>
-        <p class="lead">Pour protéger votre vie privée, la carte ne se charge que si vous la demandez. D’ici là, vos données restent à bord.</p>
+        <p class="lead">Un clic sur la carte ouvre Google Maps avec notre adresse. Vous y calculez l’itinéraire directement depuis votre position.</p>
       </div>
       <hr class="divider-beam">
       <div class="card hud-panel" data-reveal>
         <h3>Coordonnées d’atterrissage</h3>
-        <div class="map-slot" id="map-slot">
-          <div>
-            <p class="map-coords" aria-hidden="true">LAT 51.191813 N · LON 6.4393425 E</p>
-            <button type="button" class="btn btn--primary" id="map-load" data-event="map-load">Charger la carte</button>
-            <p class="form-note" style="margin-top:1rem">Le chargement de la carte transmet des données à Google.</p>
-          </div>
-        </div>
-        <p style="margin-top:1.2rem;margin-bottom:0"><a class="btn btn--ghost btn--sm" href="https://maps.google.com/?q=Stars+of+the+Galaxy,+Berliner+Platz+10,+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps">Calculer l’itinéraire</a></p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Stars+of+the+Galaxy%2C+Berliner+Platz+10%2C+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="map-open">
+          <p class="map-coords" aria-hidden="true">LAT 51.191813 N · LON 6.4393425 E</p>
+          <svg class="map-link__pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <p class="map-link__addr">Berliner Platz 10 · 41061&nbsp;Mönchengladbach</p>
+          <span class="btn btn--primary">Ouvrir dans Google Maps <span aria-hidden="true">↗</span></span>
+          <p class="form-note map-link__note">Ouvre Google Maps dans une nouvelle fenêtre.</p>
+        </a>
+        <p style="margin-top:1.2rem;margin-bottom:0"><a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=Stars+of+the+Galaxy%2C+Berliner+Platz+10%2C+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps">Calculer l’itinéraire</a></p>
       </div>
     </div>
   </section>
@@ -215,7 +212,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
     <div class="wrap">
       <div class="grid-2" style="align-items:start">
         <div data-reveal>
-          <p class="hud-label">Secteur 03 · Transmission</p>
+          <p class="hud-label">Secteur 03 · Transmission</p>
           <h2 id="formular-h">Transmission vers la base</h2>
           <p>Que vous souhaitiez réserver une <strong>visite guidée</strong> (le samedi, 70 € jusqu’à 3 personnes, entrée comprise), que vous prépariez un <strong>EVJF ou EVG</strong> avec une date et une taille de groupe en tête, ou que vous ayez une question sur la <strong>location</strong> de figurines et de vaisseaux spatiaux : écrivez-nous, nous vous répondons sur la même fréquence.</p>
           <p>Et pour tout ce qui ne figure pas ici (allergies, surprises, demandes particulières), une seule règle : demandez, tout simplement. Par formulaire, par e-mail ou directement à la caisse.</p>
@@ -249,6 +246,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
               <button class="btn btn--primary" type="submit" data-label="Envoyer la transmission">Envoyer la transmission</button>
             </div>
           </form>
+          <p class="form-note" style="margin-top:1rem">Nous utilisons vos données uniquement pour répondre à votre demande. Plus d’informations dans notre <a href="/sotg-vorschau/fr/confidentialite/">politique de confidentialité</a>.</p>
           <p class="form-note" style="margin-top:1rem">En cas de problème d’envoi, écrivez-nous directement à <a href="mailto:info@starsofthegalaxy.de">info@starsofthegalaxy.de</a>.</p>
         </div>
       </div>
@@ -287,7 +285,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         <tr data-day="6"><th scope="row">sam.</th><td>10 h–18 h</td></tr>
         <tr data-day="0"><th scope="row">dim.</th><td>12 h–17 h</td></tr>
       </table>
-      <p class="form-note">Ouvert aussi les jours fériés, ainsi que le lundi de Pâques et le lundi de Pentecôte (12 h–17 h).</p>
+      <p class="form-note">Ouvert aussi les jours fériés, ainsi que le lundi de Pâques et le lundi de Pentecôte <span class="nowrap">(12 h–17 h)</span>.</p>
     </div>
     <div>
       <h4>Navigation</h4>
@@ -305,11 +303,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       <ul>
         <li><a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="footer-shop-tickets">Billetterie en ligne</a></li>
         <li><a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="footer-shop-merch">Boutique de produits dérivés</a></li>
-        <li><a href="/sotg-vorschau/fr/guide/">Guide de l’exposition (5 langues)</a></li>
+        <li><a href="/sotg-vorschau/fr/guide/">Guide de l’exposition (5 langues)</a></li>
         <li><a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener">Appli AR SnoopIT</a></li>
         <li><a href="https://www.facebook.com/starsofthegalaxy" target="_blank" rel="noopener" data-event="footer-facebook">Facebook</a></li>
         <li><a href="https://www.instagram.com/starsofthegalaxyde/" target="_blank" rel="noopener" data-event="footer-instagram">Instagram</a></li>
       </ul>
+      <h4 class="partner-title">Partenaires</h4>
       <div class="partner-row" aria-label="Partenaires">
         <a class="partner-chip" href="https://www.hephata-mg.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-hephata.webp" alt="Hephata, fondation protestante" width="490" height="120" loading="lazy"></a>
         <a class="partner-chip" href="http://comet-cine-center.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-comet.webp" alt="Comet Cine Center" width="240" height="94" loading="lazy"></a>
@@ -331,26 +330,6 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 <div class="sticky-cta">
   <a class="btn btn--primary" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-sticky">Acheter des billets</a>
 </div>
-
-<script>
-(function () {
-  var btn = document.getElementById('map-load');
-  if (!btn) return;
-  btn.addEventListener('click', function () {
-    var slot = document.getElementById('map-slot');
-    if (!slot) return;
-    var frame = document.createElement('iframe');
-    frame.src = 'https://www.google.com/maps?q=Stars+of+the+Galaxy,+Berliner+Platz+10,+41061+M%C3%B6nchengladbach&output=embed';
-    frame.setAttribute('loading', 'lazy');
-    frame.title = 'Carte : itinéraire vers Stars of the Galaxy';
-    frame.setAttribute('allowfullscreen', '');
-    frame.referrerPolicy = 'no-referrer-when-downgrade';
-    slot.innerHTML = '';
-    slot.appendChild(frame);
-    slot.classList.add('map-slot--loaded');
-  });
-})();
-</script>
 
 <script>document.addEventListener("submit",function(e){var f=e.target;if(!f||f.tagName!=="FORM")return;e.preventDefault();e.stopImmediatePropagation();var o=f.parentNode.querySelector(".transmission");if(o)o.remove();var d=document.createElement("div");d.className="transmission";d.setAttribute("role","status");d.innerHTML="<strong>&gt;&gt; Aperçu_</strong>"+"Cette demande n\u2019a pas \u00e9t\u00e9 envoy\u00e9e. Sur le site final, elle arrive directement au mus\u00e9e.";f.parentNode.insertBefore(d,f);d.scrollIntoView({block:"center"});},true);</script>
 </body>

@@ -49,21 +49,18 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 .js [data-reveal]{opacity:0;transform:translateY(28px)}
 @media (prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none}}
 </style>
-<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261127">
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261137">
 <style>
 /* Seitenspezifisch: datenschutzfreundliches Karten-Panel */
-.map-slot{display:grid;place-items:center;min-height:340px;margin-top:1.2rem;border:1px dashed var(--line);background:rgba(10,14,31,.55);text-align:center;padding:1.5rem}
-.map-slot--loaded{display:block;min-height:0;padding:0;border-style:solid}
-.map-slot iframe{width:100%;height:420px;border:0;display:block}
 .map-coords{font-family:'Orbitron',sans-serif;font-size:.78rem;letter-spacing:.22em;color:var(--cyan);opacity:.85;margin:0 0 1rem}
 </style>
 <script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
-<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/main.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261137"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":["Museum","TouristAttraction"],
 "name":"Stars of the Galaxy","url":"https://www.starsofthegalaxy.de/",
@@ -122,12 +119,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
     </div>
     <div class="wrap">
       <div class="hero__inner">
-        <p class="hud-label hero__kicker" data-reveal>Kontakt &amp; Anfahrt · Berliner Platz 10</p>
+        <p class="hud-label hero__kicker" data-reveal>Kontakt &amp; Anfahrt · Berliner Platz 10</p>
         <h1 data-reveal data-reveal-delay=".08">Funkkontakt zur Basis</h1>
         <p class="lead" data-reveal data-reveal-delay=".16">Frage zur Führung, Wunschtermin für den JGA oder kurz klären, wo du parkst? Hier sind alle Kanäle: Telefon, Funkspruch-Formular und der Landeweg zum Berliner Platz, direkt am Hauptbahnhof Mönchengladbach.</p>
         <div class="hero__actions" data-reveal data-reveal-delay=".24">
           <a class="btn btn--primary" href="#formular">Nachricht senden</a>
-          <a class="btn btn--ghost" href="https://maps.google.com/?q=Stars+of+the+Galaxy,+Berliner+Platz+10,+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps-hero">Route planen</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&destination=Stars+of+the+Galaxy%2C+Berliner+Platz+10%2C+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps-hero">Route planen</a>
         </div>
         <p class="hero__status" data-reveal data-reveal-delay=".3"><span class="status-chip" data-open-status role="status">Öffnungszeiten …</span></p>
       </div>
@@ -138,7 +135,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" aria-labelledby="kanaele-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sektor 01 · Direktverbindung</p>
+        <p class="hud-label">Sektor 01 · Direktverbindung</p>
         <h2 id="kanaele-h">Drei Kanäle zur Kommandozentrale</h2>
         <p class="lead">Anruf für Schnelles, Mail für alles mit Anhang, Formular für bequem vom Sofa. Und wer lieber persönlich vorbeischaut: Tickets gibt's an der Kasse jederzeit ohne Wartezeit.</p>
       </div>
@@ -149,7 +146,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
           <address style="font-style:normal;line-height:1.8">
             Stars of the Galaxy<br>
             Berliner Platz 10<br>
-            41061 Mönchengladbach
+            41061&nbsp;Mönchengladbach
           </address>
           <p style="margin-top:1rem;line-height:1.8">
             <a href="tel:+4921614063790">02161 406 37 90</a><br>
@@ -165,7 +162,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <tr data-day="6"><th scope="row">Sa</th><td>10 – 18 Uhr</td></tr>
             <tr data-day="0"><th scope="row">So</th><td>12 – 17 Uhr</td></tr>
           </table>
-          <p class="form-note">Auch an Feiertagen geöffnet, zusätzlich Ostermontag und Pfingstmontag (12 – 17 Uhr). Mo–Mi bleibt die Schleuse zu. Über Weihnachten machen wir eine kurze Pause, die genauen Tage zeigt der Öffnungsstatus oben auf der Seite.</p>
+          <p class="form-note">Auch an Feiertagen geöffnet, zusätzlich Ostermontag und Pfingstmontag <span class="nowrap">(12 – 17 Uhr)</span>. Mo–Mi bleibt die Schleuse zu. Über Weihnachten machen wir eine kurze Pause, die genauen Tage zeigt der Öffnungsstatus oben auf der Seite.</p>
           <p><span class="status-chip" data-open-status role="status">Öffnungszeiten …</span></p>
         </div>
         <div class="card hud-panel" data-reveal data-reveal-delay=".16">
@@ -176,7 +173,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <li>Kostenlose Parkbuchten direkt vorm Gebäude</li>
             <li>Größerer Parkplatz gegenüber (Parkscheinautomat)</li>
             <li>Parkhaus ca. 100 m entfernt</li>
-            <li>Parkdeck Lüpertzender Str. 86: Rabatt-Coupon an der Kasse (erste Stunde frei, danach 2 €/Std.)</li>
+            <li>Parkdeck Lüpertzender Str. 86: Rabatt-Coupon an der Kasse (erste Stunde frei, danach 2&nbsp;€/Std.)</li>
           </ul>
         </div>
       </div>
@@ -191,21 +188,21 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" aria-labelledby="karte-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sektor 02 · Landekarte</p>
+        <p class="hud-label">Sektor 02 · Landekarte</p>
         <h2 id="karte-h">Anflug auf den Berliner Platz</h2>
-        <p class="lead">Aus Datenschutz-Gründen lädt die Karte erst, wenn du sie anforderst. Bis dahin bleiben deine Daten an Bord.</p>
+        <p class="lead">Ein Klick auf die Karte öffnet Google Maps mit unserer Adresse. Von dort planst du die Route direkt von deinem Standort.</p>
       </div>
       <hr class="divider-beam">
       <div class="card hud-panel" data-reveal>
         <h3>Landekoordinaten</h3>
-        <div class="map-slot" id="map-slot">
-          <div>
-            <p class="map-coords" aria-hidden="true">LAT 51.191813 N · LON 6.4393425 O</p>
-            <button type="button" class="btn btn--primary" id="map-load" data-event="map-load">Karte laden</button>
-            <p class="form-note" style="margin-top:1rem">Beim Laden der Karte werden Daten an Google übertragen.</p>
-          </div>
-        </div>
-        <p style="margin-top:1.2rem;margin-bottom:0"><a class="btn btn--ghost btn--sm" href="https://maps.google.com/?q=Stars+of+the+Galaxy,+Berliner+Platz+10,+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps">Route planen</a></p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Stars+of+the+Galaxy%2C+Berliner+Platz+10%2C+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="map-open">
+          <p class="map-coords" aria-hidden="true">LAT 51.191813 N · LON 6.4393425 O</p>
+          <svg class="map-link__pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <p class="map-link__addr">Berliner Platz 10 · 41061&nbsp;Mönchengladbach</p>
+          <span class="btn btn--primary">In Google Maps öffnen <span aria-hidden="true">↗</span></span>
+          <p class="form-note map-link__note">Öffnet Google Maps in einem neuen Fenster.</p>
+        </a>
+        <p style="margin-top:1.2rem;margin-bottom:0"><a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=Stars+of+the+Galaxy%2C+Berliner+Platz+10%2C+41061+M%C3%B6nchengladbach" target="_blank" rel="noopener" data-event="link-maps">Route planen</a></p>
       </div>
     </div>
   </section>
@@ -215,9 +212,9 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
     <div class="wrap">
       <div class="grid-2" style="align-items:start">
         <div data-reveal>
-          <p class="hud-label">Sektor 03 · Funkspruch</p>
+          <p class="hud-label">Sektor 03 · Funkspruch</p>
           <h2 id="formular-h">Übertragung an die Basis</h2>
-          <p>Egal ob du einen <strong>Führungs-Termin</strong> anfragen willst (samstags, 70 € für bis zu 3 Personen inkl. Eintritt), einen <strong>JGA</strong> mit Wunschtermin und Gruppengröße planst oder eine Frage zur <strong>Vermietung</strong> von Figuren und Raumschiffen hast: Schreib uns, wir funken zurück.</p>
+          <p>Egal ob du einen <strong>Führungs-Termin</strong> anfragen willst (samstags, 70&nbsp;€ für bis zu 3 Personen inkl. Eintritt), einen <strong>JGA</strong> mit Wunschtermin und Gruppengröße planst oder eine Frage zur <strong>Vermietung</strong> von Figuren und Raumschiffen hast: Schreib uns, wir funken zurück.</p>
           <p>Auch für alles, was hier nicht steht (Allergien, Überraschungen, Sonderwünsche), gilt: einfach fragen. Per Formular, Mail oder direkt an der Kasse.</p>
           <p class="form-note">Wichtig für <a href="/sotg-vorschau/geburtstage/galaktische-geburtstage/">Kindergeburtstage</a>: Die Buchung läuft ausschließlich schriftlich über das Buchungsformular. Eine Reservierung per Telefon ist nicht möglich.</p>
         </div>
@@ -248,6 +245,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
               <button class="btn btn--primary" type="submit" data-label="Übertragung senden">Übertragung senden</button>
             </div>
           </form>
+          <p class="form-note" style="margin-top:1rem">Wir nutzen deine Angaben nur, um deine Anfrage zu beantworten. Mehr dazu in der <a href="/sotg-vorschau/datenschutz/">Datenschutzerklärung</a>.</p>
           <p class="form-note" style="margin-top:1rem">Falls der Versand klemmt: Mail direkt an <a href="mailto:info@starsofthegalaxy.de">info@starsofthegalaxy.de</a>.</p>
         </div>
       </div>
@@ -286,7 +284,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         <tr data-day="6"><th scope="row">Sa</th><td>10 – 18 Uhr</td></tr>
         <tr data-day="0"><th scope="row">So</th><td>12 – 17 Uhr</td></tr>
       </table>
-      <p class="form-note">Auch an Feiertagen geöffnet, zusätzlich Ostermontag und Pfingstmontag (12 – 17 Uhr).</p>
+      <p class="form-note">Auch an Feiertagen geöffnet, zusätzlich Ostermontag und Pfingstmontag <span class="nowrap">(12 – 17 Uhr)</span>.</p>
     </div>
     <div>
       <h4>Navigation</h4>
@@ -304,11 +302,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       <ul>
         <li><a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="footer-shop-tickets">Ticket-Shop</a></li>
         <li><a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="footer-shop-merch">Merch-Shop</a></li>
-        <li><a href="/sotg-vorschau/fuehrer/">Ausstellungs-Führer (5 Sprachen)</a></li>
+        <li><a href="/sotg-vorschau/fuehrer/">Ausstellungs-Führer (5 Sprachen)</a></li>
         <li><a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener">AR-App SnoopIT</a></li>
         <li><a href="https://www.facebook.com/starsofthegalaxy" target="_blank" rel="noopener" data-event="footer-facebook">Facebook</a></li>
         <li><a href="https://www.instagram.com/starsofthegalaxyde/" target="_blank" rel="noopener" data-event="footer-instagram">Instagram</a></li>
       </ul>
+      <h4 class="partner-title">Partner</h4>
       <div class="partner-row" aria-label="Partner">
         <a class="partner-chip" href="https://www.hephata-mg.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-hephata.webp" alt="Hephata Evangelische Stiftung" width="490" height="120" loading="lazy"></a>
         <a class="partner-chip" href="http://comet-cine-center.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-comet.webp" alt="Comet Cine Center" width="240" height="94" loading="lazy"></a>
@@ -330,26 +329,6 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 <div class="sticky-cta">
   <a class="btn btn--primary" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-sticky">Tickets sichern</a>
 </div>
-
-<script>
-(function () {
-  var btn = document.getElementById('map-load');
-  if (!btn) return;
-  btn.addEventListener('click', function () {
-    var slot = document.getElementById('map-slot');
-    if (!slot) return;
-    var frame = document.createElement('iframe');
-    frame.src = 'https://www.google.com/maps?q=Stars+of+the+Galaxy,+Berliner+Platz+10,+41061+M%C3%B6nchengladbach&output=embed';
-    frame.setAttribute('loading', 'lazy');
-    frame.title = 'Karte: Anfahrt Stars of the Galaxy';
-    frame.setAttribute('allowfullscreen', '');
-    frame.referrerPolicy = 'no-referrer-when-downgrade';
-    slot.innerHTML = '';
-    slot.appendChild(frame);
-    slot.classList.add('map-slot--loaded');
-  });
-})();
-</script>
 
 <script>document.addEventListener("submit",function(e){var f=e.target;if(!f||f.tagName!=="FORM")return;e.preventDefault();e.stopImmediatePropagation();var o=f.parentNode.querySelector(".transmission");if(o)o.remove();var d=document.createElement("div");d.className="transmission";d.setAttribute("role","status");d.innerHTML="<strong>&gt;&gt; Vorschau_</strong>"+"Diese Anfrage wurde nicht verschickt. Auf der fertigen Seite landet sie direkt bei euch im Postfach.";f.parentNode.insertBefore(d,f);d.scrollIntoView({block:"center"});},true);</script>
 </body>

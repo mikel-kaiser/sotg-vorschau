@@ -47,7 +47,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 .js [data-reveal]{opacity:0;transform:translateY(28px)}
 @media (prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none}}
 </style>
-<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261127">
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261137">
 <style>
 /* Seitenspezifisch: Vermietung */
 .sheriff-panel{display:grid;place-items:center;text-align:center;gap:1.1rem;padding:2.8rem 1.8rem}
@@ -58,17 +58,20 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 .fieldset-plain legend{padding:0;margin-bottom:.45rem;font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
 .pick-intro{margin:1.9rem 0 .7rem}
 .pick-intro h3{margin-bottom:.25rem}
-.bereich-cta{margin-top:1.8rem}
+.bereich-cta{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.6rem}
+#halloween .card{display:flex;flex-direction:column}
+#halloween .price-tag{margin-top:auto;padding-top:.9rem}
+#halloween .hud-panel h3{font-size:.92rem;letter-spacing:.06em}
 .price-tag{font-family:'Orbitron',sans-serif;font-size:1.3rem;color:var(--amber);margin:.9rem 0 0}
 .price-tag small{display:block;font-family:'Inter',system-ui,sans-serif;font-size:.78rem;font-weight:400;letter-spacing:.04em;color:var(--ink-dim)}
 </style>
 <script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
-<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/main.js?v=20261127"></script>
-<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261137"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261137"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Museum",
 "name":"Stars of the Galaxy","url":"https://www.starsofthegalaxy.de/nl/verhuur/",
@@ -108,12 +111,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="hero hero--sub">
     <div class="wrap">
       <div class="hero__inner">
-        <p class="hud-label hero__kicker" data-reveal>Verhuur · Beurzen · Events · Bruiloften · Film</p>
+        <p class="hud-label hero__kicker" data-reveal>Verhuur · Beurzen · Events · Bruiloften · Film</p>
         <h1 data-reveal data-reveal-delay=".08">De Kracht voor jouw event. Gewoon te huur.</h1>
         <p class="lead" data-reveal data-reveal-delay=".16">26 levensgrote Hollywood-figuren, ruimteschipmodellen, XXL-objecten en halloweendecors, klaar voor je beurs, bedrijfsevent, bruiloft of filmopname. Tik aan wat je leuk vindt: je keuze komt automatisch in je aanvraag terecht.</p>
         <div class="hero__actions" data-reveal data-reveal-delay=".24">
           <a class="btn btn--primary" href="#anfrage" data-event="cta-vermietung-hero">Nu aanvragen</a>
-          <a class="btn btn--ghost" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog-hero">Bekijk de catalogus (pdf, 5&nbsp;MB)</a>
+          <a class="btn btn--ghost" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog-hero"><span class="btn__label">Bekijk de catalogus <span style="white-space:nowrap">(pdf, 5&nbsp;MB)</span></span></a>
         </div>
         <p class="hero__status" data-reveal data-reveal-delay=".3"><span class="status-chip" data-open-status role="status">Openingstijden …</span></p>
       </div>
@@ -136,18 +139,18 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="figuren" aria-labelledby="figuren-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sector 01 · Levensgrote figuren</p>
+        <p class="hud-label">Sector 01 · Levensgrote figuren</p>
         <h2 id="figuren-h">26 levensgrote filmfiguren te huur</h2>
         <p class="lead">Van Sith Lord tot de beroemdste kikker ter wereld: elke figuur uit onze verhuurcatalogus is een kant-en-klare fotoplek. Neerzetten, licht aan. De telefoons komen vanzelf tevoorschijn.</p>
       </div>
       <hr class="divider-beam">
       <div class="hero__actions" style="margin-top:1.2rem" data-reveal>
-        <a class="btn btn--primary" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog">Bekijk de catalogus (pdf, 5&nbsp;MB)</a>
+        <a class="btn btn--primary" href="/sotg-vorschau/assets/downloads/vermietkatalog-hollywood-figuren.pdf" target="_blank" rel="noopener" data-event="download-vermietkatalog"><span class="btn__label">Bekijk de catalogus <span style="white-space:nowrap">(pdf, 5&nbsp;MB)</span></span></a>
         <p class="form-note" style="margin:0">Alle 26 figuren op 16 pagina’s, om rustig door te bladeren en door te sturen.</p>
       </div>
       <details class="pick-fold" data-reveal id="figuren-auswahl">
         <summary><span>Stel je crew samen: alle 26 figuren om aan te tikken</span></summary>
-        <p class="form-note" style="margin:.8rem 0 1rem">Even aantikken is genoeg. Je keuze komt automatisch onderaan in de aanvraag.</p>
+        <p class="form-note" style="margin-top:.8rem;margin-bottom:1rem">Even aantikken is genoeg. Je keuze komt automatisch onderaan in de aanvraag.</p>
       <div class="pick-grid" data-pick-bereich="Lifesize Figuren" role="group" aria-label="Levensgrote figuren selecteren">
         <label class="pick-chip"><input type="checkbox" value="Darth Vader"><span>Darth Vader</span></label>
         <label class="pick-chip"><input type="checkbox" value="Yoda"><span>Yoda</span></label>
@@ -216,7 +219,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="modelle" aria-labelledby="modelle-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sector 02 · Modellen</p>
+        <p class="hud-label">Sector 02 · Modellen</p>
         <h2 id="modelle-h">Ruimteschepen om op te hangen of neer te zetten</h2>
         <p class="lead">Het vlaggenschip: een snowspeeder op schaal 1:2, hangend aan het plafond of staand in de ruimte. Andere ruimteschipmodellen op aanvraag. </p>
       </div>
@@ -247,7 +250,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="xxl" aria-labelledby="xxl-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sector 03 · XXL-objecten</p>
+        <p class="hud-label">Sector 03 · XXL-objecten</p>
         <h2 id="xxl-h">XXL-objecten: het echt grote geschut</h2>
         <p class="lead">Sommige blikvangers passen gewoon niet in een kast: een getrouw nagebouwde Amerikaanse sheriffauto, een opblaasbare Marshmallow Man en een fotobox in stripstijl waar je zo in stapt.</p>
       </div>
@@ -293,7 +296,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         <div data-reveal data-reveal-delay=".1">
           <h3>Amerikaanse sheriffauto</h3>
           <p>Tot aan de lichtbalk getrouw nagebouwd, desgewenst met <strong>zwaailicht en sirene</strong>. Hij brengt bruidsparen in stijl naar hun bruiloft, haalt eregasten op of staat als blikvanger pal voor de deur van je event.</p>
-          <p>Vragen over uitrusting, datum en verloop beantwoorden we het snelst via het aanvraagformulier of per e-mail.</p>
+          <p>Vragen over uitrusting, datum en verloop beantwoorden we het snelst via het aanvraagformulier of <span style="white-space:nowrap">per e-mail</span>.</p>
         </div>
       </div>
       <div class="card-grid card-grid--2" style="margin-top:1.4rem">
@@ -321,7 +324,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="halloween" aria-labelledby="halloween-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sector 04 · Halloweendeco</p>
+        <p class="hud-label">Sector 04 · Halloweendeco</p>
         <h2 id="halloween-h">Halloween: decors voor griezelnachten</h2>
         <p class="lead">Kerkhofpoort, boze clown, grafstenen in XXL-formaat: complete decors en rekwisieten voor je halloweenevent, met heldere dagprijzen.</p>
       </div>
@@ -357,7 +360,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       </div>
       <div class="bereich-cta" data-reveal>
         <a class="btn btn--ghost" href="#anfrage" data-bereich-cta="Halloween Deko" data-event="cta-bereich-halloween">Deze categorie aanvragen</a>
-        <a class="btn btn--ghost" href="https://express.adobe.com/page/iVBMnSYI4kVcz/" target="_blank" rel="noopener" data-event="link-halloween-katalog" style="margin-left:.6rem">Complete halloweencatalogus</a>
+        <a class="btn btn--ghost" href="https://express.adobe.com/page/iVBMnSYI4kVcz/" target="_blank" rel="noopener" data-event="link-halloween-katalog">Complete halloweencatalogus</a>
       </div>
     </div>
   </section>
@@ -366,7 +369,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <section class="section" id="anfrage" aria-labelledby="anfrage-h">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <p class="hud-label">Sector 05 · Aanvraag</p>
+        <p class="hud-label">Sector 05 · Aanvraag</p>
         <h2 id="anfrage-h">Jouw keuze, onze offerte</h2>
         <p class="lead">Alles wat je hebt aangetikt, staat al in het formulier. Vul de belangrijkste gegevens aan, verstuur het en wij seinen een concrete offerte terug. Figuren, modellen en XXL-objecten berekenen we op maat. Voor de halloweendeco gelden vaste dagprijzen. Aanvragen uit heel Europa zijn welkom.</p>
       </div>
@@ -391,7 +394,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             </div>
             <div>
               <label for="f-anlass">Gelegenheid</label>
-              <input type="text" id="f-anlass" name="anlass" placeholder="Beurs, bedrijfsevent, bruiloft, filmopname …">
+              <input type="text" id="f-anlass" name="anlass" placeholder="Beurs, bruiloft, filmopname …">
             </div>
             <div>
               <label for="f-datum">Datum</label>
@@ -537,7 +540,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         <tr data-day="6"><th scope="row">za</th><td>10.00 – 18.00 uur</td></tr>
         <tr data-day="0"><th scope="row">zo</th><td>12.00 – 17.00 uur</td></tr>
       </table>
-      <p class="form-note">Ook op feestdagen geopend, plus Tweede Paasdag en Tweede Pinksterdag (12.00 – 17.00 uur).</p>
+      <p class="form-note">Ook op feestdagen geopend, plus Tweede Paasdag en Tweede Pinksterdag <span class="nowrap">(12.00 – 17.00 uur)</span>.</p>
     </div>
     <div>
       <h4>Navigatie</h4>
@@ -555,11 +558,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       <ul>
         <li><a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="footer-shop-tickets">Ticketshop</a></li>
         <li><a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="footer-shop-merch">Merchandise-shop</a></li>
-        <li><a href="/sotg-vorschau/nl/gids/">Tentoonstellingsgids (5 talen)</a></li>
+        <li><a href="/sotg-vorschau/nl/gids/">Tentoonstellingsgids (5 talen)</a></li>
         <li><a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener">AR-app SnoopIT</a></li>
         <li><a href="https://www.facebook.com/starsofthegalaxy" target="_blank" rel="noopener" data-event="footer-facebook">Facebook</a></li>
         <li><a href="https://www.instagram.com/starsofthegalaxyde/" target="_blank" rel="noopener" data-event="footer-instagram">Instagram</a></li>
       </ul>
+      <h4 class="partner-title">Partners</h4>
       <div class="partner-row" aria-label="Partners">
         <a class="partner-chip" href="https://www.hephata-mg.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-hephata.webp" alt="Hephata, evangelische stichting" width="490" height="120" loading="lazy"></a>
         <a class="partner-chip" href="http://comet-cine-center.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-comet.webp" alt="Comet Cine Center" width="240" height="94" loading="lazy"></a>

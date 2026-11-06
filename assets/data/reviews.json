@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-06",
   "source": "Google-Bewertungen (manuell übernommen; automatische Aktualisierung siehe /cron/ANLEITUNG.txt)",
-  "rating": 4.8,
+  "rating": 4.9,
   "reviews": [
     {
       "name": "Florian",
@@ -49,5 +49,6 @@
       "rating": 5,
       "text": "Eine unvergessliche Reise. Die Ausstellung hat all meine Erwartungen übertroffen."
     }
-  ]
+  ],
+  "total": 4269
 }
