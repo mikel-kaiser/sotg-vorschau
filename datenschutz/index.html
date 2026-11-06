@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz | Stars of the Galaxy</title>
+<meta name="description" content="Datenschutzerklärung des Museums Stars of the Galaxy: Hosting, Anfrageformulare, Google Maps und YouTube erst nach Klick, externe Shops, deine DSGVO-Rechte.">
+<link rel="canonical" href="/sotg-vorschau/datenschutz/">
+<!-- i18n:hreflang -->
+<link rel="alternate" hreflang="de" href="/sotg-vorschau/datenschutz/">
+<link rel="alternate" hreflang="en" href="/sotg-vorschau/en/privacy/">
+<link rel="alternate" hreflang="nl" href="/sotg-vorschau/nl/privacy/">
+<link rel="alternate" hreflang="fr" href="/sotg-vorschau/fr/confidentialite/">
+<link rel="alternate" hreflang="x-default" href="/sotg-vorschau/datenschutz/">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="fr_FR">
+<!-- /i18n:hreflang -->
+<meta name="robots" content="noindex, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stars of the Galaxy">
+<meta property="og:title" content="Datenschutz | Stars of the Galaxy">
+<meta property="og:description" content="Datenschutzerklärung des Museums Stars of the Galaxy: Hosting, Anfrageformulare, Google Maps und YouTube erst nach Klick, externe Shops, deine DSGVO-Rechte.">
+<meta property="og:url" content="/sotg-vorschau/datenschutz/">
+<meta property="og:image" content="/sotg-vorschau/assets/img/og/og-home.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Datenschutz | Stars of the Galaxy">
+<meta name="twitter:description" content="Datenschutzerklärung des Museums Stars of the Galaxy: Hosting, Anfrageformulare, Google Maps und YouTube erst nach Klick, externe Shops, deine DSGVO-Rechte.">
+<meta name="twitter:image" content="/sotg-vorschau/assets/img/og/og-home.jpg">
+<meta name="theme-color" content="#05060f">
+<link rel="icon" href="/sotg-vorschau/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/sotg-vorschau/apple-touch-icon.png">
+<link rel="preload" href="/sotg-vorschau/assets/fonts/orbitron-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/sotg-vorschau/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Kritisches CSS — identisch auf jeder Seite */
+html{font-size:106.25%}
+:root{--bg-0:#05060f;--ink:#e8e9f0;--amber:#ff8c1f;--amber-ink:#1c1303;--cyan:#4de3ff;--line:rgba(77,227,255,.18)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg-0);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65;overflow-x:hidden}
+#starfield{position:fixed;inset:0;z-index:-2;width:100%;height:100%;background:radial-gradient(120% 90% at 50% 0%,#0a0e1f 0%,#05060f 62%)}
+.site-header{position:sticky;top:0;z-index:200;background:rgba(5,6,15,.72);border-bottom:1px solid rgba(77,227,255,.09)}
+.site-header__bar{display:flex;align-items:center;gap:1.2rem;height:76px}
+.site-header__logo img{height:38px;width:auto;display:block}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 0 .5em}
+.js [data-reveal]{opacity:0;transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none}}
+</style>
+<style>
+/* Seitenspezifisch: schlichte Rechtsseite */
+.legal{max-width:76ch}
+.legal article{margin:0 0 2.75rem}
+.legal h2{font-size:1.3rem}
+.legal ul{padding-left:1.25rem}
+.legal address{font-style:normal;line-height:1.8}
+</style>
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261127">
+<script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
+<script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
+<script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261127"></script>
+</head>
+<body data-page="datenschutz">
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="warp-veil" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="site-header__logo" href="/sotg-vorschau/" aria-label="Zur Startseite von Stars of the Galaxy">
+      <img src="/sotg-vorschau/assets/img/sotg-logo-hell.png" alt="Stars of the Galaxy" width="600" height="100">
+    </a>
+    <span class="status-chip" data-open-status role="status">Öffnungszeiten …</span>
+    <a class="btn btn--primary btn--sm header-cta" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-header">Tickets sichern</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="/sotg-vorschau/ausstellung/">Ausstellung</a>
+      <a href="/sotg-vorschau/tickets/">Tickets</a>
+      <a href="/sotg-vorschau/vermietung/">Vermietung</a>
+      <a href="/sotg-vorschau/geburtstage/galaktische-geburtstage/">Kindergeburtstage</a>
+      <a href="/sotg-vorschau/junggeselleninnen/">JGA-Touren</a>
+      <a href="/sotg-vorschau/kontakt/">Kontakt</a>
+      <!-- i18n:switch --><span class="lang-switch" role="group" aria-label="Sprache wählen"><a href="/sotg-vorschau/datenschutz/" hreflang="de" lang="de" title="Deutsch" aria-current="true" data-event="lang-switch-de"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#000"/><rect y="6.6" width="30" height="6.8" fill="#DD0000"/><rect y="13.3" width="30" height="6.7" fill="#FFCE00"/></svg><span>DE</span></a><a href="/sotg-vorschau/en/privacy/" hreflang="en" lang="en" title="English" data-event="lang-switch-en"><svg class="flag" viewBox="0 0 60 30" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><clipPath id="uk-hen"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#uk-hen)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span>EN</span></a><a href="/sotg-vorschau/nl/privacy/" hreflang="nl" lang="nl" title="Nederlands" data-event="lang-switch-nl"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#AE1C28"/><rect y="6.6" width="30" height="6.8" fill="#fff"/><rect y="13.3" width="30" height="6.7" fill="#21468B"/></svg><span>NL</span></a><a href="/sotg-vorschau/fr/confidentialite/" hreflang="fr" lang="fr" title="Français" data-event="lang-switch-fr"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="10" height="20" fill="#002395"/><rect x="9.9" width="10.2" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg><span>FR</span></a></span><!-- /i18n:switch -->
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section" aria-labelledby="ds-h">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="hud-label">Rechtsdokument · DSGVO</p>
+        <h1 id="ds-h">Datenschutzerklärung</h1>
+        <p class="lead">Die Kurzfassung vorab: Diese Website interessiert sich für die Galaxis, nicht für deine Daten. Kein Tracking, keine Cookies, keine Analyse-Tools. Was trotzdem verarbeitet wird, steht hier. Kurz und ohne Kleingedrucktes im Kleingedruckten.</p>
+      </div>
+      <hr class="divider-beam">
+
+      <div class="legal">
+
+        <article data-reveal aria-labelledby="ds-1">
+          <h2 id="ds-1">1. Verantwortlicher</h2>
+          <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+          <address>
+            Thomas Manglitz<br>
+            Filmfiguren Ausstellung „Stars of the Galaxy“<br>
+            Berliner Platz 10<br>
+            41061 Mönchengladbach<br>
+            Telefon: <a href="tel:+4921614063790">02161 406 37 90</a><br>
+            E-Mail: <a href="mailto:info@starsofthegalaxy.de">info@starsofthegalaxy.de</a>
+          </address>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-2">
+          <h2 id="ds-2">2. Hosting &amp; Server-Logfiles</h2>
+          <p>Diese Website wird gehostet bei der <strong>IONOS SE</strong>, Elgendorfer Str. 57, 56410 Montabaur. Mit dem Hoster besteht ein Vertrag über Auftragsverarbeitung nach Art. 28 DSGVO.</p>
+          <p>Beim Aufruf der Seiten speichert der Server automatisch sogenannte Logfiles. Darin stehen:</p>
+          <ul>
+            <li>die IP-Adresse des aufrufenden Geräts,</li>
+            <li>Datum und Uhrzeit des Abrufs,</li>
+            <li>die aufgerufene Seite,</li>
+            <li>der User-Agent (Browsertyp und Betriebssystem).</li>
+          </ul>
+          <p>Diese Daten brauchen wir, damit die Seite stabil und sicher läuft, etwa um Angriffe zu erkennen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am technisch fehlerfreien Betrieb). Die Logfiles werden gemäß den Speicherfristen des Hosters gelöscht. Eine Zusammenführung mit anderen Daten findet nicht statt.</p>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-3">
+          <h2 id="ds-3">3. Kontakt- und Anfrageformulare</h2>
+          <p>Auf dieser Website gibt es mehrere Formulare: für allgemeine <strong>Kontaktanfragen</strong> sowie für Anfragen zu <strong>Vermietung</strong>, <strong>JGA-Touren</strong> und <strong>Kindergeburtstagen</strong>. Was du dort eingibst (z.&nbsp;B. Name, E-Mail-Adresse, Wunschtermin und deine Nachricht), verarbeiten wir ausschließlich, um deine Anfrage zu bearbeiten und zu beantworten. Die Angaben werden per E-Mail an <a href="mailto:info@starsofthegalaxy.de">info@starsofthegalaxy.de</a> übermittelt.</p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn deine Anfrage auf einen Vertrag zielt (z.&nbsp;B. eine Geburtstags- oder Führungsbuchung), im Übrigen Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Deine Daten geben wir nicht an Dritte weiter. Wir löschen sie nach abschließender Bearbeitung deiner Anfrage, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-4">
+          <h2 id="ds-4">4. Google Maps: Karte erst nach Klick</h2>
+          <p>Auf der Kontaktseite binden wir eine Karte von Google Maps ein, aber erst, <strong>nachdem du sie aktiv per Klick geladen hast</strong>. Vorher wird keine Verbindung zu Google aufgebaut.</p>
+          <p>Mit dem Aktivieren der Karte werden Daten (u.&nbsp;a. deine IP-Adresse) an Google übertragen. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Rechtsgrundlage ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO. Du widerrufst sie mit Wirkung für die Zukunft, indem du die Seite einfach neu lädst. Die Karte bleibt dann wieder deaktiviert, bis du erneut klickst.</p>
+          <p>Mehr dazu in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-event="link-google-privacy">Datenschutzerklärung von Google</a>.</p>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-5">
+          <h2 id="ds-5">5. YouTube-Videos: Video erst nach Klick</h2>
+          <p>Einzelne Videos (z.&nbsp;B. zur AR-App SnoopIT) binden wir über <strong>youtube-nocookie.com</strong> im erweiterten Datenschutzmodus ein. Auch hier gilt: Das Video lädt <strong>erst, nachdem du es per Klick gestartet hast</strong>. Vorher wird keine Verbindung zu YouTube aufgebaut.</p>
+          <p>Mit dem Start eines Videos werden Daten (u.&nbsp;a. deine IP-Adresse) an YouTube bzw. Google übertragen. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Rechtsgrundlage ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO. Sie gilt nur für das Video, das du tatsächlich startest. Mehr dazu in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-event="link-google-privacy-yt">Datenschutzerklärung von Google</a>.</p>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-6" id="cookies">
+          <h2 id="ds-6">6. Cookies &amp; Einwilligung</h2>
+          <p>Beim ersten Besuch fragt dich ein Hinweisfenster, welche Cookies du zulassen möchtest. <strong>Notwendige</strong> Einträge sind immer aktiv: Sie speichern deine Cookie-Auswahl (im Browser-Speicher unter „sotg-cookie-consent-v1“, bleibt auf deinem Gerät) und sorgen per sessionStorage dafür, dass Hinweis-Fenster nicht bei jedem Seitenwechsel erneut aufpoppen. Diese Einträge werden an niemanden übertragen.</p>
+          <p>Cookies der Kategorien <strong>Präferenzen, Statistiken und Marketing</strong> setzen wir nur mit deiner Einwilligung und nur, wenn ein entsprechender Dienst überhaupt eingebunden ist. Derzeit sind auf dieser Website <strong>keine Analyse- oder Werbe-Tools aktiv</strong>; lehnst du ab, bleibt schlicht alles aus. Kommen künftig Dienste wie Google Tag Manager oder das Meta-Pixel hinzu, laden sie ausschließlich nach deiner Zustimmung, und dieser Abschnitt wird entsprechend ergänzt.</p>
+          <p>Deine Auswahl kannst du jederzeit ändern oder widerrufen: über den Link <a href="/sotg-vorschau/datenschutz/#cookies" data-consent-open><strong>„Cookie-Einstellungen“</strong></a> im Footer jeder Seite.</p>
+          <p>Unabhängig davon gilt: Lädst du per Klick die Anfahrtskarte oder ein Video (siehe Abschnitte zu Google Maps und YouTube), kann Google innerhalb des eingebetteten Fensters Cookies setzen. Dein Klick ist dabei die Einwilligung. Vorher passiert nichts.</p>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-7">
+          <h2 id="ds-7">7. Externe Links &amp; Dienste</h2>
+          <p>Einige Angebote laufen über externe Anbieter. Sobald du dorthin wechselst, gelten die Datenschutzhinweise des jeweiligen Anbieters und nicht mehr diese Erklärung:</p>
+          <ul>
+            <li><strong>Ticket- und Merch-Shop</strong> (<a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="link-ds-shop-tickets">Ticket-Shop</a>, <a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="link-ds-shop-merch">Merch-Shop</a>): betrieben über die Plattform Shopify. Siehe die <a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noopener" data-event="link-shopify-privacy">Datenschutzerklärung von Shopify</a>.</li>
+            <li><strong>Digitaler Ausstellungs-Führer</strong> (in fünf Sprachen, unter /fuehrer/): wird als Einbettung von Adobe Express direkt auf unserer Seite angezeigt. Die Einbettung lädt erst, wenn du eine Sprache anklickst. Dein Klick ist dabei die Einwilligung. Ab dann kann Adobe innerhalb des eingebetteten Fensters Cookies setzen (wie bei Google Maps und YouTube oben). Siehe die <a href="https://www.adobe.com/de/privacy/policy.html" target="_blank" rel="noopener" data-event="link-adobe-privacy">Datenschutzrichtlinie von Adobe</a>.</li>
+            <li><strong>AR-App „SnoopIT“</strong> (<a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener" data-event="link-ds-snoopit">Download-Link</a>): ein Angebot eines Drittanbieters. Es gelten die Datenschutzhinweise der App bzw. des jeweiligen App-Stores.</li>
+          </ul>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-8">
+          <h2 id="ds-8">8. Deine Rechte</h2>
+          <p>Dir stehen nach der DSGVO folgende Rechte zu, für die eine formlose E-Mail an <a href="mailto:info@starsofthegalaxy.de">info@starsofthegalaxy.de</a> genügt:</p>
+          <ul>
+            <li><strong>Auskunft</strong> über deine gespeicherten Daten (Art. 15 DSGVO),</li>
+            <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO),</li>
+            <li><strong>Löschung</strong> (Art. 17 DSGVO),</li>
+            <li><strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO),</li>
+            <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO),</li>
+            <li><strong>Widerspruch</strong> gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO),</li>
+            <li><strong>Widerruf</strong> erteilter Einwilligungen mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO), etwa für die per Klick geladene Karte oder Videos.</li>
+          </ul>
+          <p>Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig für uns ist die <strong>Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)</strong>, Kavalleriestraße 2–4, 40213 Düsseldorf, <a href="https://www.ldi.nrw.de/" target="_blank" rel="noopener" data-event="link-ldi-nrw">www.ldi.nrw.de</a>.</p>
+        </article>
+
+        <article data-reveal aria-labelledby="ds-9">
+          <h2 id="ds-9">9. Stand dieser Erklärung</h2>
+          <p>Stand: November 2026. Ändert sich die Rechtslage oder die Website, passen wir diese Erklärung an. Die jeweils aktuelle Fassung findest du immer hier.</p>
+        </article>
+
+        <p data-reveal><a class="btn btn--ghost" href="/sotg-vorschau/">Zurück zur Startseite</a></p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div>
+      <h4>Basis-Station</h4>
+      <address>
+        Stars of the Galaxy<br>
+        Berliner Platz 10<br>
+        41061 Mönchengladbach<br>
+        <a href="tel:+4921614063790">02161 406 37 90</a><br>
+        <a href="mailto:info@starsofthegalaxy.de">info@starsofthegalaxy.de</a>
+      </address>
+    </div>
+    <div>
+      <h4>Öffnungszeiten</h4>
+      <table class="info-table">
+        <tr data-day="4"><th scope="row">Do</th><td>12 – 18 Uhr</td></tr>
+        <tr data-day="5"><th scope="row">Fr</th><td>12 – 18 Uhr</td></tr>
+        <tr data-day="6"><th scope="row">Sa</th><td>10 – 18 Uhr</td></tr>
+        <tr data-day="0"><th scope="row">So</th><td>12 – 17 Uhr</td></tr>
+      </table>
+      <p class="form-note">Auch an Feiertagen geöffnet, zusätzlich Ostermontag und Pfingstmontag (12 – 17 Uhr).</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/sotg-vorschau/ausstellung/">Ausstellung</a></li>
+        <li><a href="/sotg-vorschau/tickets/">Tickets</a></li>
+        <li><a href="/sotg-vorschau/vermietung/">Vermietung</a></li>
+        <li><a href="/sotg-vorschau/geburtstage/galaktische-geburtstage/">Kindergeburtstage</a></li>
+        <li><a href="/sotg-vorschau/junggeselleninnen/">JGA-Touren</a></li>
+        <li><a href="/sotg-vorschau/kontakt/">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Extern</h4>
+      <ul>
+        <li><a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="footer-shop-tickets">Ticket-Shop</a></li>
+        <li><a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="footer-shop-merch">Merch-Shop</a></li>
+        <li><a href="/sotg-vorschau/fuehrer/">Ausstellungs-Führer (5 Sprachen)</a></li>
+        <li><a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener">AR-App SnoopIT</a></li>
+        <li><a href="https://www.facebook.com/starsofthegalaxy" target="_blank" rel="noopener" data-event="footer-facebook">Facebook</a></li>
+        <li><a href="https://www.instagram.com/starsofthegalaxyde/" target="_blank" rel="noopener" data-event="footer-instagram">Instagram</a></li>
+      </ul>
+      <div class="partner-row" aria-label="Partner">
+        <a class="partner-chip" href="https://www.hephata-mg.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-hephata.webp" alt="Hephata Evangelische Stiftung" width="490" height="120" loading="lazy"></a>
+        <a class="partner-chip" href="http://comet-cine-center.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-comet.webp" alt="Comet Cine Center" width="240" height="94" loading="lazy"></a>
+        <a class="partner-chip" href="https://steinedorf.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-steinedorf.webp" alt="Steinedorf Toys &amp; Collectibles" width="360" height="259" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap site-footer__legal">
+    <!-- i18n:footer-langs --><nav class="footer-langs" aria-label="Sprache"><a href="/sotg-vorschau/datenschutz/" hreflang="de" lang="de" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#000"/><rect y="6.6" width="30" height="6.8" fill="#DD0000"/><rect y="13.3" width="30" height="6.7" fill="#FFCE00"/></svg><span>Deutsch</span></a><a href="/sotg-vorschau/en/privacy/" hreflang="en" lang="en"><svg class="flag" viewBox="0 0 60 30" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><clipPath id="uk-fen"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#uk-fen)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span>English</span></a><a href="/sotg-vorschau/nl/privacy/" hreflang="nl" lang="nl"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#AE1C28"/><rect y="6.6" width="30" height="6.8" fill="#fff"/><rect y="13.3" width="30" height="6.7" fill="#21468B"/></svg><span>Nederlands</span></a><a href="/sotg-vorschau/fr/confidentialite/" hreflang="fr" lang="fr"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="10" height="20" fill="#002395"/><rect x="9.9" width="10.2" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg><span>Français</span></a></nav><!-- /i18n:footer-langs -->
+    <nav aria-label="Rechtliches">
+      <a href="/sotg-vorschau/impressum/">Impressum</a>
+      <a href="/sotg-vorschau/datenschutz/" aria-current="page">Datenschutz</a>
+      <a href="/sotg-vorschau/datenschutz/#cookies" data-consent-open>Cookie-Einstellungen</a>
+    </nav>
+    <p class="disclaimer">Stars of the Galaxy ist ein unabhängiges, privat betriebenes Museum und steht in keiner Verbindung zu Lucasfilm Ltd. oder The Walt Disney Company. Alle genannten Marken sind Eigentum ihrer jeweiligen Inhaber.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn--primary" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-sticky">Tickets sichern</a>
+</div>
+
+<script>document.addEventListener("submit",function(e){var f=e.target;if(!f||f.tagName!=="FORM")return;e.preventDefault();e.stopImmediatePropagation();var o=f.parentNode.querySelector(".transmission");if(o)o.remove();var d=document.createElement("div");d.className="transmission";d.setAttribute("role","status");d.innerHTML="<strong>&gt;&gt; Vorschau_</strong>"+"Diese Anfrage wurde nicht verschickt. Auf der fertigen Seite landet sie direkt bei euch im Postfach.";f.parentNode.insertBefore(d,f);d.scrollIntoView({block:"center"});},true);</script>
+</body>
+</html>

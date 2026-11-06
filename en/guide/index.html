@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exhibition Guide in 5 Languages | Stars of the Galaxy</title>
+<meta name="description" content="The digital exhibition guide to Stars of the Galaxy, the sci-fi museum in Mönchengladbach. Read it right here in German, English, French, Dutch or Polish.">
+<link rel="canonical" href="/sotg-vorschau/en/guide/">
+<!-- i18n:hreflang -->
+<link rel="alternate" hreflang="de" href="/sotg-vorschau/fuehrer/">
+<link rel="alternate" hreflang="en" href="/sotg-vorschau/en/guide/">
+<link rel="alternate" hreflang="nl" href="/sotg-vorschau/nl/gids/">
+<link rel="alternate" hreflang="fr" href="/sotg-vorschau/fr/guide/">
+<link rel="alternate" hreflang="x-default" href="/sotg-vorschau/fuehrer/">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="fr_FR">
+<!-- /i18n:hreflang -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stars of the Galaxy">
+<meta property="og:title" content="Exhibition Guide in 5 Languages | Stars of the Galaxy">
+<meta property="og:description" content="Read the digital exhibition guide right here on the website, in five languages.">
+<meta property="og:url" content="/sotg-vorschau/en/guide/">
+<meta property="og:image" content="/sotg-vorschau/assets/img/og/og-ausstellung.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Exhibition Guide in 5 Languages | Stars of the Galaxy">
+<meta name="twitter:description" content="Read the digital exhibition guide right here on the website.">
+<meta name="twitter:image" content="/sotg-vorschau/assets/img/og/og-ausstellung.jpg">
+<meta name="theme-color" content="#05060f">
+<link rel="icon" href="/sotg-vorschau/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/sotg-vorschau/apple-touch-icon.png">
+<link rel="preload" href="/sotg-vorschau/assets/fonts/orbitron-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/sotg-vorschau/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Kritisches CSS — identisch auf jeder Seite */
+html{font-size:106.25%}
+:root{--bg-0:#05060f;--ink:#e8e9f0;--amber:#ff8c1f;--amber-ink:#1c1303;--cyan:#4de3ff;--line:rgba(77,227,255,.18)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg-0);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65;overflow-x:hidden}
+#starfield{position:fixed;inset:0;z-index:-2;width:100%;height:100%;background:radial-gradient(120% 90% at 50% 0%,#0a0e1f 0%,#05060f 62%)}
+.site-header{position:sticky;top:0;z-index:200;background:rgba(5,6,15,.72);border-bottom:1px solid rgba(77,227,255,.09)}
+.site-header__bar{display:flex;align-items:center;gap:1.2rem;height:76px}
+.site-header__logo img{height:38px;width:auto;display:block}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 0 .5em}
+.js [data-reveal]{opacity:0;transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){.js [data-reveal]{opacity:1;transform:none}}
+</style>
+<style>
+/* Seitenspezifisch: Führer-Einbettung */
+.guide-frame {
+  position: relative; width: 100%;
+  height: clamp(560px, calc(100svh - 170px), 1100px);
+  border: 1px solid var(--line); clip-path: var(--bevel);
+  background: var(--glass-solid);
+}
+.guide-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.guide-frame__empty {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  text-align: center; color: var(--ink-dim); padding: 2rem;
+}
+.guide-tabs { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.2rem; }
+.guide-tabs .btn[aria-pressed="true"] { background: var(--amber); color: var(--amber-ink); box-shadow: none; }
+</style>
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261127">
+<script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
+<script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
+<script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261127"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261127"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Museum","name":"Stars of the Galaxy",
+"url":"https://www.starsofthegalaxy.de/en/guide/","telephone":"+49 2161 4063790",
+"address":{"@type":"PostalAddress","streetAddress":"Berliner Platz 10","postalCode":"41061","addressLocality":"Mönchengladbach","addressCountry":"DE"},
+"geo":{"@type":"GeoCoordinates","latitude":51.191813,"longitude":6.4393425}}
+</script>
+</head>
+<body data-page="fuehrer">
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="warp-veil" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="site-header__logo" href="/sotg-vorschau/en/" aria-label="Stars of the Galaxy home page">
+      <img src="/sotg-vorschau/assets/img/sotg-logo-hell.png" alt="Stars of the Galaxy" width="600" height="100">
+    </a>
+    <span class="status-chip" data-open-status role="status">Opening hours …</span>
+    <a class="btn btn--primary btn--sm header-cta" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-header">Get tickets</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/sotg-vorschau/en/exhibition/">Exhibition</a>
+      <a href="/sotg-vorschau/en/tickets/">Tickets</a>
+      <a href="/sotg-vorschau/en/prop-rental/">Prop Rental</a>
+      <a href="/sotg-vorschau/en/birthday-parties/">Kids’ Birthdays</a>
+      <a href="/sotg-vorschau/en/hen-and-stag-parties/">Hen &amp; Stag</a>
+      <a href="/sotg-vorschau/en/contact/">Contact</a>
+      <!-- i18n:switch --><span class="lang-switch" role="group" aria-label="Choose language"><a href="/sotg-vorschau/fuehrer/" hreflang="de" lang="de" title="Deutsch" data-event="lang-switch-de"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#000"/><rect y="6.6" width="30" height="6.8" fill="#DD0000"/><rect y="13.3" width="30" height="6.7" fill="#FFCE00"/></svg><span>DE</span></a><a href="/sotg-vorschau/en/guide/" hreflang="en" lang="en" title="English" aria-current="true" data-event="lang-switch-en"><svg class="flag" viewBox="0 0 60 30" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><clipPath id="uk-hen"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#uk-hen)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span>EN</span></a><a href="/sotg-vorschau/nl/gids/" hreflang="nl" lang="nl" title="Nederlands" data-event="lang-switch-nl"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#AE1C28"/><rect y="6.6" width="30" height="6.8" fill="#fff"/><rect y="13.3" width="30" height="6.7" fill="#21468B"/></svg><span>NL</span></a><a href="/sotg-vorschau/fr/guide/" hreflang="fr" lang="fr" title="Français" data-event="lang-switch-fr"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="10" height="20" fill="#002395"/><rect x="9.9" width="10.2" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg><span>FR</span></a></span><!-- /i18n:switch -->
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--tight" style="padding-top:3.2rem">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="hud-label">Onboard computer · Knowledge base</p>
+        <h1>The exhibition guide</h1>
+        <p class="lead">Every highlight of the exhibition to read at your leisure, right here on this page and in five languages. Pick your language and the guide loads instantly.</p>
+      </div>
+      <hr class="divider-beam">
+
+      <div class="guide-tabs" role="group" aria-label="Choose the language of the exhibition guide">
+        <button class="btn btn--ghost btn--sm" type="button" data-guide="https://new.express.adobe.com/webpage/7eEiXQ19ZUHnl" data-lang="de" lang="de" aria-pressed="false">Deutsch</button>
+        <button class="btn btn--ghost btn--sm" type="button" data-guide="https://new.express.adobe.com/webpage/lhaNVkS4EqsWr" data-lang="en" lang="en" aria-pressed="false">English</button>
+        <button class="btn btn--ghost btn--sm" type="button" data-guide="https://new.express.adobe.com/webpage/6gKl4LnBdeJsc" data-lang="fr" lang="fr" aria-pressed="false">Français</button>
+        <button class="btn btn--ghost btn--sm" type="button" data-guide="https://new.express.adobe.com/webpage/ACrqx7Ofu2az4" data-lang="nl" lang="nl" aria-pressed="false">Nederlands</button>
+        <button class="btn btn--ghost btn--sm" type="button" data-guide="https://new.express.adobe.com/webpage/VZzqmsOAFL8gG" data-lang="pl" lang="pl" aria-pressed="false">Polski</button>
+      </div>
+
+      <div class="guide-frame" data-reveal>
+        <div class="guide-frame__empty" id="guide-empty">
+          <p><strong style="color:var(--ink)">Choose a language, read the guide.</strong><br>
+          The content is only loaded from Adobe Express once you select a language.</p>
+        </div>
+      </div>
+      <p class="form-note" style="margin-top:.9rem">Prefer a separate window? <a id="guide-extern" href="https://new.express.adobe.com/webpage/lhaNVkS4EqsWr" target="_blank" rel="noopener">Open the guide in its own window</a>. Loading the guide transfers data to Adobe.</p>
+    </div>
+  </section>
+
+  <!-- ===== Abschluss-CTA ===== -->
+  <section class="cta-final">
+    <div class="wrap" data-reveal>
+      <p class="hud-label" style="justify-content:center">Done reading?</p>
+      <h2>It’s all even better in real life.</h2>
+      <a class="btn btn--primary" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-final">Get tickets</a>
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    'use strict';
+    var frame = document.querySelector('.guide-frame');
+    var empty = document.getElementById('guide-empty');
+    var extern = document.getElementById('guide-extern');
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.guide-tabs [data-guide]'));
+    var iframe = null;
+    function load(btn) {
+      var url = btn.getAttribute('data-guide');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.title = 'Digital exhibition guide';
+        iframe.loading = 'lazy';
+        frame.appendChild(iframe);
+      }
+      iframe.src = url;
+      if (empty) { empty.remove(); empty = null; }
+      if (extern) extern.href = url;
+      tabs.forEach(function (t) { t.setAttribute('aria-pressed', t === btn ? 'true' : 'false'); });
+      try { history.replaceState(null, '', '?lang=' + btn.getAttribute('data-lang')); } catch (e) {}
+      frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    tabs.forEach(function (t) { t.addEventListener('click', function () { load(t); }); });
+    var m = /[?&]lang=(de|en|fr|nl|pl)/.exec(location.search);
+    if (m) {
+      var pre = tabs.filter(function (t) { return t.getAttribute('data-lang') === m[1]; })[0];
+      if (pre) load(pre);
+    }
+  })();
+  </script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div>
+      <h4>Home base</h4>
+      <address>
+        Stars of the Galaxy<br>
+        Berliner Platz 10<br>
+        41061 Mönchengladbach, Germany<br>
+        <a href="tel:+4921614063790">+49 2161 406 37 90</a><br>
+        <a href="mailto:info@starsofthegalaxy.de">info@starsofthegalaxy.de</a>
+      </address>
+    </div>
+    <div>
+      <h4>Opening hours</h4>
+      <table class="info-table">
+        <tr data-day="4"><th scope="row">Thu</th><td>12:00 – 18:00</td></tr>
+        <tr data-day="5"><th scope="row">Fri</th><td>12:00 – 18:00</td></tr>
+        <tr data-day="6"><th scope="row">Sat</th><td>10:00 – 18:00</td></tr>
+        <tr data-day="0"><th scope="row">Sun</th><td>12:00 – 17:00</td></tr>
+      </table>
+      <p class="form-note">Open on public holidays too, plus Easter Monday and Whit Monday (12:00 – 17:00).</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/sotg-vorschau/en/exhibition/">Exhibition</a></li>
+        <li><a href="/sotg-vorschau/en/tickets/">Tickets</a></li>
+        <li><a href="/sotg-vorschau/en/prop-rental/">Prop Rental</a></li>
+        <li><a href="/sotg-vorschau/en/birthday-parties/">Kids’ Birthday Parties</a></li>
+        <li><a href="/sotg-vorschau/en/hen-and-stag-parties/">Hen &amp; Stag Parties</a></li>
+        <li><a href="/sotg-vorschau/en/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>More</h4>
+      <ul>
+        <li><a href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="footer-shop-tickets">Ticket shop</a></li>
+        <li><a href="https://shop.starsofthegalaxy.de/collections/stobern" target="_blank" rel="noopener" data-event="footer-shop-merch">Merch shop</a></li>
+        <li><a href="/sotg-vorschau/en/guide/">Exhibition guide (5 languages)</a></li>
+        <li><a href="https://l.ead.me/snoopstarapp" target="_blank" rel="noopener">AR app SnoopIT</a></li>
+        <li><a href="https://www.facebook.com/starsofthegalaxy" target="_blank" rel="noopener" data-event="footer-facebook">Facebook</a></li>
+        <li><a href="https://www.instagram.com/starsofthegalaxyde/" target="_blank" rel="noopener" data-event="footer-instagram">Instagram</a></li>
+      </ul>
+      <div class="partner-row" aria-label="Partners">
+        <a class="partner-chip" href="https://www.hephata-mg.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-hephata.webp" alt="Hephata, a Protestant foundation" width="490" height="120" loading="lazy"></a>
+        <a class="partner-chip" href="http://comet-cine-center.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-comet.webp" alt="Comet Cine Center" width="240" height="94" loading="lazy"></a>
+        <a class="partner-chip" href="https://steinedorf.de/" target="_blank" rel="noopener"><img src="/sotg-vorschau/assets/img/partner-steinedorf.webp" alt="Steinedorf Toys &amp; Collectibles" width="360" height="259" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap site-footer__legal">
+    <!-- i18n:footer-langs --><nav class="footer-langs" aria-label="Language"><a href="/sotg-vorschau/fuehrer/" hreflang="de" lang="de"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#000"/><rect y="6.6" width="30" height="6.8" fill="#DD0000"/><rect y="13.3" width="30" height="6.7" fill="#FFCE00"/></svg><span>Deutsch</span></a><a href="/sotg-vorschau/en/guide/" hreflang="en" lang="en" aria-current="true"><svg class="flag" viewBox="0 0 60 30" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><clipPath id="uk-fen"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#uk-fen)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span>English</span></a><a href="/sotg-vorschau/nl/gids/" hreflang="nl" lang="nl"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="30" height="7" fill="#AE1C28"/><rect y="6.6" width="30" height="6.8" fill="#fff"/><rect y="13.3" width="30" height="6.7" fill="#21468B"/></svg><span>Nederlands</span></a><a href="/sotg-vorschau/fr/guide/" hreflang="fr" lang="fr"><svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false" preserveAspectRatio="none"><rect width="10" height="20" fill="#002395"/><rect x="9.9" width="10.2" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg><span>Français</span></a></nav><!-- /i18n:footer-langs -->
+    <nav aria-label="Legal">
+      <a href="/sotg-vorschau/en/legal-notice/">Legal notice</a>
+      <a href="/sotg-vorschau/en/privacy/">Privacy</a>
+      <a href="/sotg-vorschau/en/privacy/#cookies" data-consent-open>Cookie settings</a>
+    </nav>
+    <p class="disclaimer">Stars of the Galaxy is an independent, privately run museum and is not affiliated with Lucasfilm Ltd. or The Walt Disney Company. All trademarks mentioned are the property of their respective owners.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn--primary" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-sticky">Get tickets</a>
+</div>
+
+<script>document.addEventListener("submit",function(e){var f=e.target;if(!f||f.tagName!=="FORM")return;e.preventDefault();e.stopImmediatePropagation();var o=f.parentNode.querySelector(".transmission");if(o)o.remove();var d=document.createElement("div");d.className="transmission";d.setAttribute("role","status");d.innerHTML="<strong>&gt;&gt; Preview_</strong>"+"This request was not sent. On the live site it goes straight to the museum inbox.";f.parentNode.insertBefore(d,f);d.scrollIntoView({block:"center"});},true);</script>
+</body>
+</html>

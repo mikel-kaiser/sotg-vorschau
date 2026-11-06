@@ -1,0 +1,2874 @@
+{
+ "version": 1,
+ "greeting": {
+  "de": "Piep, piep! Ich bin Kenny, der Roboter-Butler von Stars of the Galaxy. Frag mich alles rund um deinen Besuch, zum Beispiel nach Öffnungszeiten, Tickets oder Kindergeburtstagen.",
+  "en": "Beep, beep! I'm Kenny, the robot butler of Stars of the Galaxy. Ask me anything about your visit, such as opening hours, tickets or kids' birthday parties.",
+  "nl": "Piep, piep! Ik ben Kenny, de robotbutler van Stars of the Galaxy. Vraag me alles over je bezoek, bijvoorbeeld over openingstijden, tickets of kinderfeestjes.",
+  "fr": "Bip, bip ! Je suis Kenny, le robot majordome de Stars of the Galaxy. Posez-moi vos questions sur votre visite : horaires, billets ou anniversaires d’enfants."
+ },
+ "fallback": {
+  "de": "Hm, dazu finde ich in meinen Datenbanken leider nichts. Ruf das Team gern an unter +49 2161 406 37 90 oder schreib uns über die Kontaktseite.",
+  "en": "Hmm, I can't find anything about that in my data banks. Feel free to call the team on +49 2161 406 37 90 or write to us via the contact page.",
+  "nl": "Hm, daarover vind ik helaas niets in mijn databanken. Bel het team gerust op +49 2161 406 37 90 of stuur ons een bericht via de contactpagina.",
+  "fr": "Hum, je ne trouve rien à ce sujet dans mes banques de données. N’hésitez pas à appeler l’équipe au +49 2161 406 37 90 ou à nous écrire via la page contact."
+ },
+ "suggestions": [
+  "oeffnungszeiten",
+  "feiertage",
+  "preise",
+  "geburtstag-pakete",
+  "adresse"
+ ],
+ "items": [
+  {
+   "id": "oeffnungszeiten",
+   "q": {
+    "de": "Wann habt ihr geöffnet?",
+    "en": "When are you open?",
+    "nl": "Wanneer zijn jullie open?",
+    "fr": "Quels sont vos horaires ?"
+   },
+   "keywords": {
+    "de": [
+     "öffnungszeiten",
+     "oeffnungszeiten",
+     "offnungszeiten",
+     "geöffnet",
+     "geoeffnet",
+     "offen",
+     "wann",
+     "uhrzeit",
+     "heute",
+     "montag",
+     "dienstag",
+     "mittwoch",
+     "geschlossen"
+    ],
+    "en": [
+     "opening hours",
+     "opening times",
+     "open",
+     "opening",
+     "hours",
+     "when",
+     "today",
+     "closed",
+     "monday",
+     "tuesday",
+     "wednesday",
+     "times",
+     "oppening"
+    ],
+    "nl": [
+     "openingstijden",
+     "openingsuren",
+     "open",
+     "geopend",
+     "wanneer",
+     "vandaag",
+     "gesloten",
+     "dicht",
+     "maandag",
+     "dinsdag",
+     "woensdag",
+     "tijden"
+    ],
+    "fr": [
+     "horaires",
+     "horaire",
+     "ouvert",
+     "ouverture",
+     "heures",
+     "quand",
+     "aujourd'hui",
+     "fermé",
+     "ferme",
+     "lundi",
+     "mardi",
+     "mercredi"
+    ]
+   },
+   "a": {
+    "de": "Wir haben Do und Fr 12–18 Uhr, Sa 10–18 Uhr und So 12–17 Uhr geöffnet. Montag bis Mittwoch bleibt die Schleuse zu.\nOb gerade offen ist, zeigt dir der Öffnungsstatus oben auf der Seite.",
+    "en": "We're open Thu and Fri 12:00–18:00, Sat 10:00–18:00 and Sun 12:00–17:00. Monday to Wednesday the airlock stays shut.\nWhether we're open right now is shown in the opening status at the top of the page.",
+    "nl": "We zijn open op do en vr 12.00–18.00 uur, za 10.00–18.00 uur en zo 12.00–17.00 uur. Van maandag tot en met woensdag blijft de sluis dicht.\nOf we nu open zijn, zie je aan de openingsstatus bovenaan de pagina.",
+    "fr": "Nous sommes ouverts le jeudi et le vendredi de 12 h à 18 h, le samedi de 10 h à 18 h et le dimanche de 12 h à 17 h. Du lundi au mercredi, le sas reste fermé.\nLe statut d’ouverture en haut de la page vous indique si nous sommes ouverts en ce moment."
+   },
+   "link": {
+    "de": "/sotg-vorschau/tickets/#zeiten",
+    "en": "/sotg-vorschau/en/tickets/#zeiten",
+    "nl": "/sotg-vorschau/nl/tickets/#zeiten",
+    "fr": "/sotg-vorschau/fr/billets/#zeiten"
+   },
+   "linkText": {
+    "de": "Öffnungszeiten & Anfahrt",
+    "en": "Opening hours & directions",
+    "nl": "Openingstijden & route",
+    "fr": "Horaires et accès"
+   }
+  },
+  {
+   "id": "feiertage",
+   "q": {
+    "de": "Habt ihr auch an Feiertagen geöffnet?",
+    "en": "Are you open on public holidays?",
+    "nl": "Zijn jullie ook op feestdagen open?",
+    "fr": "Êtes-vous ouverts les jours fériés ?"
+   },
+   "keywords": {
+    "de": [
+     "feiertag",
+     "feiertage",
+     "feiertagen",
+     "ostermontag",
+     "pfingstmontag",
+     "ostern",
+     "pfingsten",
+     "karfreitag",
+     "himmelfahrt",
+     "allerheiligen",
+     "fronleichnam",
+     "brückentag",
+     "feirtag"
+    ],
+    "en": [
+     "public holiday",
+     "bank holiday",
+     "holiday",
+     "holidays",
+     "easter",
+     "easter monday",
+     "whit monday",
+     "whitsun",
+     "pentecost",
+     "good friday",
+     "ascension",
+     "all saints"
+    ],
+    "nl": [
+     "feestdag",
+     "feestdagen",
+     "pasen",
+     "tweede paasdag",
+     "paasmaandag",
+     "pinksteren",
+     "tweede pinksterdag",
+     "pinkstermaandag",
+     "goede vrijdag",
+     "hemelvaart",
+     "hemelvaartsdag",
+     "allerheiligen"
+    ],
+    "fr": [
+     "jour férié",
+     "jours fériés",
+     "ferie",
+     "férié",
+     "pâques",
+     "paques",
+     "lundi de pâques",
+     "pentecôte",
+     "pentecote",
+     "vendredi saint",
+     "ascension",
+     "toussaint"
+    ]
+   },
+   "a": {
+    "de": "Ja! Donnerstag bis Sonntag haben wir auch an Feiertagen geöffnet, zum Beispiel an Karfreitag, Christi Himmelfahrt oder Allerheiligen.\nZusätzlich sind wir am Ostermontag und Pfingstmontag von 12–17 Uhr für dich da.",
+    "en": "Yes! Thursday to Sunday we're open on public holidays too, for example Good Friday, Ascension Day or All Saints' Day.\nWe're also open on Easter Monday and Whit Monday, 12:00–17:00.",
+    "nl": "Ja! Van donderdag tot en met zondag zijn we ook op feestdagen open, bijvoorbeeld op Goede Vrijdag, Hemelvaartsdag of Allerheiligen.\nDaarnaast zijn we op Tweede Paasdag en Tweede Pinksterdag open van 12.00–17.00 uur.",
+    "fr": "Oui ! Du jeudi au dimanche, nous sommes aussi ouverts les jours fériés, par exemple le Vendredi saint, l’Ascension ou la Toussaint.\nNous ouvrons en plus le lundi de Pâques et le lundi de Pentecôte, de 12 h à 17 h."
+   },
+   "link": {
+    "de": "/sotg-vorschau/tickets/#zeiten",
+    "en": "/sotg-vorschau/en/tickets/#zeiten",
+    "nl": "/sotg-vorschau/nl/tickets/#zeiten",
+    "fr": "/sotg-vorschau/fr/billets/#zeiten"
+   },
+   "linkText": {
+    "de": "Öffnungszeiten ansehen",
+    "en": "See opening hours",
+    "nl": "Bekijk de openingstijden",
+    "fr": "Voir les horaires"
+   }
+  },
+  {
+   "id": "weihnachten",
+   "q": {
+    "de": "Habt ihr über Weihnachten geöffnet?",
+    "en": "Are you open over Christmas?",
+    "nl": "Zijn jullie open rond kerst?",
+    "fr": "Êtes-vous ouverts à Noël ?"
+   },
+   "keywords": {
+    "de": [
+     "weihnachten",
+     "weihnachtspause",
+     "weihnachtsferien",
+     "heiligabend",
+     "silvester",
+     "neujahr",
+     "zwischen den jahren",
+     "jahreswechsel",
+     "winterpause",
+     "pause",
+     "betriebsferien",
+     "weihnachen"
+    ],
+    "en": [
+     "christmas",
+     "xmas",
+     "christmas break",
+     "christmas eve",
+     "boxing day",
+     "new year",
+     "new year's eve",
+     "winter break",
+     "break",
+     "closed for christmas"
+    ],
+    "nl": [
+     "kerst",
+     "kerstmis",
+     "kerstvakantie",
+     "kerstavond",
+     "oud en nieuw",
+     "oudjaar",
+     "nieuwjaar",
+     "winterstop",
+     "pauze",
+     "tweede kerstdag"
+    ],
+    "fr": [
+     "noël",
+     "noel",
+     "vacances de noël",
+     "réveillon",
+     "reveillon",
+     "nouvel an",
+     "jour de l'an",
+     "saint-sylvestre",
+     "pause",
+     "fêtes de fin d'année",
+     "fin d'annee"
+    ]
+   },
+   "a": {
+    "de": "Über Weihnachten machen wir eine kurze Pause. Die genauen Tage zeigt dir der Öffnungsstatus oben auf der Seite.",
+    "en": "We take a short break over Christmas. The exact dates are shown in the opening status at the top of the page.",
+    "nl": "Rond kerst nemen we een korte pauze. De precieze dagen zie je aan de openingsstatus bovenaan de pagina.",
+    "fr": "Nous faisons une courte pause pendant les fêtes de Noël. Les dates exactes sont indiquées dans le statut d’ouverture en haut de la page."
+   }
+  },
+  {
+   "id": "preise",
+   "q": {
+    "de": "Was kosten die Tickets?",
+    "en": "How much are tickets?",
+    "nl": "Wat kosten de tickets?",
+    "fr": "Combien coûtent les billets ?"
+   },
+   "keywords": {
+    "de": [
+     "preis",
+     "preise",
+     "kosten",
+     "kostet",
+     "eintritt",
+     "eintrittspreis",
+     "ticketpreis",
+     "tickets",
+     "ticket",
+     "karte",
+     "erwachsene",
+     "kinderpreis",
+     "wie viel",
+     "wieviel",
+     "euro"
+    ],
+    "en": [
+     "price",
+     "prices",
+     "cost",
+     "how much",
+     "admission",
+     "entry",
+     "entrance fee",
+     "ticket",
+     "tickets",
+     "adult",
+     "child price",
+     "fee",
+     "euro",
+     "pricing"
+    ],
+    "nl": [
+     "prijs",
+     "prijzen",
+     "kosten",
+     "kost",
+     "hoeveel",
+     "entree",
+     "toegang",
+     "entreeprijs",
+     "ticket",
+     "tickets",
+     "kaartje",
+     "volwassene",
+     "kinderprijs",
+     "euro"
+    ],
+    "fr": [
+     "prix",
+     "tarif",
+     "tarifs",
+     "combien",
+     "coût",
+     "cout",
+     "entrée",
+     "entree",
+     "billet",
+     "billets",
+     "ticket",
+     "adulte",
+     "prix enfant",
+     "euro"
+    ]
+   },
+   "a": {
+    "de": "Kinder (3–15 Jahre) zahlen 12 €, Erwachsene 18 €, die Familienkarte kostet 50 €. Ermäßigt zahlst du 8 € (Kinder) bzw. 14 € (Erwachsene).\nJedes Ticket gilt für die komplette Ausstellung.",
+    "en": "Children (3–15) are €12, adults €18 and the family ticket is €50. Concessions are €8 (children) or €14 (adults).\nEvery ticket covers the entire exhibition.",
+    "nl": "Kinderen (3–15 jaar) betalen € 12, volwassenen € 18 en het gezinsticket kost € 50. Met korting betaal je € 8 (kinderen) of € 14 (volwassenen).\nElk ticket geldt voor de hele tentoonstelling.",
+    "fr": "Enfants (3 à 15 ans) : 12 €, adultes : 18 €, billet famille : 50 €. Le tarif réduit est de 8 € (enfants) ou 14 € (adultes).\nChaque billet donne accès à toute l’exposition."
+   },
+   "link": {
+    "de": "/sotg-vorschau/tickets/#preise",
+    "en": "/sotg-vorschau/en/tickets/#preise",
+    "nl": "/sotg-vorschau/nl/tickets/#preise",
+    "fr": "/sotg-vorschau/fr/billets/#preise"
+   },
+   "linkText": {
+    "de": "Alle Preise ansehen",
+    "en": "See all prices",
+    "nl": "Bekijk alle prijzen",
+    "fr": "Voir tous les tarifs"
+   }
+  },
+  {
+   "id": "familienkarte",
+   "q": {
+    "de": "Wer kann die Familienkarte nutzen?",
+    "en": "Who can use the family ticket?",
+    "nl": "Wie kan het gezinsticket gebruiken?",
+    "fr": "Qui peut utiliser le billet famille ?"
+   },
+   "keywords": {
+    "de": [
+     "familienkarte",
+     "familie",
+     "familienticket",
+     "familien",
+     "gruppenticket",
+     "gruppe",
+     "gruppen",
+     "freunde",
+     "nachbarn",
+     "zwei erwachsene",
+     "2 erwachsene",
+     "oma",
+     "opa",
+     "familenkarte"
+    ],
+    "en": [
+     "family ticket",
+     "family",
+     "families",
+     "group ticket",
+     "group",
+     "groups",
+     "friends",
+     "neighbours",
+     "two adults",
+     "2 adults",
+     "grandparents",
+     "famly"
+    ],
+    "nl": [
+     "gezinsticket",
+     "gezin",
+     "familie",
+     "familieticket",
+     "groepsticket",
+     "groep",
+     "groepen",
+     "vrienden",
+     "buren",
+     "twee volwassenen",
+     "2 volwassenen",
+     "opa",
+     "oma"
+    ],
+    "fr": [
+     "billet famille",
+     "famille",
+     "familial",
+     "billet de groupe",
+     "groupe",
+     "groupes",
+     "amis",
+     "voisins",
+     "deux adultes",
+     "2 adultes",
+     "grands-parents",
+     "tarif famille"
+    ]
+   },
+   "a": {
+    "de": "Die Familienkarte kostet 50 € für 2 Erwachsene + 2 Kinder oder 1 Erwachsenen + 3 Kinder, damit spart ihr bis zu 10 €.\nSie gilt auch als Gruppenticket für 2 Erwachsene + 2 Kinder, egal ob Familie, Freunde oder Nachbarn.",
+    "en": "The family ticket is €50 for 2 adults + 2 children or 1 adult + 3 children, saving you up to €10.\nIt also works as a group ticket for any 2 adults + 2 children, whether you're family, friends or neighbours.",
+    "nl": "Het gezinsticket kost € 50 voor 2 volwassenen + 2 kinderen of 1 volwassene + 3 kinderen. Zo bespaar je tot € 10.\nHet geldt ook als groepsticket voor 2 volwassenen + 2 kinderen, of je nu familie, vrienden of buren bent.",
+    "fr": "Le billet famille coûte 50 € pour 2 adultes + 2 enfants ou 1 adulte + 3 enfants, soit jusqu’à 10 € d’économie.\nIl vaut aussi comme billet de groupe pour 2 adultes + 2 enfants, que vous soyez en famille, entre amis ou entre voisins."
+   },
+   "link": {
+    "de": "/sotg-vorschau/tickets/#preise",
+    "en": "/sotg-vorschau/en/tickets/#preise",
+    "nl": "/sotg-vorschau/nl/tickets/#preise",
+    "fr": "/sotg-vorschau/fr/billets/#preise"
+   },
+   "linkText": {
+    "de": "Zu den Tickets",
+    "en": "To the tickets",
+    "nl": "Naar de tickets",
+    "fr": "Vers les billets"
+   }
+  },
+  {
+   "id": "ermaessigung",
+   "q": {
+    "de": "Gibt es Ermäßigungen?",
+    "en": "Do you offer concessions?",
+    "nl": "Is er korting?",
+    "fr": "Y a-t-il des tarifs réduits ?"
+   },
+   "keywords": {
+    "de": [
+     "ermäßigt",
+     "ermässigt",
+     "ermaessigt",
+     "ermäßigung",
+     "rabatt",
+     "senioren",
+     "rentner",
+     "schüler",
+     "student",
+     "studenten",
+     "azubi",
+     "behinderung",
+     "schwerbehindert",
+     "begleitperson",
+     "fsj"
+    ],
+    "en": [
+     "concession",
+     "concessions",
+     "discount",
+     "reduced",
+     "senior",
+     "pensioner",
+     "student",
+     "students",
+     "pupil",
+     "apprentice",
+     "disabled",
+     "disability",
+     "carer",
+     "companion"
+    ],
+    "nl": [
+     "korting",
+     "gereduceerd",
+     "reductie",
+     "senioren",
+     "ouderen",
+     "scholier",
+     "student",
+     "studenten",
+     "leerling",
+     "beperking",
+     "gehandicapt",
+     "begeleider",
+     "mintocard"
+    ],
+    "fr": [
+     "réduit",
+     "reduit",
+     "réduction",
+     "reduction",
+     "remise",
+     "senior",
+     "seniors",
+     "étudiant",
+     "etudiant",
+     "élève",
+     "apprenti",
+     "handicap",
+     "accompagnateur",
+     "tarif réduit"
+    ]
+   },
+   "a": {
+    "de": "Ermäßigt zahlen Kinder 8 € und Erwachsene 14 €. Das gilt für Senioren ab 67, Schüler ab 16, Azubis und Studenten bis 27, FSJ/FÖJ sowie Menschen mit Behinderung und ihre eingetragene Begleitperson (beide ermäßigt).\nAuch mit S-Club, Familienkarte Neuss/Krefeld/MG oder Mintocard gibt es den ermäßigten Preis.",
+    "en": "Concessions are €8 for children and €14 for adults: seniors aged 67+, school pupils aged 16+, apprentices and students up to 27, volunteers (FSJ/FÖJ), and disabled visitors plus their registered companion (both pay the concession rate).\nThe S-Club, Familienkarte Neuss/Krefeld/MG and Mintocard partner cards also qualify.",
+    "nl": "Met korting betalen kinderen € 8 en volwassenen € 14. Dat geldt voor senioren vanaf 67, scholieren vanaf 16, leerlingen in een beroepsopleiding en studenten tot 27, vrijwilligers (FSJ/FÖJ) en mensen met een beperking plus hun geregistreerde begeleider (allebei korting).\nOok met de partnerkaarten S-Club, Familienkarte Neuss/Krefeld/MG of Mintocard krijg je korting.",
+    "fr": "Le tarif réduit est de 8 € pour les enfants et de 14 € pour les adultes : seniors à partir de 67 ans, élèves à partir de 16 ans, apprentis et étudiants jusqu’à 27 ans, volontaires (FSJ/FÖJ), personnes en situation de handicap et leur accompagnateur inscrit (tous deux au tarif réduit).\nLes cartes partenaires S-Club, Familienkarte Neuss/Krefeld/MG et Mintocard y donnent aussi droit."
+   },
+   "link": {
+    "de": "/sotg-vorschau/tickets/#preise",
+    "en": "/sotg-vorschau/en/tickets/#preise",
+    "nl": "/sotg-vorschau/nl/tickets/#preise",
+    "fr": "/sotg-vorschau/fr/billets/#preise"
+   },
+   "linkText": {
+    "de": "Alle Ermäßigungen",
+    "en": "All concessions",
+    "nl": "Alle kortingen",
+    "fr": "Tous les tarifs réduits"
+   }
+  },
+  {
+   "id": "tickets-kaufen",
+   "q": {
+    "de": "Muss ich Tickets vorab online kaufen?",
+    "en": "Do I need to book tickets online?",
+    "nl": "Moet ik tickets vooraf online kopen?",
+    "fr": "Faut-il acheter les billets en ligne ?"
+   },
+   "keywords": {
+    "de": [
+     "online",
+     "kaufen",
+     "vorab",
+     "vorher",
+     "reservieren",
+     "reservierung",
+     "voranmeldung",
+     "kasse",
+     "wartezeit",
+     "warten",
+     "schlange",
+     "ticketshop",
+     "shop",
+     "buchen",
+     "tiket"
+    ],
+    "en": [
+     "online",
+     "buy",
+     "book",
+     "booking",
+     "in advance",
+     "advance",
+     "reserve",
+     "reservation",
+     "ticket desk",
+     "at the door",
+     "queue",
+     "waiting",
+     "shop",
+     "purchase"
+    ],
+    "nl": [
+     "online",
+     "kopen",
+     "vooraf",
+     "van tevoren",
+     "reserveren",
+     "reservering",
+     "boeken",
+     "kassa",
+     "aan de deur",
+     "wachten",
+     "wachtrij",
+     "rij",
+     "shop",
+     "bestellen"
+    ],
+    "fr": [
+     "en ligne",
+     "acheter",
+     "achat",
+     "à l'avance",
+     "avance",
+     "réserver",
+     "reserver",
+     "réservation",
+     "caisse",
+     "guichet",
+     "attente",
+     "file d'attente",
+     "boutique",
+     "shop"
+    ]
+   },
+   "a": {
+    "de": "Musst du nicht: Kauf dein Ticket online im Ticket-Shop oder spontan an der Kasse, ganz ohne Wartezeit und ohne Voranmeldung. Der Preis ist gleich.",
+    "en": "No need: buy your ticket online in our ticket shop or just turn up at the ticket desk, with no waiting and no need to book ahead. Same price either way.\nThe shop is in German: “Erwachsene” = adults, “Kinder” = children, “Familienkarte” = family ticket.",
+    "nl": "Hoeft niet: koop je ticket online in onze ticketshop of gewoon aan de kassa, zonder wachttijd en zonder reservering. De prijs is hetzelfde.\nDe shop is in het Duits: “Erwachsene” = volwassenen, “Kinder” = kinderen, “Familienkarte” = gezinsticket.",
+    "fr": "Ce n’est pas nécessaire : achetez votre billet en ligne dans notre boutique ou directement à la caisse, sans attente et sans réservation. Le prix est le même.\nLa boutique est en allemand : « Erwachsene » = adultes, « Kinder » = enfants, « Familienkarte » = billet famille."
+   },
+   "link": {
+    "de": "https://shop.starsofthegalaxy.de/collections/tickets",
+    "en": "https://shop.starsofthegalaxy.de/collections/tickets",
+    "nl": "https://shop.starsofthegalaxy.de/collections/tickets",
+    "fr": "https://shop.starsofthegalaxy.de/collections/tickets"
+   },
+   "linkText": {
+    "de": "Zum Ticket-Shop",
+    "en": "To the ticket shop",
+    "nl": "Naar de ticketshop",
+    "fr": "Vers la billetterie"
+   }
+  },
+  {
+   "id": "besuchsdauer",
+   "q": {
+    "de": "Wie lange dauert ein Besuch?",
+    "en": "How long does a visit take?",
+    "nl": "Hoe lang duurt een bezoek?",
+    "fr": "Combien de temps dure une visite ?"
+   },
+   "keywords": {
+    "de": [
+     "wie lange",
+     "dauer",
+     "dauert",
+     "zeit",
+     "stunden",
+     "stunde",
+     "besuchsdauer",
+     "zeit einplanen",
+     "einplanen",
+     "rundgang",
+     "lange"
+    ],
+    "en": [
+     "how long",
+     "duration",
+     "time",
+     "hours",
+     "hour",
+     "visit length",
+     "allow",
+     "plan",
+     "long",
+     "take"
+    ],
+    "nl": [
+     "hoe lang",
+     "duur",
+     "duurt",
+     "tijd",
+     "uur",
+     "uren",
+     "bezoekduur",
+     "rekenen",
+     "plannen",
+     "lang"
+    ],
+    "fr": [
+     "combien de temps",
+     "durée",
+     "duree",
+     "dure",
+     "temps",
+     "heures",
+     "heure",
+     "prévoir",
+     "prevoir",
+     "longtemps"
+    ]
+   },
+   "a": {
+    "de": "Eine feste Zeit gibt es nicht: Manche ziehen zügig durch, Fans bleiben deutlich länger, denn auf über 1.200 m² gibt es viel zu entdecken. Plan lieber etwas Puffer ein, das Hoth-Diorama lässt niemanden so schnell wieder los.",
+    "en": "There's no set time: some visitors move through quickly, fans stay much longer, as there's plenty to discover across more than 1,200 m². Best to allow a little extra time, because the Hoth diorama doesn't let anyone go in a hurry.",
+    "nl": "Een vaste tijd is er niet: sommigen lopen er vlot doorheen, fans blijven veel langer, want op ruim 1.200 m² is er veel te ontdekken. Plan wat extra tijd in, het Hoth-diorama laat niemand snel los.",
+    "fr": "Il n’y a pas de durée fixe : certains visiteurs avancent vite, les fans restent bien plus longtemps, car il y a beaucoup à découvrir sur plus de 1 200 m². Prévoyez une petite marge, le diorama de Hoth ne laisse personne repartir si vite."
+   }
+  },
+  {
+   "id": "adresse",
+   "q": {
+    "de": "Wo finde ich euch?",
+    "en": "Where are you?",
+    "nl": "Waar vind ik jullie?",
+    "fr": "Où vous trouver ?"
+   },
+   "keywords": {
+    "de": [
+     "adresse",
+     "anfahrt",
+     "anreise",
+     "standort",
+     "lage",
+     "hauptbahnhof",
+     "bahnhof",
+     "bahn",
+     "zug",
+     "bus",
+     "öpnv",
+     "berliner platz",
+     "mönchengladbach",
+     "moenchengladbach"
+    ],
+    "en": [
+     "address",
+     "where",
+     "location",
+     "directions",
+     "how to get",
+     "get there",
+     "station",
+     "main station",
+     "train",
+     "bus",
+     "public transport",
+     "berliner platz",
+     "mönchengladbach",
+     "monchengladbach"
+    ],
+    "nl": [
+     "adres",
+     "waar",
+     "locatie",
+     "route",
+     "routebeschrijving",
+     "hoe kom ik",
+     "station",
+     "centraal station",
+     "trein",
+     "bus",
+     "openbaar vervoer",
+     "berliner platz",
+     "mönchengladbach",
+     "venlo"
+    ],
+    "fr": [
+     "adresse",
+     "ou se trouve",
+     "lieu",
+     "accès",
+     "acces",
+     "itinéraire",
+     "gare",
+     "gare centrale",
+     "train",
+     "bus",
+     "transports",
+     "berliner platz",
+     "mönchengladbach"
+    ]
+   },
+   "a": {
+    "de": "Du findest uns am Berliner Platz 10, 41061 Mönchengladbach, direkt am Hauptbahnhof. Vom Gleis sind es nur wenige Gehminuten bis zur Museumstür.",
+    "en": "You'll find us at Berliner Platz 10, 41061 Mönchengladbach, Germany, right next to Mönchengladbach Hauptbahnhof (main station). It's just a few minutes' walk from the platform to our door.",
+    "nl": "Je vindt ons aan de Berliner Platz 10, 41061 Mönchengladbach (Duitsland), naast Mönchengladbach Hauptbahnhof (centraal station). Vanaf het perron ben je in een paar minuten lopen bij de deur.",
+    "fr": "Vous nous trouverez au Berliner Platz 10, 41061 Mönchengladbach (Allemagne), à deux pas de la gare centrale (Hauptbahnhof) de Mönchengladbach. Depuis le quai, il ne faut que quelques minutes à pied."
+   },
+   "link": {
+    "de": "/sotg-vorschau/kontakt/",
+    "en": "/sotg-vorschau/en/contact/",
+    "nl": "/sotg-vorschau/nl/contact/",
+    "fr": "/sotg-vorschau/fr/contact/"
+   },
+   "linkText": {
+    "de": "Anfahrt & Karte",
+    "en": "Directions & map",
+    "nl": "Route & kaart",
+    "fr": "Accès et plan"
+   }
+  },
+  {
+   "id": "parken",
+   "q": {
+    "de": "Wo kann ich parken?",
+    "en": "Where can I park?",
+    "nl": "Waar kan ik parkeren?",
+    "fr": "Où se garer ?"
+   },
+   "keywords": {
+    "de": [
+     "parken",
+     "parkplatz",
+     "parkplätze",
+     "parkhaus",
+     "parkdeck",
+     "auto",
+     "parkgebühr",
+     "kostenlos parken",
+     "coupon",
+     "lüpertzender",
+     "anreise mit dem auto",
+     "parkn"
+    ],
+    "en": [
+     "parking",
+     "park",
+     "car park",
+     "car",
+     "multi-storey",
+     "parking garage",
+     "free parking",
+     "parking fee",
+     "coupon",
+     "drive",
+     "driving"
+    ],
+    "nl": [
+     "parkeren",
+     "parkeerplaats",
+     "parkeergarage",
+     "parkeerdek",
+     "auto",
+     "gratis parkeren",
+     "parkeerkosten",
+     "coupon",
+     "rijden",
+     "met de auto"
+    ],
+    "fr": [
+     "parking",
+     "se garer",
+     "garer",
+     "stationnement",
+     "stationner",
+     "voiture",
+     "parking gratuit",
+     "coupon",
+     "en voiture",
+     "parc de stationnement"
+    ]
+   },
+   "a": {
+    "de": "Direkt vorm Gebäude gibt es kostenlose Parkbuchten, gegenüber einen größeren Parkplatz mit Parkscheinautomat und rund 100 m entfernt ein Parkhaus.\nTipp: Für das Parkdeck Lüpertzender Str. 86 bekommst du an der Kasse einen Rabatt-Coupon (erste Stunde frei, danach 2 € pro Stunde).",
+    "en": "There are free parking bays right outside the building, a larger car park (pay and display) opposite and a multi-storey car park about 100 m away.\nTip: for the Lüpertzender Str. 86 car park you'll get a discount coupon at the ticket desk (first hour free, then €2 per hour).",
+    "nl": "Direct voor het gebouw zijn gratis parkeervakken, aan de overkant ligt een grotere parkeerplaats met parkeerautomaat en op zo’n 100 m een parkeergarage.\nTip: voor het parkeerdek Lüpertzender Str. 86 krijg je aan de kassa een kortingscoupon (eerste uur gratis, daarna € 2 per uur).",
+    "fr": "Vous trouverez des places gratuites juste devant le bâtiment, un grand parking payant (horodateur) en face et un parking couvert à environ 100 m.\nAstuce : pour le parking Lüpertzender Str. 86, vous recevez à la caisse un coupon de réduction (première heure gratuite, puis 2 € de l’heure)."
+   },
+   "link": {
+    "de": "/sotg-vorschau/kontakt/",
+    "en": "/sotg-vorschau/en/contact/",
+    "nl": "/sotg-vorschau/nl/contact/",
+    "fr": "/sotg-vorschau/fr/contact/"
+   },
+   "linkText": {
+    "de": "Anfahrt & Parken",
+    "en": "Directions & parking",
+    "nl": "Route & parkeren",
+    "fr": "Accès et parking"
+   }
+  },
+  {
+   "id": "barrierefreiheit",
+   "q": {
+    "de": "Ist das Museum barrierefrei?",
+    "en": "Is the museum accessible?",
+    "nl": "Is het museum toegankelijk?",
+    "fr": "Le musée est-il accessible ?"
+   },
+   "keywords": {
+    "de": [
+     "barrierefrei",
+     "barrierefreiheit",
+     "rollstuhl",
+     "rolli",
+     "rollator",
+     "kinderwagen",
+     "buggy",
+     "treppe",
+     "treppen",
+     "stufen",
+     "aufzug",
+     "fahrstuhl",
+     "gehbehindert",
+     "ebenerdig",
+     "barierefrei"
+    ],
+    "en": [
+     "accessible",
+     "accessibility",
+     "wheelchair",
+     "disabled access",
+     "pram",
+     "pushchair",
+     "buggy",
+     "stroller",
+     "stairs",
+     "steps",
+     "lift",
+     "elevator",
+     "step-free",
+     "mobility"
+    ],
+    "nl": [
+     "toegankelijk",
+     "toegankelijkheid",
+     "rolstoel",
+     "rollator",
+     "kinderwagen",
+     "buggy",
+     "trap",
+     "trappen",
+     "treden",
+     "traptreden",
+     "lift",
+     "drempel",
+     "slecht ter been",
+     "gelijkvloers"
+    ],
+    "fr": [
+     "accessible",
+     "accessibilité",
+     "accessibilite",
+     "fauteuil roulant",
+     "fauteuil",
+     "pmr",
+     "poussette",
+     "escalier",
+     "escaliers",
+     "marches",
+     "ascenseur",
+     "mobilité réduite",
+     "plain-pied",
+     "rollator"
+    ]
+   },
+   "a": {
+    "de": "Ganz ehrlich: Am Eingang warten vier Stufen, am Anfang der Ausstellung eine Treppe. Leichte Rollstühle und Kinderwagen können getragen werden, danach sind rund 80 % der Ausstellung ebenerdig befahrbar.\nDer Bereich mit Kostümsammlung und Eiswelt liegt hinter zwei Treppen und ist nicht rollstuhlgerecht.",
+    "en": "To be honest: there are four steps at the entrance and a staircase at the start of the exhibition. Light wheelchairs and prams can be carried, and after that around 80% of the exhibition is step-free.\nThe area with the costume collection and the ice world is behind two staircases and isn't wheelchair-accessible.",
+    "nl": "Eerlijk is eerlijk: bij de ingang zijn vier treden en aan het begin van de tentoonstelling een trap. Lichte rolstoelen en kinderwagens kunnen worden gedragen, daarna is ongeveer 80% van de tentoonstelling gelijkvloers.\nHet deel met de kostuumcollectie en de ijswereld ligt achter twee trappen en is niet rolstoeltoegankelijk.",
+    "fr": "En toute franchise : quatre marches vous attendent à l’entrée et un escalier au début de l’exposition. Les fauteuils roulants légers et les poussettes peuvent être portés. Ensuite, environ 80 % de l’exposition est de plain-pied.\nLa partie consacrée à la collection de costumes et au monde de glace se trouve derrière deux escaliers et n’est pas accessible en fauteuil roulant."
+   },
+   "link": {
+    "de": "/sotg-vorschau/ausstellung/",
+    "en": "/sotg-vorschau/en/exhibition/",
+    "nl": "/sotg-vorschau/nl/tentoonstelling/",
+    "fr": "/sotg-vorschau/fr/exposition/"
+   },
+   "linkText": {
+    "de": "Mehr zur Ausstellung",
+    "en": "More about the exhibition",
+    "nl": "Meer over de tentoonstelling",
+    "fr": "En savoir plus sur l’exposition"
+   }
+  },
+  {
+   "id": "kalt",
+   "q": {
+    "de": "Ist es im Museum kalt?",
+    "en": "Is it cold in the museum?",
+    "nl": "Is het koud in het museum?",
+    "fr": "Fait-il froid dans le musée ?"
+   },
+   "keywords": {
+    "de": [
+     "kalt",
+     "kälte",
+     "heizung",
+     "beheizt",
+     "unbeheizt",
+     "warm",
+     "anziehen",
+     "jacke",
+     "kleidung",
+     "temperatur",
+     "frieren",
+     "winter",
+     "friert"
+    ],
+    "en": [
+     "cold",
+     "heating",
+     "heated",
+     "unheated",
+     "warm",
+     "dress",
+     "wear",
+     "jacket",
+     "coat",
+     "clothing",
+     "temperature",
+     "chilly",
+     "freezing"
+    ],
+    "nl": [
+     "koud",
+     "kou",
+     "verwarming",
+     "verwarmd",
+     "onverwarmd",
+     "warm",
+     "aankleden",
+     "jas",
+     "kleding",
+     "kleren",
+     "temperatuur",
+     "fris",
+     "winter"
+    ],
+    "fr": [
+     "froid",
+     "chauffage",
+     "chauffé",
+     "chauffe",
+     "non chauffé",
+     "chaud",
+     "habiller",
+     "s'habiller",
+     "veste",
+     "manteau",
+     "vêtements",
+     "température",
+     "temperature"
+    ]
+   },
+   "a": {
+    "de": "Ja, im Weltraum ist es kalt: Unser Museum ist unbeheizt. Zieh dich an wie für eine Expedition auf einen Eisplaneten, dann hältst du es locker bis zum letzten Exponat aus.",
+    "en": "Yes, space is cold: our museum is unheated. Dress as if you're off on an expedition to an ice planet and you'll easily last until the very last exhibit.",
+    "nl": "Ja, in de ruimte is het koud: ons museum is onverwarmd. Kleed je warm aan, alsof je op expeditie gaat naar een ijsplaneet, dan hou je het makkelijk vol tot het laatste object.",
+    "fr": "Oui, il fait froid dans l’espace : notre musée n’est pas chauffé. Habillez-vous comme pour une expédition sur une planète de glace et vous tiendrez sans peine jusqu’à la dernière pièce."
+   }
+  },
+  {
+   "id": "hunde",
+   "q": {
+    "de": "Darf mein Hund mit?",
+    "en": "Can I bring my dog?",
+    "nl": "Mag mijn hond mee?",
+    "fr": "Puis-je venir avec mon chien ?"
+   },
+   "keywords": {
+    "de": [
+     "hund",
+     "hunde",
+     "haustier",
+     "haustiere",
+     "tier",
+     "tiere",
+     "vierbeiner",
+     "leine",
+     "katze",
+     "katzen",
+     "welpe"
+    ],
+    "en": [
+     "dog",
+     "dogs",
+     "pet",
+     "pets",
+     "animal",
+     "animals",
+     "puppy",
+     "lead",
+     "leash",
+     "cat",
+     "cats"
+    ],
+    "nl": [
+     "hond",
+     "honden",
+     "huisdier",
+     "huisdieren",
+     "dier",
+     "dieren",
+     "puppy",
+     "lijn",
+     "aangelijnd",
+     "kat",
+     "katten",
+     "viervoeter"
+    ],
+    "fr": [
+     "chien",
+     "chiens",
+     "animal",
+     "animaux",
+     "animal de compagnie",
+     "chiot",
+     "laisse",
+     "chat",
+     "chats",
+     "toutou"
+    ]
+   },
+   "a": {
+    "de": "Hunde sind bei uns willkommen. Zur Vorbereitung der diplomatischen Beziehungen: Im Haus wohnen auch zwei Katzen.",
+    "en": "Dogs are welcome here. To help prepare diplomatic relations: two cats live in the building too.",
+    "nl": "Honden zijn welkom. Ter voorbereiding van de diplomatieke betrekkingen: in het gebouw wonen ook twee katten.",
+    "fr": "Les chiens sont les bienvenus. Pour préparer les relations diplomatiques : deux chats vivent aussi dans la maison."
+   }
+  },
+  {
+   "id": "fotos",
+   "q": {
+    "de": "Darf ich fotografieren?",
+    "en": "Can I take photos?",
+    "nl": "Mag ik foto's maken?",
+    "fr": "Peut-on prendre des photos ?"
+   },
+   "keywords": {
+    "de": [
+     "foto",
+     "fotos",
+     "fotografieren",
+     "bilder",
+     "kamera",
+     "handy",
+     "selfie",
+     "filmen",
+     "video",
+     "instagram",
+     "fotographieren"
+    ],
+    "en": [
+     "photo",
+     "photos",
+     "photograph",
+     "photography",
+     "pictures",
+     "camera",
+     "phone",
+     "selfie",
+     "filming",
+     "video",
+     "instagram"
+    ],
+    "nl": [
+     "foto",
+     "foto's",
+     "fotos",
+     "fotograferen",
+     "camera",
+     "telefoon",
+     "selfie",
+     "filmen",
+     "video",
+     "instagram",
+     "plaatjes"
+    ],
+    "fr": [
+     "photo",
+     "photos",
+     "photographier",
+     "appareil photo",
+     "téléphone",
+     "telephone",
+     "selfie",
+     "filmer",
+     "vidéo",
+     "video",
+     "instagram"
+    ]
+   },
+   "a": {
+    "de": "Ja, Fotografieren ist ausdrücklich erlaubt. Der 5,80 Meter lange AT-AT und Han Solo in Karbonit warten schon auf dein bestes Motiv.",
+    "en": "Yes, photos are very welcome. The 5.80-metre AT-AT and Han Solo in carbonite are already waiting for your best shot.",
+    "nl": "Ja, foto's maken mag uitdrukkelijk. De 5,80 meter lange AT-AT en Han Solo in carboniet wachten al op je mooiste plaatje.",
+    "fr": "Oui, les photos sont expressément autorisées. L’AT-AT de 5,80 mètres et Han Solo dans la carbonite n’attendent que votre plus belle photo."
+   }
+  },
+  {
+   "id": "ausstellung",
+   "q": {
+    "de": "Was gibt es zu sehen?",
+    "en": "What is there to see?",
+    "nl": "Wat is er te zien?",
+    "fr": "Qu’y a-t-il à voir ?"
+   },
+   "keywords": {
+    "de": [
+     "sehen",
+     "ausstellung",
+     "exponate",
+     "highlights",
+     "at-at",
+     "atat",
+     "figuren",
+     "lego",
+     "sternenzerstörer",
+     "karbonit",
+     "hoth",
+     "c-3po",
+     "starfighter",
+     "museum",
+     "star wars"
+    ],
+    "en": [
+     "see",
+     "exhibition",
+     "exhibits",
+     "highlights",
+     "at-at",
+     "atat",
+     "figures",
+     "lego",
+     "star destroyer",
+     "carbonite",
+     "hoth",
+     "c-3po",
+     "starfighter",
+     "star wars"
+    ],
+    "nl": [
+     "zien",
+     "tentoonstelling",
+     "expositie",
+     "objecten",
+     "highlights",
+     "at-at",
+     "atat",
+     "figuren",
+     "lego",
+     "star destroyer",
+     "carboniet",
+     "hoth",
+     "c-3po",
+     "star wars"
+    ],
+    "fr": [
+     "voir",
+     "exposition",
+     "expo",
+     "objets",
+     "à voir",
+     "at-at",
+     "atat",
+     "figurines",
+     "lego",
+     "destroyer",
+     "carbonite",
+     "hoth",
+     "c-3po",
+     "star wars"
+    ]
+   },
+   "a": {
+    "de": "Auf über 1.200 m² warten ein 5,80 Meter langer AT-AT im großen Hoth-Diorama, über 50 lebensgroße Figuren, Han Solo in Karbonit, eine C-3PO-Animatronik, die sich wirklich bewegt, und ein LEGO-Sternenzerstörer aus 400.000 Steinen.\nGanz neu: ein lebensgroßer Starfighter im imperialen Hangar.",
+    "en": "Across more than 1,200 m² you'll find a 5.80-metre AT-AT in the big Hoth diorama, over 50 life-size figures, Han Solo in carbonite, a C-3PO animatronic that really moves and a LEGO Star Destroyer built from 400,000 bricks.\nBrand new: a life-size starfighter in the Imperial hangar.",
+    "nl": "Op ruim 1.200 m² wachten een 5,80 meter lange AT-AT in het grote Hoth-diorama, meer dan 50 levensgrote figuren, Han Solo in carboniet, een C-3PO-animatronic die echt beweegt en een LEGO Star Destroyer van 400.000 steentjes.\nGloednieuw: een levensgrote starfighter in de keizerlijke hangar.",
+    "fr": "Sur plus de 1 200 m² vous attendent un AT-AT de 5,80 mètres dans le grand diorama de Hoth, plus de 50 figurines grandeur nature, Han Solo dans la carbonite, un animatronique de C-3PO qui bouge vraiment et un Destroyer stellaire LEGO de 400 000 briques.\nNouveauté : un chasseur stellaire grandeur nature dans le hangar impérial."
+   },
+   "link": {
+    "de": "/sotg-vorschau/ausstellung/",
+    "en": "/sotg-vorschau/en/exhibition/",
+    "nl": "/sotg-vorschau/nl/tentoonstelling/",
+    "fr": "/sotg-vorschau/fr/exposition/"
+   },
+   "linkText": {
+    "de": "Ausstellung entdecken",
+    "en": "Explore the exhibition",
+    "nl": "Ontdek de tentoonstelling",
+    "fr": "Découvrir l’exposition"
+   }
+  },
+  {
+   "id": "fuehrung",
+   "q": {
+    "de": "Gibt es Führungen?",
+    "en": "Do you offer guided tours?",
+    "nl": "Zijn er rondleidingen?",
+    "fr": "Proposez-vous des visites guidées ?"
+   },
+   "keywords": {
+    "de": [
+     "führung",
+     "führungen",
+     "fuehrung",
+     "fuhrung",
+     "guide",
+     "geführt",
+     "rundgang mit guide",
+     "private führung",
+     "tour",
+     "gruppenführung",
+     "anmeldung führung"
+    ],
+    "en": [
+     "guided tour",
+     "tour",
+     "tours",
+     "guide",
+     "guided",
+     "private tour",
+     "group tour",
+     "tour guide",
+     "walkthrough"
+    ],
+    "nl": [
+     "rondleiding",
+     "rondleidingen",
+     "gids",
+     "begeleid",
+     "privérondleiding",
+     "prive rondleiding",
+     "tour",
+     "groepsrondleiding",
+     "met gids"
+    ],
+    "fr": [
+     "visite guidée",
+     "visite guidee",
+     "visites guidées",
+     "guide",
+     "guidé",
+     "visite privée",
+     "visite de groupe",
+     "tour",
+     "accompagné"
+    ]
+   },
+   "a": {
+    "de": "Unsere private Führung kostet 70 € für bis zu 3 Personen, der Eintritt ist inklusive. Termine gibt es samstags, die Anmeldung läuft ausschließlich per Mail an info@starsofthegalaxy.de.",
+    "en": "Our private guided tour costs €70 for up to 3 people, admission included. Tours run on Saturdays and are booked by email only, at info@starsofthegalaxy.de.",
+    "nl": "Onze privérondleiding kost € 70 voor maximaal 3 personen, inclusief entree. Rondleidingen zijn op zaterdag en aanmelden kan alleen per mail via info@starsofthegalaxy.de.",
+    "fr": "Notre visite guidée privée coûte 70 € pour 3 personnes maximum, entrée comprise. Elle a lieu le samedi, et se réserve uniquement par e-mail à info@starsofthegalaxy.de."
+   },
+   "link": {
+    "de": "/sotg-vorschau/tickets/",
+    "en": "/sotg-vorschau/en/tickets/",
+    "nl": "/sotg-vorschau/nl/tickets/",
+    "fr": "/sotg-vorschau/fr/billets/"
+   },
+   "linkText": {
+    "de": "Mehr zur Führung",
+    "en": "More about tours",
+    "nl": "Meer over rondleidingen",
+    "fr": "En savoir plus sur les visites"
+   }
+  },
+  {
+   "id": "digitaler-fuehrer",
+   "q": {
+    "de": "Gibt es einen Führer in meiner Sprache?",
+    "en": "Is there a guide in my language?",
+    "nl": "Is er een gids in mijn taal?",
+    "fr": "Existe-t-il un guide dans ma langue ?"
+   },
+   "keywords": {
+    "de": [
+     "digitaler führer",
+     "ausstellungsführer",
+     "ausstellungs-führer",
+     "sprache",
+     "sprachen",
+     "englisch",
+     "französisch",
+     "niederländisch",
+     "polnisch",
+     "audioguide",
+     "nachlesen",
+     "infos",
+     "texte"
+    ],
+    "en": [
+     "digital guide",
+     "exhibition guide",
+     "language",
+     "languages",
+     "english",
+     "french",
+     "dutch",
+     "polish",
+     "german",
+     "audio guide",
+     "audioguide",
+     "translation",
+     "read"
+    ],
+    "nl": [
+     "digitale gids",
+     "tentoonstellingsgids",
+     "taal",
+     "talen",
+     "nederlands",
+     "engels",
+     "frans",
+     "pools",
+     "duits",
+     "audiotour",
+     "audiogids",
+     "vertaling",
+     "lezen"
+    ],
+    "fr": [
+     "guide numérique",
+     "guide numerique",
+     "guide de l'exposition",
+     "langue",
+     "langues",
+     "français",
+     "francais",
+     "anglais",
+     "néerlandais",
+     "polonais",
+     "allemand",
+     "audioguide",
+     "traduction"
+    ]
+   },
+   "a": {
+    "de": "Ja! Unseren digitalen Ausstellungs-Führer gibt es in fünf Sprachen: Deutsch, Englisch, Französisch, Niederländisch und Polnisch. Alle Highlights zum Nachlesen, direkt hier auf der Website.",
+    "en": "Yes! Our digital exhibition guide comes in five languages: German, English, French, Dutch and Polish. All the highlights to read at your own pace, right here on the website.",
+    "nl": "Ja! Onze digitale tentoonstellingsgids is er in vijf talen: Duits, Engels, Frans, Nederlands en Pools. Alle highlights om rustig na te lezen, gewoon hier op de website.",
+    "fr": "Oui ! Notre guide numérique de l’exposition existe en cinq langues : allemand, anglais, français, néerlandais et polonais. Tous les temps forts à lire tranquillement, directement sur ce site."
+   },
+   "link": {
+    "de": "/sotg-vorschau/fuehrer/",
+    "en": "/sotg-vorschau/en/guide/",
+    "nl": "/sotg-vorschau/nl/gids/",
+    "fr": "/sotg-vorschau/fr/guide/"
+   },
+   "linkText": {
+    "de": "Zum Ausstellungs-Führer",
+    "en": "Open the exhibition guide",
+    "nl": "Naar de tentoonstellingsgids",
+    "fr": "Ouvrir le guide de l’exposition"
+   }
+  },
+  {
+   "id": "snoopit",
+   "q": {
+    "de": "Was ist die App SnoopIT?",
+    "en": "What is the SnoopIT app?",
+    "nl": "Wat is de SnoopIT-app?",
+    "fr": "Qu’est-ce que l’appli SnoopIT ?"
+   },
+   "keywords": {
+    "de": [
+     "app",
+     "snoopit",
+     "snoop",
+     "snoopstar",
+     "augmented reality",
+     "erweiterte realität",
+     "handy app",
+     "download",
+     "herunterladen",
+     "smartphone",
+     "kostenlos"
+    ],
+    "en": [
+     "app",
+     "snoopit",
+     "snoop",
+     "snoopstar",
+     "augmented reality",
+     "download",
+     "smartphone",
+     "phone app",
+     "free app",
+     "install"
+    ],
+    "nl": [
+     "app",
+     "snoopit",
+     "snoop",
+     "snoopstar",
+     "augmented reality",
+     "downloaden",
+     "download",
+     "smartphone",
+     "gratis app",
+     "installeren"
+    ],
+    "fr": [
+     "application",
+     "appli",
+     "app",
+     "snoopit",
+     "snoop",
+     "snoopstar",
+     "réalité augmentée",
+     "realite augmentee",
+     "télécharger",
+     "telecharger",
+     "smartphone",
+     "gratuite"
+    ]
+   },
+   "a": {
+    "de": "Das ist mein Zuhause! In der kostenlosen AR-App SnoopIT erkläre ich dir die Highlights direkt auf deinem Display: Raumschiffe starten, Droiden erwachen. Am besten installierst du sie schon vor dem Besuch.",
+    "en": "That's where I live! In the free AR app SnoopIT I walk you through the highlights right on your screen: starships take off, droids wake up. Best to install it before your visit.",
+    "nl": "Daar woon ik! In de gratis AR-app SnoopIT vertel ik je alles over de highlights, gewoon op je scherm: ruimteschepen stijgen op, droids komen tot leven. Installeer hem het liefst al vóór je bezoek.",
+    "fr": "C’est là que j’habite ! Dans l’appli AR gratuite SnoopIT, je vous présente les temps forts directement sur votre écran : les vaisseaux décollent, les droïdes se réveillent. Idéalement, installez-la avant votre visite."
+   },
+   "link": {
+    "de": "https://l.ead.me/snoopstarapp",
+    "en": "https://l.ead.me/snoopstarapp",
+    "nl": "https://l.ead.me/snoopstarapp",
+    "fr": "https://l.ead.me/snoopstarapp"
+   },
+   "linkText": {
+    "de": "SnoopIT kostenlos laden",
+    "en": "Get SnoopIT for free",
+    "nl": "Download SnoopIT gratis",
+    "fr": "Télécharger SnoopIT gratuitement"
+   }
+  },
+  {
+   "id": "offiziell",
+   "q": {
+    "de": "Seid ihr ein offizielles Museum?",
+    "en": "Are you an official museum?",
+    "nl": "Zijn jullie een officieel museum?",
+    "fr": "Êtes-vous un musée officiel ?"
+   },
+   "keywords": {
+    "de": [
+     "offiziell",
+     "lucasfilm",
+     "disney",
+     "betreiber",
+     "privat",
+     "wem gehört",
+     "unabhängig",
+     "lizenz",
+     "original",
+     "wer betreibt"
+    ],
+    "en": [
+     "official",
+     "lucasfilm",
+     "disney",
+     "owner",
+     "private",
+     "privately run",
+     "independent",
+     "licensed",
+     "affiliated",
+     "who runs"
+    ],
+    "nl": [
+     "officieel",
+     "lucasfilm",
+     "disney",
+     "eigenaar",
+     "privé",
+     "prive",
+     "onafhankelijk",
+     "licentie",
+     "wie runt",
+     "particulier"
+    ],
+    "fr": [
+     "officiel",
+     "lucasfilm",
+     "disney",
+     "propriétaire",
+     "privé",
+     "prive",
+     "indépendant",
+     "independant",
+     "licence",
+     "affilié"
+    ]
+   },
+   "a": {
+    "de": "Stars of the Galaxy ist ein unabhängiges, privat betriebenes Museum und steht in keiner Verbindung zu Lucasfilm Ltd. oder The Walt Disney Company.",
+    "en": "Stars of the Galaxy is an independent, privately run museum and is not affiliated with Lucasfilm Ltd. or The Walt Disney Company.",
+    "nl": "Stars of the Galaxy is een onafhankelijk, particulier museum en heeft geen enkele band met Lucasfilm Ltd. of The Walt Disney Company.",
+    "fr": "Stars of the Galaxy est un musée indépendant, géré à titre privé, sans aucun lien avec Lucasfilm Ltd. ni The Walt Disney Company."
+   }
+  },
+  {
+   "id": "geburtstag-pakete",
+   "q": {
+    "de": "Was kostet ein Kindergeburtstag?",
+    "en": "How much is a kids' birthday party?",
+    "nl": "Wat kost een kinderfeestje?",
+    "fr": "Combien coûte un anniversaire d’enfant ?"
+   },
+   "keywords": {
+    "de": [
+     "kindergeburtstag",
+     "geburtstag",
+     "geburtstage",
+     "feiern",
+     "party",
+     "paket",
+     "pakete",
+     "standard",
+     "medium",
+     "deluxe",
+     "geburtstagsfeier",
+     "geburtstag preis",
+     "kindergeburstag",
+     "geburtsag"
+    ],
+    "en": [
+     "birthday",
+     "birthday party",
+     "kids party",
+     "kids' party",
+     "party",
+     "package",
+     "packages",
+     "standard",
+     "medium",
+     "deluxe",
+     "celebrate",
+     "children party",
+     "bday"
+    ],
+    "nl": [
+     "kinderfeestje",
+     "kinderfeest",
+     "verjaardag",
+     "verjaardagsfeest",
+     "feestje",
+     "feest",
+     "pakket",
+     "pakketten",
+     "standard",
+     "medium",
+     "deluxe",
+     "vieren",
+     "partijtje"
+    ],
+    "fr": [
+     "anniversaire",
+     "anniversaire d'enfant",
+     "fête",
+     "fete",
+     "goûter",
+     "formule",
+     "formules",
+     "forfait",
+     "standard",
+     "medium",
+     "deluxe",
+     "célébrer",
+     "anniv"
+    ]
+   },
+   "a": {
+    "de": "Unseren Rundum-Sorglos-Geburtstag gibt es in drei Paketen: Standard 219 € (ca. 1,5–2 Std.), Medium 279 € (ca. 2–2,5 Std., plus Leihkostüme und Ausstellungsbesuch) und Deluxe 349 € (ca. 2,5–3 Std., plus Urkunden, Hot Dogs und Überraschungsgeschenk fürs Geburtstagskind).",
+    "en": "Our all-inclusive, no-stress birthday comes in three packages: Standard €219 (approx. 1.5–2 hrs), Medium €279 (approx. 2–2.5 hrs, plus costumes to borrow and a visit to the exhibition) and Deluxe €349 (approx. 2.5–3 hrs, plus certificates, hot dogs and a surprise gift for the birthday child).",
+    "nl": "Ons zorgeloze all-in kinderfeestje is er in drie pakketten: Standard € 219 (ca. 1,5–2 uur), Medium € 279 (ca. 2–2,5 uur, plus leenkostuums en een bezoek aan de tentoonstelling) en Deluxe € 349 (ca. 2,5–3 uur, plus oorkondes, hotdogs en een verrassingscadeau voor de jarige).",
+    "fr": "Notre anniversaire clé en main existe en trois formules : Standard à 219 € (env. 1 h 30 à 2 h), Medium à 279 € (env. 2 h à 2 h 30, avec prêt de costumes et visite de l’exposition) et Deluxe à 349 € (env. 2 h 30 à 3 h, avec diplômes, hot-dogs et cadeau surprise pour la star du jour)."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/",
+    "en": "/sotg-vorschau/en/birthday-parties/",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/",
+    "fr": "/sotg-vorschau/fr/anniversaires/"
+   },
+   "linkText": {
+    "de": "Pakete vergleichen",
+    "en": "Compare packages",
+    "nl": "Vergelijk de pakketten",
+    "fr": "Comparer les formules"
+   }
+  },
+  {
+   "id": "geburtstag-ablauf",
+   "q": {
+    "de": "Was erleben die Kinder beim Geburtstag?",
+    "en": "What do the children do at the party?",
+    "nl": "Wat doen de kinderen op het feestje?",
+    "fr": "Que font les enfants pendant l’anniversaire ?"
+   },
+   "keywords": {
+    "de": [
+     "ablauf",
+     "programm",
+     "missionen",
+     "mission",
+     "animateur",
+     "lichtschwert",
+     "jedipass",
+     "jedi",
+     "roboter",
+     "quiz",
+     "spiele",
+     "was machen",
+     "betreuung"
+    ],
+    "en": [
+     "programme",
+     "program",
+     "what happens",
+     "activities",
+     "missions",
+     "mission",
+     "entertainer",
+     "host",
+     "lightsaber",
+     "jedi pass",
+     "jedi",
+     "robot",
+     "games"
+    ],
+    "nl": [
+     "programma",
+     "verloop",
+     "activiteiten",
+     "missies",
+     "missie",
+     "animator",
+     "begeleider",
+     "lichtzwaard",
+     "jedi-pas",
+     "jedi",
+     "robot",
+     "spelletjes",
+     "wat doen"
+    ],
+    "fr": [
+     "programme",
+     "déroulement",
+     "deroulement",
+     "activités",
+     "activites",
+     "missions",
+     "mission",
+     "animateur",
+     "sabre laser",
+     "pass jedi",
+     "jedi",
+     "robot",
+     "jeux",
+     "passeport jedi"
+    ]
+   },
+   "a": {
+    "de": "Euer Animateur führt die Kinder durch vier Missionen: Roboter-Reparatur, Geräusche-Quiz, Laserschuss-Spiel und Lichtschwert-Training. Am Ende bekommt jedes Kind seinen eigenen Jedipass.\nMaterial und Raumreinigung sind inklusive, du bringst nur die Kinder.",
+    "en": "Your party host leads the children through four missions: robot repair, a sound quiz, a laser target game and lightsaber training. At the end every child gets their own Jedi pass.\nMaterials and cleaning are included, you just bring the kids.",
+    "nl": "Jullie animator neemt de kinderen mee op vier missies: robotreparatie, geluidenquiz, laserschietspel en lichtzwaardtraining. Aan het eind krijgt elk kind een eigen Jedi-pas.\nMateriaal en schoonmaak zijn inbegrepen, jij neemt alleen de kinderen mee.",
+    "fr": "Votre animateur guide les enfants à travers quatre missions : réparation de robots, quiz sonore, jeu de tir laser et entraînement au sabre laser. À la fin, chaque enfant reçoit son propre passeport Jedi.\nLe matériel et le nettoyage de la salle sont compris : vous n’avez qu’à amener les enfants."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/",
+    "en": "/sotg-vorschau/en/birthday-parties/",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/",
+    "fr": "/sotg-vorschau/fr/anniversaires/"
+   },
+   "linkText": {
+    "de": "Zum Kindergeburtstag",
+    "en": "Kids' birthday parties",
+    "nl": "Naar het kinderfeestje",
+    "fr": "Vers les anniversaires d’enfants"
+   }
+  },
+  {
+   "id": "geburtstag-kinder",
+   "q": {
+    "de": "Wie viele Kinder können mitfeiern?",
+    "en": "How many children can come?",
+    "nl": "Hoeveel kinderen kunnen er mee?",
+    "fr": "Combien d’enfants peuvent participer ?"
+   },
+   "keywords": {
+    "de": [
+     "wie viele kinder",
+     "anzahl",
+     "anzahl kinder",
+     "maximal",
+     "10 kinder",
+     "zehn",
+     "gäste",
+     "gastkinder",
+     "erwachsene dabei",
+     "eltern",
+     "alter",
+     "ab wie viel jahren",
+     "mindestalter",
+     "mehr als 10",
+     "mehr kinder",
+     "wie viele",
+     "max",
+     "zu viele kinder"
+    ],
+    "en": [
+     "how many children",
+     "how many kids",
+     "number of children",
+     "maximum",
+     "10 children",
+     "ten",
+     "guests",
+     "adults",
+     "parents",
+     "age",
+     "minimum age",
+     "how old",
+     "more than 10",
+     "more children",
+     "how many",
+     "max"
+    ],
+    "nl": [
+     "hoeveel kinderen",
+     "aantal",
+     "aantal kinderen",
+     "maximaal",
+     "10 kinderen",
+     "tien",
+     "gasten",
+     "volwassenen",
+     "ouders",
+     "leeftijd",
+     "vanaf welke leeftijd",
+     "hoe oud",
+     "meer dan 10",
+     "meer kinderen",
+     "hoeveel",
+     "max"
+    ],
+    "fr": [
+     "combien d'enfants",
+     "nombre",
+     "nombre d'enfants",
+     "maximum",
+     "10 enfants",
+     "dix",
+     "invités",
+     "invites",
+     "adultes",
+     "parents",
+     "âge",
+     "age minimum",
+     "plus de 10",
+     "plus d enfants",
+     "combien",
+     "max"
+    ]
+   },
+   "a": {
+    "de": "Pro Feier sind maximal 10 Kinder dabei, dazu 2–3 Erwachsene als Begleitung. Mitfeiern kann man ab 6 Jahren, nach oben ist bei 96 Schluss.",
+    "en": "Each party is for a maximum of 10 children, plus 2–3 accompanying adults. Party guests should be 6 or older, and the upper limit is 96.",
+    "nl": "Per feestje zijn er maximaal 10 kinderen, plus 2–3 volwassenen als begeleiding. Meedoen kan vanaf 6 jaar, bij 96 houdt het op.",
+    "fr": "Chaque fête accueille 10 enfants maximum, accompagnés de 2 à 3 adultes. L’anniversaire convient dès 6 ans, et la limite d’âge est fixée à 96 ans."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/",
+    "en": "/sotg-vorschau/en/birthday-parties/",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/",
+    "fr": "/sotg-vorschau/fr/anniversaires/"
+   },
+   "linkText": {
+    "de": "Zum Kindergeburtstag",
+    "en": "Kids' birthday parties",
+    "nl": "Naar het kinderfeestje",
+    "fr": "Vers les anniversaires d’enfants"
+   }
+  },
+  {
+   "id": "geburtstag-termine",
+   "q": {
+    "de": "Wann kann man Geburtstag feiern?",
+    "en": "When can we hold a party?",
+    "nl": "Wanneer kun je een feestje vieren?",
+    "fr": "Quand peut-on fêter un anniversaire ?"
+   },
+   "keywords": {
+    "de": [
+     "termin",
+     "termine",
+     "uhrzeit",
+     "samstag",
+     "sonntag",
+     "wochentag",
+     "unter der woche",
+     "startzeit",
+     "aufpreis",
+     "datum",
+     "wann feiern",
+     "12:30",
+     "15:00"
+    ],
+    "en": [
+     "date",
+     "dates",
+     "time",
+     "times",
+     "saturday",
+     "sunday",
+     "weekday",
+     "during the week",
+     "start time",
+     "surcharge",
+     "slot",
+     "when"
+    ],
+    "nl": [
+     "datum",
+     "data",
+     "tijd",
+     "tijdstip",
+     "zaterdag",
+     "zondag",
+     "doordeweeks",
+     "door de week",
+     "starttijd",
+     "toeslag",
+     "wanneer",
+     "tijdslot"
+    ],
+    "fr": [
+     "date",
+     "dates",
+     "heure",
+     "horaire",
+     "créneau",
+     "samedi",
+     "dimanche",
+     "en semaine",
+     "jour de semaine",
+     "supplément",
+     "supplement",
+     "quand"
+    ]
+   },
+   "a": {
+    "de": "Feste Startzeiten sind samstags um 12:30 und 15:00 Uhr. Wochentags feiern wir nach Absprache, sonntags nach Absprache gegen Aufpreis.",
+    "en": "Fixed start times are Saturdays at 12:30 and 15:00. Weekday parties are by arrangement, and Sundays by arrangement for a surcharge.",
+    "nl": "Vaste starttijden zijn op zaterdag om 12.30 en 15.00 uur. Doordeweeks vieren we in overleg, op zondag in overleg tegen een toeslag.",
+    "fr": "Les créneaux fixes sont le samedi à 12 h 30 et à 15 h. En semaine, la fête est possible sur rendez-vous, le dimanche aussi, avec supplément."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/#buchung",
+    "en": "/sotg-vorschau/en/birthday-parties/#buchung",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/#buchung",
+    "fr": "/sotg-vorschau/fr/anniversaires/#buchung"
+   },
+   "linkText": {
+    "de": "Wunschtermin buchen",
+    "en": "Book your date",
+    "nl": "Boek je datum",
+    "fr": "Réserver votre date"
+   }
+  },
+  {
+   "id": "geburtstag-torte-allergie",
+   "q": {
+    "de": "Dürfen wir eine eigene Torte mitbringen? Und bei Allergien?",
+    "en": "Can we bring our own cake? What about allergies?",
+    "nl": "Mogen we zelf een taart meenemen? En bij allergieën?",
+    "fr": "Peut-on apporter un gâteau ? Et en cas d’allergie ?"
+   },
+   "keywords": {
+    "de": [
+     "torte",
+     "kuchen",
+     "geburtstagstorte",
+     "mitbringen",
+     "eigenes essen",
+     "allergie",
+     "allergien",
+     "unverträglichkeit",
+     "laktose",
+     "gluten",
+     "nüsse",
+     "vegan",
+     "vegetarisch"
+    ],
+    "en": [
+     "cake",
+     "birthday cake",
+     "bring",
+     "own food",
+     "allergy",
+     "allergies",
+     "intolerance",
+     "lactose",
+     "gluten",
+     "nuts",
+     "vegan",
+     "vegetarian",
+     "dietary"
+    ],
+    "nl": [
+     "taart",
+     "verjaardagstaart",
+     "meenemen",
+     "eigen eten",
+     "allergie",
+     "allergieën",
+     "allergieen",
+     "intolerantie",
+     "lactose",
+     "gluten",
+     "noten",
+     "veganistisch",
+     "vegetarisch"
+    ],
+    "fr": [
+     "gâteau",
+     "gateau",
+     "gâteau d'anniversaire",
+     "apporter",
+     "propre nourriture",
+     "allergie",
+     "allergies",
+     "intolérance",
+     "lactose",
+     "gluten",
+     "noix",
+     "végan",
+     "végétarien"
+    ]
+   },
+   "a": {
+    "de": "Beides klären wir am liebsten vorab persönlich. Schreib uns vor der Buchung eine Mail an info@starsofthegalaxy.de, dann besprechen wir, was bei eurer Feier möglich ist.",
+    "en": "We'd rather sort both out with you personally beforehand. Send us an email at info@starsofthegalaxy.de before booking and we'll talk through what's possible for your party.",
+    "nl": "Beide stemmen we het liefst vooraf persoonlijk af. Stuur ons vóór je boeking een mail via info@starsofthegalaxy.de, dan bespreken we wat er bij jullie feestje kan.",
+    "fr": "Nous préférons en discuter avec vous au préalable. Écrivez-nous avant la réservation à info@starsofthegalaxy.de et nous verrons ensemble ce qui est possible pour votre fête."
+   }
+  },
+  {
+   "id": "geburtstag-verpflegung",
+   "q": {
+    "de": "Was gibt es beim Geburtstag zu essen und trinken?",
+    "en": "What food and drinks are included?",
+    "nl": "Wat is er te eten en te drinken?",
+    "fr": "Que mange-t-on et que boit-on ?"
+   },
+   "keywords": {
+    "de": [
+     "essen",
+     "trinken",
+     "getränke",
+     "verpflegung",
+     "snacks",
+     "cookies",
+     "kekse",
+     "hot dog",
+     "hotdogs",
+     "zuckerfrei",
+     "koffeinfrei",
+     "saft",
+     "hunger"
+    ],
+    "en": [
+     "food",
+     "drinks",
+     "drink",
+     "catering",
+     "snacks",
+     "cookies",
+     "biscuits",
+     "hot dog",
+     "hot dogs",
+     "sugar-free",
+     "caffeine-free",
+     "juice",
+     "eat"
+    ],
+    "nl": [
+     "eten",
+     "drinken",
+     "drankjes",
+     "frisdrank",
+     "catering",
+     "snacks",
+     "koekjes",
+     "cookies",
+     "hotdog",
+     "hotdogs",
+     "suikervrij",
+     "cafeïnevrij",
+     "sap"
+    ],
+    "fr": [
+     "manger",
+     "boire",
+     "boissons",
+     "nourriture",
+     "repas",
+     "collation",
+     "goûter",
+     "cookies",
+     "biscuits",
+     "hot-dog",
+     "hot dog",
+     "sans sucre",
+     "sans caféine"
+    ]
+   },
+   "a": {
+    "de": "In jedem Paket sind zucker- und koffeinfreie Getränke und Cookies dabei. Im Deluxe-Paket gibt es zusätzlich warme Verpflegung mit Hot Dogs.",
+    "en": "Every package includes sugar-free and caffeine-free drinks plus cookies. The Deluxe package adds a hot meal with hot dogs.",
+    "nl": "In elk pakket zitten suikervrije en cafeïnevrije drankjes en cookies. Het Deluxe-pakket heeft daarnaast warm eten met hotdogs.",
+    "fr": "Chaque formule comprend des boissons sans sucre et sans caféine ainsi que des cookies. La formule Deluxe ajoute un repas chaud avec des hot-dogs."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/",
+    "en": "/sotg-vorschau/en/birthday-parties/",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/",
+    "fr": "/sotg-vorschau/fr/anniversaires/"
+   },
+   "linkText": {
+    "de": "Pakete vergleichen",
+    "en": "Compare packages",
+    "nl": "Vergelijk de pakketten",
+    "fr": "Comparer les formules"
+   }
+  },
+  {
+   "id": "geschenktueten",
+   "q": {
+    "de": "Gibt es Geschenktüten für die Gäste?",
+    "en": "Do you offer party bags?",
+    "nl": "Hebben jullie uitdeelzakjes?",
+    "fr": "Proposez-vous des pochettes-cadeaux ?"
+   },
+   "keywords": {
+    "de": [
+     "geschenktüte",
+     "geschenktüten",
+     "geschenktuete",
+     "tüte",
+     "tüten",
+     "mitgebsel",
+     "gastgeschenk",
+     "gastgeschenke",
+     "giveaway",
+     "süßigkeiten",
+     "tattoos",
+     "sammelkarten",
+     "goodie bag"
+    ],
+    "en": [
+     "party bag",
+     "party bags",
+     "goody bag",
+     "goodie bag",
+     "gift bag",
+     "bags",
+     "giveaway",
+     "favours",
+     "party favours",
+     "sweets",
+     "tattoos",
+     "trading cards"
+    ],
+    "nl": [
+     "uitdeelzakje",
+     "uitdeelzakjes",
+     "cadeauzakje",
+     "cadeauzakjes",
+     "zakje",
+     "traktatie",
+     "uitdelen",
+     "goodiebag",
+     "snoep",
+     "tattoos",
+     "verzamelkaarten",
+     "bedankje"
+    ],
+    "fr": [
+     "pochette",
+     "pochettes",
+     "pochette cadeau",
+     "sachet",
+     "sachets",
+     "petit cadeau",
+     "cadeaux invités",
+     "bonbons",
+     "friandises",
+     "tatouages",
+     "cartes à collectionner",
+     "goodies"
+    ]
+   },
+   "a": {
+    "de": "Ja! Geschenktüten kosten 5 € pro Stück, der Inhalt ist über 10 € wert: eine LEGO-kompatible Figur und Sammelkarten, Kindertattoos, Minifiguren zum Bemalen und Süßigkeiten.\nIdeal als Mitgebsel. Die Anzahl wählst du einfach im Buchungsformular.",
+    "en": "Yes! Party bags cost €5 each, with contents worth over €10: a LEGO-compatible figure and trading cards, temporary tattoos, mini figures to paint and sweets.\nPerfect as a take-home treat. Just choose how many in the booking form.",
+    "nl": "Ja! Uitdeelzakjes kosten € 5 per stuk en de inhoud is meer dan € 10 waard: een LEGO-compatibel figuurtje en verzamelkaarten, plaktattoos, minifiguurtjes om te beschilderen en snoep.\nIdeaal als bedankje. Het aantal kies je gewoon in het boekingsformulier.",
+    "fr": "Oui ! Les pochettes-cadeaux coûtent 5 € pièce, pour un contenu d’une valeur de plus de 10 € : une figurine compatible LEGO et des cartes à collectionner, des tatouages pour enfants, des minifigurines à peindre et des bonbons.\nIdéal comme petit cadeau à emporter. Il suffit d’indiquer le nombre dans le formulaire de réservation."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/#buchung",
+    "en": "/sotg-vorschau/en/birthday-parties/#buchung",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/#buchung",
+    "fr": "/sotg-vorschau/fr/anniversaires/#buchung"
+   },
+   "linkText": {
+    "de": "Zum Buchungsformular",
+    "en": "To the booking form",
+    "nl": "Naar het boekingsformulier",
+    "fr": "Vers le formulaire de réservation"
+   }
+  },
+  {
+   "id": "gutscheine-gaeste",
+   "q": {
+    "de": "Was können die Gastkinder schenken?",
+    "en": "What can guests give as a present?",
+    "nl": "Wat kunnen de gasten cadeau geven?",
+    "fr": "Que peuvent offrir les petits invités ?"
+   },
+   "keywords": {
+    "de": [
+     "gutschein",
+     "gutscheine",
+     "geschenkgutschein",
+     "geschenk",
+     "geschenke",
+     "schenken",
+     "geschenkidee",
+     "gastkinder",
+     "kommission",
+     "was schenken",
+     "gutschien"
+    ],
+    "en": [
+     "voucher",
+     "vouchers",
+     "gift voucher",
+     "gift card",
+     "present",
+     "presents",
+     "gift",
+     "gift idea",
+     "what to give",
+     "guests",
+     "sale or return"
+    ],
+    "nl": [
+     "cadeaubon",
+     "cadeaubonnen",
+     "waardebon",
+     "tegoedbon",
+     "cadeau",
+     "cadeautje",
+     "cadeautip",
+     "wat geven",
+     "gasten",
+     "cadeau idee",
+     "consignatie"
+    ],
+    "fr": [
+     "bon cadeau",
+     "bons cadeaux",
+     "bon d'achat",
+     "carte cadeau",
+     "cadeau",
+     "cadeaux",
+     "offrir",
+     "idée cadeau",
+     "idee cadeau",
+     "invités",
+     "dépôt"
+    ]
+   },
+   "a": {
+    "de": "Gastkinder wissen oft nicht, was sie schenken sollen. Darum geben wir euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit.\nAbgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück. Trag einfach im Buchungsformular ein, wie viele ihr möchtet.",
+    "en": "Guests often don't know what to give. So we hand you gift vouchers worth €5 or €10 in advance, on a sale-or-return basis.\nOn the day of the party you only pay for the ones that were sold, the rest come back to us. Just note how many you'd like in the booking form.",
+    "nl": "Gasten weten vaak niet wat ze moeten geven. Daarom geven we je vooraf cadeaubonnen van € 5 of € 10 mee in consignatie.\nOp de verjaardag reken je alleen af wat er verkocht is, de rest komt terug. Vul in het boekingsformulier gewoon in hoeveel je wilt.",
+    "fr": "Les petits invités ne savent souvent pas quoi offrir. C’est pourquoi nous vous remettons à l’avance des bons cadeaux de 5 € ou 10 € en dépôt-vente.\nLe jour de l’anniversaire, seuls les bons vendus sont facturés, le reste nous est rendu. Indiquez simplement le nombre souhaité dans le formulaire de réservation."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/#buchung",
+    "en": "/sotg-vorschau/en/birthday-parties/#buchung",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/#buchung",
+    "fr": "/sotg-vorschau/fr/anniversaires/#buchung"
+   },
+   "linkText": {
+    "de": "Zum Buchungsformular",
+    "en": "To the booking form",
+    "nl": "Naar het boekingsformulier",
+    "fr": "Vers le formulaire de réservation"
+   }
+  },
+  {
+   "id": "geburtstag-buchen",
+   "q": {
+    "de": "Wie buche ich einen Kindergeburtstag?",
+    "en": "How do I book a kids' party?",
+    "nl": "Hoe boek ik een kinderfeestje?",
+    "fr": "Comment réserver un anniversaire d’enfant ?"
+   },
+   "keywords": {
+    "de": [
+     "buchen",
+     "buchung",
+     "geburtstag buchen",
+     "reservieren",
+     "reservierung",
+     "anfrage",
+     "formular",
+     "buchungsformular",
+     "telefonisch",
+     "anrufen",
+     "frage",
+     "wie buche"
+    ],
+    "en": [
+     "book",
+     "booking",
+     "book a party",
+     "reserve",
+     "reservation",
+     "enquiry",
+     "enquire",
+     "form",
+     "booking form",
+     "by phone",
+     "call",
+     "question"
+    ],
+    "nl": [
+     "boeken",
+     "boeking",
+     "feestje boeken",
+     "reserveren",
+     "reservering",
+     "aanvraag",
+     "aanvragen",
+     "formulier",
+     "boekingsformulier",
+     "telefonisch",
+     "bellen",
+     "vraag"
+    ],
+    "fr": [
+     "réserver",
+     "reserver",
+     "réservation",
+     "reservation",
+     "demande",
+     "formulaire",
+     "formulaire de réservation",
+     "par téléphone",
+     "appeler",
+     "question",
+     "comment réserver"
+    ]
+   },
+   "a": {
+    "de": "Gebucht wird ausschließlich schriftlich über das Buchungsformular auf der Geburtstagsseite, eine Reservierung per Telefon ist nicht möglich.\nErst mal nur eine Frage? Dann schreib uns lieber über das Kontaktformular oder ruf an: +49 2161 406 37 90.",
+    "en": "Bookings are made in writing only, using the booking form on our birthday page. We can't take reservations by phone.\nJust have a question for now? Then use our contact form or give us a call: +49 2161 406 37 90.",
+    "nl": "Boeken kan alleen schriftelijk via het boekingsformulier op de pagina over kinderfeestjes, telefonisch reserveren is niet mogelijk.\nEerst alleen een vraag? Stuur ons dan liever een bericht via het contactformulier of bel: +49 2161 406 37 90.",
+    "fr": "La réservation se fait uniquement par écrit, via le formulaire de la page anniversaires. Il n’est pas possible de réserver par téléphone.\nVous avez juste une question pour l’instant ? Écrivez-nous plutôt via le formulaire de contact ou appelez-nous : +49 2161 406 37 90."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/#buchung",
+    "en": "/sotg-vorschau/en/birthday-parties/#buchung",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/#buchung",
+    "fr": "/sotg-vorschau/fr/anniversaires/#buchung"
+   },
+   "linkText": {
+    "de": "Zum Buchungsformular",
+    "en": "To the booking form",
+    "nl": "Naar het boekingsformulier",
+    "fr": "Vers le formulaire de réservation"
+   }
+  },
+  {
+   "id": "buchung-verbindlich",
+   "q": {
+    "de": "Ist meine Buchung sofort verbindlich?",
+    "en": "Is my booking confirmed straight away?",
+    "nl": "Is mijn boeking meteen definitief?",
+    "fr": "Ma réservation est-elle confirmée tout de suite ?"
+   },
+   "keywords": {
+    "de": [
+     "verbindlich",
+     "unverbindlich",
+     "bestätigung",
+     "bestaetigung",
+     "bestätigt",
+     "fest",
+     "gebucht",
+     "keine antwort",
+     "keine mail",
+     "spam",
+     "e-mail",
+     "mail bekommen",
+     "stornieren"
+    ],
+    "en": [
+     "binding",
+     "confirmed",
+     "confirmation",
+     "confirm",
+     "is it booked",
+     "no reply",
+     "no email",
+     "spam",
+     "junk",
+     "email",
+     "heard back",
+     "pending"
+    ],
+    "nl": [
+     "bindend",
+     "definitief",
+     "bevestiging",
+     "bevestigd",
+     "vast",
+     "geboekt",
+     "geen antwoord",
+     "geen mail",
+     "spam",
+     "ongewenste mail",
+     "e-mail",
+     "mail ontvangen"
+    ],
+    "fr": [
+     "ferme",
+     "définitif",
+     "definitif",
+     "engagement",
+     "confirmation",
+     "confirmé",
+     "confirmee",
+     "réservé",
+     "pas de réponse",
+     "pas de mail",
+     "spam",
+     "courrier indésirable",
+     "e-mail"
+    ]
+   },
+   "a": {
+    "de": "Deine Buchung ist verbindlich, sobald wir sie per E-Mail bestätigen. Erst dann ist der Termin fest.\nSchau zur Sicherheit auch in deinen Spam-Ordner.",
+    "en": "Your booking becomes binding as soon as we confirm it by email. Only then is the date fixed.\nTo be on the safe side, check your spam folder too.",
+    "nl": "Je boeking is bindend zodra we die per e-mail bevestigen. Pas dan staat de datum vast.\nKijk voor de zekerheid ook in je spammap.",
+    "fr": "Votre réservation devient ferme dès que nous la confirmons par e-mail. C’est seulement à ce moment-là que la date est fixée.\nPar précaution, pensez à vérifier aussi votre dossier de courrier indésirable."
+   },
+   "link": {
+    "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/#buchung",
+    "en": "/sotg-vorschau/en/birthday-parties/#buchung",
+    "nl": "/sotg-vorschau/nl/kinderfeestje/#buchung",
+    "fr": "/sotg-vorschau/fr/anniversaires/#buchung"
+   },
+   "linkText": {
+    "de": "Zum Buchungsformular",
+    "en": "To the booking form",
+    "nl": "Naar het boekingsformulier",
+    "fr": "Vers le formulaire de réservation"
+   }
+  },
+  {
+   "id": "jga",
+   "q": {
+    "de": "Was bietet ihr für einen JGA?",
+    "en": "What do you offer for hen and stag parties?",
+    "nl": "Wat bieden jullie voor een vrijgezellenfeest?",
+    "fr": "Que proposez-vous pour un EVJF ou EVG ?"
+   },
+   "keywords": {
+    "de": [
+     "jga",
+     "junggesellenabschied",
+     "junggesellinnenabschied",
+     "junggesellen",
+     "polterabend",
+     "hochzeit",
+     "cocktail",
+     "cantina",
+     "space cantina",
+     "gruppe erwachsene",
+     "lichtschwert duell",
+     "jga tour"
+    ],
+    "en": [
+     "hen party",
+     "stag party",
+     "hen do",
+     "stag do",
+     "bachelor",
+     "bachelorette",
+     "wedding",
+     "cocktail",
+     "cocktails",
+     "cantina",
+     "space cantina",
+     "lightsaber duel"
+    ],
+    "nl": [
+     "vrijgezellenfeest",
+     "vrijgezellen",
+     "vrijgezellenavond",
+     "bruiloft",
+     "trouwen",
+     "cocktail",
+     "cocktails",
+     "cantina",
+     "space cantina",
+     "lichtzwaardduel",
+     "vrijgezel",
+     "groep"
+    ],
+    "fr": [
+     "evjf",
+     "evg",
+     "enterrement de vie",
+     "enterrement de vie de jeune fille",
+     "enterrement de vie de garçon",
+     "mariage",
+     "cocktail",
+     "cocktails",
+     "cantina",
+     "space cantina",
+     "duel au sabre laser"
+    ]
+   },
+   "a": {
+    "de": "Unsere JGA-Tour kostet 50 € pro Person: Begrüßungscocktail in der Space Cantina, eine Stunde Padawan-Führung durch die Ausstellung und als Finale ein Lichtschwert-Kampftraining. Optional gibt es Hot Dogs für 7,50 € pro Person.\nDen Termin machen wir nach Absprache, schick uns einfach Wunschtermin und Gruppengröße.",
+    "en": "Our hen and stag tour costs €50 per person: a welcome cocktail in the Space Cantina, a one-hour Padawan tour of the exhibition and lightsaber combat training as the grand finale. Hot dogs are available for an extra €7.50 per person.\nDates are by arrangement, just send us your preferred date and group size.",
+    "nl": "Onze vrijgezellentour kost € 50 per persoon: welkomstcocktail in de Space Cantina, een uur Padawan-rondleiding door de tentoonstelling en als finale een lichtzwaardgevechtstraining. Hotdogs kun je erbij boeken voor € 7,50 per persoon.\nDe datum spreken we samen af, stuur ons gewoon je gewenste datum en groepsgrootte.",
+    "fr": "Notre formule EVJF & EVG coûte 50 € par personne : cocktail de bienvenue à la Space Cantina, une heure de visite guidée en Padawan à travers l’exposition et, en grand final, un entraînement au combat au sabre laser. Des hot-dogs sont proposés en option pour 7,50 € par personne.\nLa date se fixe sur demande : envoyez-nous simplement la date souhaitée et la taille du groupe."
+   },
+   "link": {
+    "de": "/sotg-vorschau/junggeselleninnen/",
+    "en": "/sotg-vorschau/en/hen-and-stag-parties/",
+    "nl": "/sotg-vorschau/nl/vrijgezellenfeest/",
+    "fr": "/sotg-vorschau/fr/evjf-evg/"
+   },
+   "linkText": {
+    "de": "JGA-Tour ansehen",
+    "en": "See the hen & stag tour",
+    "nl": "Bekijk de vrijgezellentour",
+    "fr": "Voir l’offre EVJF & EVG"
+   }
+  },
+  {
+   "id": "vermietung",
+   "q": {
+    "de": "Kann man Figuren mieten?",
+    "en": "Can I hire figures?",
+    "nl": "Kan ik figuren huren?",
+    "fr": "Peut-on louer des figurines ?"
+   },
+   "keywords": {
+    "de": [
+     "mieten",
+     "vermietung",
+     "ausleihen",
+     "leihen",
+     "verleih",
+     "lebensgroße figuren",
+     "filmfiguren",
+     "messe",
+     "event",
+     "firmenevent",
+     "dreh",
+     "sheriff",
+     "halloween",
+     "deko",
+     "europa"
+    ],
+    "en": [
+     "hire",
+     "rent",
+     "rental",
+     "prop rental",
+     "props",
+     "borrow",
+     "life-size figures",
+     "film figures",
+     "trade fair",
+     "event",
+     "corporate event",
+     "film shoot",
+     "sheriff car",
+     "halloween",
+     "europe"
+    ],
+    "nl": [
+     "huren",
+     "verhuur",
+     "lenen",
+     "verhuren",
+     "levensgrote figuren",
+     "filmfiguren",
+     "beurs",
+     "evenement",
+     "event",
+     "bedrijfsfeest",
+     "filmopname",
+     "sheriffauto",
+     "halloween",
+     "decoratie",
+     "europa"
+    ],
+    "fr": [
+     "louer",
+     "location",
+     "emprunter",
+     "prêt",
+     "figures grandeur nature",
+     "personnages de films",
+     "salon",
+     "événement",
+     "evenement",
+     "séminaire",
+     "tournage",
+     "voiture de shérif",
+     "halloween",
+     "décor",
+     "europe"
+    ]
+   },
+   "a": {
+    "de": "Ja! Wir vermieten 26 lebensgroße Filmfiguren, Raumschiff-Modelle, XXL-Exponate wie ein US-Sheriff-Car und Halloween-Kulissen, für Messe, Firmenevent, Hochzeit oder Dreh. Anfragen aus ganz Europa sind willkommen.\nFiguren, Modelle und XXL-Exponate kalkulieren wir individuell, die Halloween-Deko hat feste Tagespreise.",
+    "en": "Yes! We hire out 26 life-size film figures, starship models, XXL exhibits such as a US sheriff car and Halloween sets, for trade fairs, corporate events, weddings or film shoots. Enquiries from all over Europe are welcome.\nFigures, models and XXL exhibits are priced individually, the Halloween decorations have fixed day rates.",
+    "nl": "Ja! We verhuren 26 levensgrote filmfiguren, ruimteschipmodellen, XXL-objecten zoals een Amerikaanse sheriffauto en halloweendecors, voor beurs, bedrijfsevent, bruiloft of filmopname. Aanvragen uit heel Europa zijn welkom.\nFiguren, modellen en XXL-objecten berekenen we op maat, de halloweendecoratie heeft vaste dagprijzen.",
+    "fr": "Oui ! Nous louons 26 figurines de cinéma grandeur nature, des maquettes de vaisseaux, des pièces XXL comme une voiture de shérif américaine et des décors d’Halloween, pour salons, événements d’entreprise, mariages ou tournages. Les demandes de toute l’Europe sont les bienvenues.\nLes figurines, maquettes et pièces XXL sont chiffrées au cas par cas, la déco Halloween a des tarifs journaliers fixes."
+   },
+   "link": {
+    "de": "/sotg-vorschau/vermietung/#anfrage",
+    "en": "/sotg-vorschau/en/prop-rental/#anfrage",
+    "nl": "/sotg-vorschau/nl/verhuur/#anfrage",
+    "fr": "/sotg-vorschau/fr/location/#anfrage"
+   },
+   "linkText": {
+    "de": "Angebot anfragen",
+    "en": "Request a quote",
+    "nl": "Offerte aanvragen",
+    "fr": "Demander un devis"
+   }
+  },
+  {
+   "id": "kontakt",
+   "q": {
+    "de": "Wie erreiche ich euch?",
+    "en": "How can I contact you?",
+    "nl": "Hoe kan ik jullie bereiken?",
+    "fr": "Comment vous contacter ?"
+   },
+   "keywords": {
+    "de": [
+     "kontakt",
+     "telefon",
+     "telefonnummer",
+     "nummer",
+     "anrufen",
+     "erreichen",
+     "mail",
+     "e-mail",
+     "email",
+     "schreiben",
+     "kontaktformular",
+     "nachricht",
+     "frage"
+    ],
+    "en": [
+     "contact",
+     "phone",
+     "phone number",
+     "telephone",
+     "number",
+     "call",
+     "reach",
+     "email",
+     "e-mail",
+     "mail",
+     "write",
+     "contact form",
+     "message"
+    ],
+    "nl": [
+     "contact",
+     "telefoon",
+     "telefoonnummer",
+     "nummer",
+     "bellen",
+     "bereiken",
+     "mail",
+     "e-mail",
+     "email",
+     "mailen",
+     "schrijven",
+     "contactformulier",
+     "bericht"
+    ],
+    "fr": [
+     "contact",
+     "contacter",
+     "téléphone",
+     "telephone",
+     "numéro",
+     "numero",
+     "appeler",
+     "joindre",
+     "e-mail",
+     "email",
+     "mail",
+     "écrire",
+     "formulaire de contact",
+     "message"
+    ]
+   },
+   "a": {
+    "de": "Ruf uns an unter +49 2161 406 37 90, am besten zu den Öffnungszeiten, oder schreib an info@starsofthegalaxy.de. Auf der Kontaktseite findest du auch unser Formular.",
+    "en": "Call us on +49 2161 406 37 90, ideally during opening hours, or email info@starsofthegalaxy.de. You'll also find our contact form on the contact page.",
+    "nl": "Bel ons op +49 2161 406 37 90, het liefst tijdens de openingstijden, of mail naar info@starsofthegalaxy.de. Op de contactpagina vind je ook ons formulier.",
+    "fr": "Appelez-nous au +49 2161 406 37 90, de préférence pendant les heures d’ouverture, ou écrivez à info@starsofthegalaxy.de. Vous trouverez aussi notre formulaire sur la page contact."
+   },
+   "link": {
+    "de": "/sotg-vorschau/kontakt/",
+    "en": "/sotg-vorschau/en/contact/",
+    "nl": "/sotg-vorschau/nl/contact/",
+    "fr": "/sotg-vorschau/fr/contact/"
+   },
+   "linkText": {
+    "de": "Zur Kontaktseite",
+    "en": "To the contact page",
+    "nl": "Naar de contactpagina",
+    "fr": "Vers la page contact"
+   }
+  },
+  {
+   "id": "merch-shop",
+   "q": {
+    "de": "Gibt es einen Fanshop?",
+    "en": "Do you have a merch shop?",
+    "nl": "Hebben jullie een fanshop?",
+    "fr": "Avez-vous une boutique ?"
+   },
+   "keywords": {
+    "de": [
+     "shop",
+     "fanshop",
+     "merch",
+     "merchandise",
+     "fanartikel",
+     "souvenir",
+     "souvenirs",
+     "andenken",
+     "kaufen",
+     "tasse",
+     "tshirt"
+    ],
+    "en": [
+     "shop",
+     "merch",
+     "merchandise",
+     "souvenir",
+     "souvenirs",
+     "gift shop",
+     "fan shop",
+     "buy",
+     "mug",
+     "t-shirt"
+    ],
+    "nl": [
+     "shop",
+     "fanshop",
+     "merch",
+     "merchandise",
+     "souvenir",
+     "souvenirs",
+     "aandenken",
+     "winkel",
+     "kopen",
+     "t-shirt"
+    ],
+    "fr": [
+     "boutique",
+     "shop",
+     "merch",
+     "produits dérivés",
+     "souvenir",
+     "souvenirs",
+     "goodies",
+     "acheter",
+     "tasse",
+     "t-shirt"
+    ]
+   },
+   "a": {
+    "de": "Fanartikel findest du in unserem Merch-Shop online.",
+    "en": "You'll find merchandise in our online merch shop (in German).",
+    "nl": "Merchandise vind je in onze online merchshop (in het Duits).",
+    "fr": "Vous trouverez nos produits dérivés dans notre boutique en ligne (en allemand)."
+   },
+   "link": {
+    "de": "https://shop.starsofthegalaxy.de/collections/stobern",
+    "en": "https://shop.starsofthegalaxy.de/collections/stobern",
+    "nl": "https://shop.starsofthegalaxy.de/collections/stobern",
+    "fr": "https://shop.starsofthegalaxy.de/collections/stobern"
+   },
+   "linkText": {
+    "de": "Zum Merch-Shop",
+    "en": "To the merch shop",
+    "nl": "Naar de merchshop",
+    "fr": "Vers la boutique"
+   }
+  },
+  {
+   "id": "kenny",
+   "q": {
+    "de": "Wer bist du eigentlich?",
+    "en": "Who are you?",
+    "nl": "Wie ben jij eigenlijk?",
+    "fr": "Qui êtes-vous ?"
+   },
+   "keywords": {
+    "de": [
+     "kenny",
+     "wer bist du",
+     "roboter",
+     "bot",
+     "chatbot",
+     "butler",
+     "droide",
+     "mensch",
+     "hallo",
+     "hey"
+    ],
+    "en": [
+     "kenny",
+     "who are you",
+     "robot",
+     "bot",
+     "chatbot",
+     "butler",
+     "droid",
+     "human",
+     "hello",
+     "hey"
+    ],
+    "nl": [
+     "kenny",
+     "wie ben je",
+     "wie ben jij",
+     "robot",
+     "bot",
+     "chatbot",
+     "butler",
+     "droid",
+     "mens",
+     "hallo",
+     "hoi",
+     "hey"
+    ],
+    "fr": [
+     "kenny",
+     "qui êtes-vous",
+     "qui es-tu",
+     "robot",
+     "bot",
+     "chatbot",
+     "majordome",
+     "droïde",
+     "humain",
+     "bonjour",
+     "salut"
+    ]
+   },
+   "a": {
+    "de": "Ich bin Kenny, der Roboter-Butler von Stars of the Galaxy. In der AR-App SnoopIT führe ich dich durch die Ausstellung, und hier beantworte ich deine Fragen rund um den Besuch.",
+    "en": "I'm Kenny, the robot butler of Stars of the Galaxy. In the AR app SnoopIT I guide you through the exhibition, and here I answer your questions about your visit.",
+    "nl": "Ik ben Kenny, de robotbutler van Stars of the Galaxy. In de AR-app SnoopIT leid ik je door de tentoonstelling, en hier beantwoord ik je vragen over je bezoek.",
+    "fr": "Je suis Kenny, le robot majordome de Stars of the Galaxy. Dans l’appli SnoopIT, je vous guide à travers l’exposition, et ici je réponds à vos questions sur votre visite."
+   }
+  }
+ ]
+}

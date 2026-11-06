@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sotg",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "python3 -m http.server \"${PORT:-8123}\" --directory /Users/Mikel/Claude/stars-of-the-galaxy"],
+      "autoPort": true
+    }
+  ]
+}

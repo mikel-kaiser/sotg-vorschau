@@ -1,0 +1,53 @@
+{
+  "updated": "2026-11-03",
+  "source": "Google-Bewertungen (manuell übernommen; automatische Aktualisierung siehe /cron/ANLEITUNG.txt)",
+  "rating": 4.8,
+  "reviews": [
+    {
+      "name": "Florian",
+      "rating": 5,
+      "text": "Super nettes Personal! Das Museum ist sehr schön und spannend gestaltet und jeder Fan wird hier glücklich raus gehen."
+    },
+    {
+      "name": "Courtney B.",
+      "rating": 5,
+      "text": "The staff were so lovely and polite. I really enjoyed it here! The best place to go whether it's by yourself or with your family.",
+      "lang": "en"
+    },
+    {
+      "name": "Viel Unterwegs",
+      "rating": 5,
+      "text": "Sei die Macht mit dir. Warm anziehen, denn im Weltraum ist es kalt. Kindergeburtstag einfach mega."
+    },
+    {
+      "name": "Amy B.",
+      "rating": 5,
+      "text": "Super Ausstellung, ein sehr netter Mitarbeiter, es war ein sehr schöner Nachmittag."
+    },
+    {
+      "name": "Arno",
+      "rating": 5,
+      "text": "Für Star Wars Fans ein Muss. Wirklich tolle Ausstellung."
+    },
+    {
+      "name": "Daniel W.",
+      "rating": 5,
+      "text": "Toller Ort für alle Star Wars Fans! Muss man gesehen haben!"
+    },
+    {
+      "name": "Birgitt B.",
+      "rating": 5,
+      "text": "Wir waren total begeistert. Man sollte auf jeden Fall die Führung mitmachen. Ein Highlight ist dieses Museum, auch wenn man sich mit Star Wars nicht so auskennt."
+    },
+    {
+      "name": "Michael B.",
+      "rating": 5,
+      "text": "Tolle Ausstellung für Fans und auch welche, die es erst noch werden müssen."
+    },
+    {
+      "name": "Alex F.",
+      "rating": 5,
+      "text": "Eine unvergessliche Reise. Die Ausstellung hat all meine Erwartungen übertroffen."
+    }
+  ]
+}
