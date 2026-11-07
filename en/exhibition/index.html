@@ -476,6 +476,6 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <a class="btn btn--primary" href="https://shop.starsofthegalaxy.de/collections/tickets" target="_blank" rel="noopener" data-event="cta-tickets-sticky">Get tickets</a>
 </div>
 
-<script>document.addEventListener("submit",function(e){var f=e.target;if(!f||f.tagName!=="FORM")return;e.preventDefault();e.stopImmediatePropagation();var o=f.parentNode.querySelector(".transmission");if(o)o.remove();var d=document.createElement("div");d.className="transmission";d.setAttribute("role","status");d.innerHTML="<strong>&gt;&gt; Preview_</strong>"+"This request was not sent. On the live site it goes straight to the museum inbox.";f.parentNode.insertBefore(d,f);d.scrollIntoView({block:"center"});},true);</script>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(!f||f.tagName!=="FORM"||!f.hasAttribute("data-transmission"))return;e.preventDefault();e.stopImmediatePropagation();var o=f.parentNode.querySelector(".transmission");if(o)o.remove();var d=document.createElement("div");d.className="transmission";d.setAttribute("role","status");d.innerHTML="<strong>&gt;&gt; Preview_</strong>"+"This request was not sent. On the live site it goes straight to the museum inbox.";f.parentNode.insertBefore(d,f);d.scrollIntoView({block:"center"});},true);</script>
 </body>
 </html>
