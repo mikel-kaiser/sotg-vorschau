@@ -114,8 +114,10 @@
     card.hidden = false;
   }
 
+  var pins = {};
   P.forEach(function (p) {
     var b = document.createElement('button');
+    pins[p.id] = b;
     b.type = 'button';
     b.className = 'lageplan__pin' + (p.foto ? ' lageplan__pin--foto' : '');
     /* Punkt an den Rand der Beschriftung setzen, damit der Plan lesbar bleibt */
@@ -127,8 +129,96 @@
     b.addEventListener('click', function (e) { e.stopPropagation(); open(b, p); });
     stage.appendChild(b);
   });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && current) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && current && !(dlg && dlg.open)) close(); });
   document.addEventListener('click', function (e) { if (current && !card.contains(e.target)) close(); });
+
+  /* ---- Feedback 12.11.2026: Plan groß als Pop-up öffnen, Stationen mit Fotos ---- */
+  var T = {
+    open: { de: 'Lageplan groß öffnen', en: 'Open full-size floor plan', nl: 'Plattegrond groot openen', fr: 'Ouvrir le plan en grand' },
+    title: { de: 'Lageplan', en: 'Floor plan', nl: 'Plattegrond', fr: 'Plan du musée' },
+    stations: { de: 'Stationen im Überblick', en: 'Stations at a glance', nl: 'Stations in één oogopslag', fr: 'Les stations en un coup d’œil' }
+  };
+  var dlg = null, dlgBody = null, home = document.createComment('lageplan');
+  root.parentNode.insertBefore(home, root);
+
+  function buildDialog() {
+    dlg = document.createElement('dialog');
+    dlg.className = 'lageplan-dialog';
+    dlg.setAttribute('aria-label', L(T.title));
+    var bar = document.createElement('div'); bar.className = 'lageplan-dialog__bar';
+    var t = document.createElement('strong'); t.textContent = L(T.title);
+    var x = document.createElement('button'); x.type = 'button'; x.className = 'lageplan-dialog__close';
+    x.setAttribute('aria-label', L(UI.close)); x.textContent = '×';
+    x.addEventListener('click', function () { dlg.close(); });
+    bar.appendChild(t); bar.appendChild(x);
+    dlgBody = document.createElement('div'); dlgBody.className = 'lageplan-dialog__body';
+    dlg.appendChild(bar); dlg.appendChild(dlgBody);
+    document.body.appendChild(dlg);
+    dlg.addEventListener('cancel', function (e) {
+      if (current) { e.preventDefault(); close(); }
+    });
+    dlg.addEventListener('close', function () {
+      if (current) close();
+      home.parentNode.insertBefore(root, home.nextSibling);
+      document.documentElement.style.overflow = '';
+    });
+  }
+  function openDialog(id) {
+    if (typeof HTMLDialogElement === 'undefined') { if (id) pins[id].click(); return; }
+    if (!dlg) buildDialog();
+    if (!dlg.open) {
+      if (current) close();
+      dlgBody.appendChild(root);
+      document.documentElement.style.overflow = 'hidden';
+      dlg.showModal();
+      dlgBody.scrollTop = 0; dlgBody.scrollLeft = 0;
+    }
+    if (id) {
+      var p = null;
+      P.forEach(function (q) { if (q.id === id) p = q; });
+      /* Punkt ins Bild holen (wichtig auf schmalen Bildschirmen) */
+      var b = pins[id];
+      var lp = root;
+      if (lp.scrollWidth > lp.clientWidth) lp.scrollLeft = Math.max(0, b.offsetLeft - lp.clientWidth / 2);
+      if (current !== b) open(b, p);
+    }
+  }
+  /* Klick auf eine freie Stelle des Plans öffnet ihn groß */
+  stage.addEventListener('click', function (e) {
+    if (e.target.closest('.lageplan__pin') || (dlg && dlg.open)) return;
+    if (current) return;
+    openDialog();
+  });
+
+  var legend = document.querySelector('.lageplan__legend');
+  var tools = document.createElement('div'); tools.className = 'lageplan-tools';
+  var big = document.createElement('button'); big.type = 'button'; big.className = 'btn btn--ghost btn--sm';
+  big.setAttribute('data-event', 'lageplan-gross');
+  big.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="margin-right:.45rem"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
+  big.appendChild(document.createTextNode(L(T.open)));
+  big.addEventListener('click', function (e) { e.stopPropagation(); openDialog(); });
+  var anchor = legend || root;
+  anchor.parentNode.insertBefore(tools, anchor);
+  if (legend) tools.appendChild(legend);
+  tools.appendChild(big);
+
+  /* Stationen mit Fotos unter dem Plan */
+  var box = document.createElement('div'); box.className = 'lageplan__stations';
+  var h = document.createElement('h3'); h.textContent = L(T.stations);
+  var grid = document.createElement('div'); grid.className = 'lageplan__stations-grid';
+  P.forEach(function (p) {
+    var b = document.createElement('button'); b.type = 'button';
+    b.className = 'lageplan__station' + (p.foto ? ' lageplan__station--foto' : '');
+    b.setAttribute('data-event', 'lageplan-station-' + p.id);
+    var im = document.createElement('img');
+    im.src = src(p, 480); im.alt = ''; im.width = 480; im.height = 360; im.loading = 'lazy'; im.decoding = 'async';
+    var s = document.createElement('span'); s.textContent = L(p.t);
+    b.appendChild(im); b.appendChild(s);
+    b.addEventListener('click', function (e) { e.stopPropagation(); openDialog(p.id); });
+    grid.appendChild(b);
+  });
+  box.appendChild(h); box.appendChild(grid);
+  tools.parentNode.insertBefore(box, tools.nextSibling);
 })();
 
 /* QA 07.11.: Hinweis unter dem Lageplan auf dem Handy */
@@ -136,8 +226,8 @@
   var lp = document.querySelector('.lageplan');
   if (!lp) return;
   var L = (document.documentElement.lang || 'de').slice(0, 2);
-  var T = { de: 'Tipp: Plan zur Seite wischen, um alles zu sehen.', en: 'Tip: swipe the plan sideways to see everything.',
-            nl: 'Tip: veeg de plattegrond opzij om alles te zien.', fr: 'Astuce\u00a0: faites glisser le plan sur le côté pour tout voir.' };
+  var T = { de: 'Tipp: Plan antippen, um ihn groß zu öffnen.', en: 'Tip: tap the plan to open it full size.',
+            nl: 'Tip: tik op de plattegrond om hem groot te openen.', fr: 'Astuce\u00a0: touchez le plan pour l’ouvrir en grand.' };
   var p = document.createElement('p');
   p.className = 'lageplan__swipe'; p.textContent = T[L] || T.de;
   lp.parentNode.insertBefore(p, lp.nextSibling);

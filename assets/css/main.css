@@ -1142,3 +1142,59 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
   .btn { padding-inline: .95rem; letter-spacing: .08em; }
 }
 @media (max-width: 420px) { #guide .pick-grid { grid-template-columns: 1fr; } }
+
+/* ===== Feedback Thomas 12.11.2026 ===== */
+@media (min-width: 860px) { .grid-2--wide-media.grid-2--media-right { grid-template-columns: 1fr 1.15fr; } }
+/* Partnerlogos hell auf dunklem Grund */
+.partner-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.1rem 1.8rem; }
+.partner-chip { background: none; border: 0; clip-path: none; padding: 0; min-height: 0; opacity: .88; }
+.partner-chip:hover { opacity: 1; }
+.partner-chip img { height: 46px; max-height: none; width: auto; max-width: 210px; }
+.partner-chip img[src*="steinedorf"] { height: 76px; }
+/* Vermietung: hohe Bilder für XXL-Exponate */
+.card > .card__media--tall { aspect-ratio: 4 / 5; object-position: 50% 30%; }
+/* Ticketseite: Hinweis auf die JGA-Tour */
+.jga-hint { margin-top: 1.4rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem 1.4rem; }
+.jga-hint p { margin: 0; flex: 1 1 26rem; color: var(--ink-dim); }
+/* Lageplan: groß öffnen, Stationen mit Fotos */
+.lageplan-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.4rem; margin-top: .9rem; }
+.lageplan-tools .lageplan__legend { margin-top: 0; }
+.lageplan__stage { cursor: zoom-in; }
+.lageplan-dialog .lageplan__stage { cursor: default; }
+.lageplan-dialog {
+  width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0;
+  background: rgba(5, 6, 15, .98); color: var(--ink); overflow: hidden;
+}
+.lageplan-dialog::backdrop { background: rgba(3, 4, 10, .9); }
+.lageplan-dialog__bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .7rem 1rem; border-bottom: 1px solid var(--line); background: rgba(8, 11, 24, .98);
+}
+.lageplan-dialog__bar strong { font-family: var(--font-display); letter-spacing: .08em; text-transform: uppercase; font-size: .95rem; }
+.lageplan-dialog__close { width: 44px; height: 44px; background: transparent; color: #fff; border: 1px solid var(--line); font-size: 1.5rem; cursor: pointer; }
+.lageplan-dialog__body { height: calc(100dvh - 62px); overflow: auto; padding: 1rem; -webkit-overflow-scrolling: touch; }
+.lageplan-dialog .lageplan { width: min(100%, calc((100dvh - 110px) * 1.405)); margin: 0 auto; overflow: visible; }
+.lageplan-dialog .lageplan__card img { height: 220px; }
+@media (max-width: 900px) {
+  .lageplan-dialog .lageplan { width: auto; overflow-x: auto; }
+  .lageplan-dialog .lageplan__stage { min-width: 880px; }
+  .lageplan-dialog .lageplan__card { position: fixed; left: 50%; right: auto !important; top: auto !important; bottom: 1rem; transform: translateX(-50%); width: min(420px, calc(100vw - 2rem)); margin: 0; }
+  .lageplan-dialog .lageplan__card img { height: 180px; }
+}
+.lageplan__stations { margin-top: 2.2rem; }
+.lageplan__stations h3 { font-size: 1.05rem; margin: 0 0 .9rem; }
+.lageplan__stations-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: .8rem; }
+.lageplan__station {
+  display: block; padding: 0; text-align: left; cursor: pointer; color: var(--ink);
+  background: rgba(8, 11, 24, .9); border: 1px solid var(--line); clip-path: var(--bevel-sm); overflow: hidden;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.lageplan__station:hover, .lageplan__station:focus-visible { border-color: var(--cyan); transform: translateY(-2px); outline: none; }
+.lageplan__station img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.lageplan__station span { display: flex; align-items: center; gap: .45rem; padding: .55rem .7rem .65rem; font-size: .92rem; line-height: 1.3; }
+.lageplan__station span::before { content: ''; flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--cyan); }
+.lageplan__station--foto span::before { background: var(--amber); }
+@media (max-width: 640px) {
+  .lageplan__stations-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .7rem; padding-bottom: .5rem; -webkit-overflow-scrolling: touch; }
+  .lageplan__station { flex: 0 0 62%; scroll-snap-align: start; }
+}

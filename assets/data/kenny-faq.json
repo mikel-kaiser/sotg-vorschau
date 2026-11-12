@@ -944,10 +944,10 @@
     ]
    },
    "a": {
-    "de": "Ganz ehrlich: Am Eingang warten vier Stufen, am Anfang der Ausstellung eine Treppe. Leichte Rollstühle und Kinderwagen können getragen werden, danach sind rund 80 % der Ausstellung ebenerdig befahrbar.\nDer Bereich mit Kostümsammlung und Eiswelt liegt hinter zwei Treppen und ist nicht rollstuhlgerecht.",
-    "en": "To be honest: there are four steps at the entrance and a staircase at the start of the exhibition. Light wheelchairs and prams can be carried, and after that around 80% of the exhibition is step-free.\nThe area with the costume collection and the ice world is behind two staircases and isn't wheelchair-accessible.",
-    "nl": "Eerlijk is eerlijk: bij de ingang zijn vier treden en aan het begin van de tentoonstelling een trap. Lichte rolstoelen en kinderwagens kunnen worden gedragen, daarna is ongeveer 80% van de tentoonstelling gelijkvloers.\nHet deel met de kostuumcollectie en de ijswereld ligt achter twee trappen en is niet rolstoeltoegankelijk.",
-    "fr": "En toute franchise : quatre marches vous attendent à l’entrée et un escalier au début de l’exposition. Les fauteuils roulants légers et les poussettes peuvent être portés. Ensuite, environ 80 % de l’exposition est de plain-pied.\nLa partie consacrée à la collection de costumes et au monde de glace se trouve derrière deux escaliers et n’est pas accessible en fauteuil roulant."
+    "de": "Am Eingang warten vier Stufen, am Anfang der Ausstellung eine Treppe. Leichte Rollstühle und Kinderwagen können getragen werden, danach sind rund 80 % der Ausstellung ebenerdig befahrbar.\nDer Bereich mit Kostümsammlung und Eiswelt liegt hinter zwei Treppen und ist nicht rollstuhlgerecht.",
+    "en": "There are four steps at the entrance and a staircase at the start of the exhibition. Light wheelchairs and prams can be carried, and after that around 80% of the exhibition is step-free.\nThe area with the costume collection and the ice world is behind two staircases and isn't wheelchair-accessible.",
+    "nl": "Bij de ingang zijn vier treden en aan het begin van de tentoonstelling een trap. Lichte rolstoelen en kinderwagens kunnen worden gedragen, daarna is ongeveer 80% van de tentoonstelling gelijkvloers.\nHet deel met de kostuumcollectie en de ijswereld ligt achter twee trappen en is niet rolstoeltoegankelijk.",
+    "fr": "Quatre marches vous attendent à l’entrée et un escalier au début de l’exposition. Les fauteuils roulants légers et les poussettes peuvent être portés. Ensuite, environ 80 % de l’exposition est de plain-pied.\nLa partie consacrée à la collection de costumes et au monde de glace se trouve derrière deux escaliers et n’est pas accessible en fauteuil roulant."
    },
    "link": {
     "de": "/sotg-vorschau/ausstellung/",
@@ -1253,10 +1253,10 @@
     ]
    },
    "a": {
-    "de": "Auf über 1.200 m² warten ein 5,80 Meter langer AT-AT im großen Hoth-Diorama, über 50 lebensgroße Figuren, Han Solo in Karbonit, eine C-3PO-Animatronik, die sich wirklich bewegt, und ein LEGO-Sternenzerstörer aus 400.000 Steinen.\nGanz neu: ein lebensgroßer Starfighter im imperialen Hangar.",
-    "en": "Across more than 1,200 m² you'll find a 5.80-metre AT-AT in the big Hoth diorama, over 50 life-size figures, Han Solo in carbonite, a C-3PO animatronic that really moves and a LEGO Star Destroyer built from 400,000 bricks.\nBrand new: a life-size starfighter in the Imperial hangar.",
-    "nl": "Op ruim 1.200 m² wachten een 5,80 meter lange AT-AT in het grote Hoth-diorama, meer dan 50 levensgrote figuren, Han Solo in carboniet, een C-3PO-animatronic die echt beweegt en een LEGO Star Destroyer van 400.000 steentjes.\nGloednieuw: een levensgrote starfighter in de keizerlijke hangar.",
-    "fr": "Sur plus de 1 200 m² vous attendent un AT-AT de 5,80 mètres dans le grand diorama de Hoth, plus de 50 figurines grandeur nature, Han Solo dans la carbonite, un animatronique de C-3PO qui bouge vraiment et un Destroyer stellaire LEGO de 400 000 briques.\nNouveauté : un chasseur stellaire grandeur nature dans le hangar impérial."
+    "de": "Auf über 1.200 m² warten ein 5,80 Meter langer AT-AT im großen Hoth-Diorama, über 50 lebensgroße Figuren, Han Solo in Karbonit, eine Darth-Vader-Animatronik, die sich wirklich bewegt, und ein LEGO-Sternenzerstörer aus 400.000 Steinen.\nGanz neu: ein lebensgroßer Starfighter im imperialen Hangar.",
+    "en": "Across more than 1,200 m² you'll find a 5.80-metre AT-AT in the big Hoth diorama, over 50 life-size figures, Han Solo in carbonite, a Darth Vader animatronic that really moves and a LEGO Star Destroyer built from 400,000 bricks.\nBrand new: a life-size starfighter in the Imperial hangar.",
+    "nl": "Op ruim 1.200 m² wachten een 5,80 meter lange AT-AT in het grote Hoth-diorama, meer dan 50 levensgrote figuren, Han Solo in carboniet, een Darth Vader-animatronic die echt beweegt en een LEGO Star Destroyer van 400.000 steentjes.\nGloednieuw: een levensgrote starfighter in de keizerlijke hangar.",
+    "fr": "Sur plus de 1 200 m² vous attendent un AT-AT de 5,80 mètres dans le grand diorama de Hoth, plus de 50 figurines grandeur nature, Han Solo dans la carbonite, un animatronique de Dark Vador qui bouge vraiment et un Destroyer stellaire LEGO de 400 000 briques.\nNouveauté : un chasseur stellaire grandeur nature dans le hangar impérial."
    },
    "link": {
     "de": "/sotg-vorschau/ausstellung/",
@@ -1692,7 +1692,10 @@
      "quiz",
      "spiele",
      "was machen",
-     "betreuung"
+     "betreuung",
+     "prüfung",
+     "prüfungen",
+     "jedi-prüfung"
     ],
     "en": [
      "programme",
@@ -1707,7 +1710,9 @@
      "jedi pass",
      "jedi",
      "robot",
-     "games"
+     "games",
+     "trial",
+     "trials"
     ],
     "nl": [
      "programma",
@@ -1722,7 +1727,9 @@
      "jedi",
      "robot",
      "spelletjes",
-     "wat doen"
+     "wat doen",
+     "proef",
+     "proeven"
     ],
     "fr": [
      "programme",
@@ -1738,14 +1745,17 @@
      "jedi",
      "robot",
      "jeux",
-     "passeport jedi"
+     "passeport jedi",
+     "épreuve",
+     "épreuves",
+     "epreuves"
     ]
    },
    "a": {
-    "de": "Euer Animateur führt die Kinder durch vier Missionen: Roboter-Reparatur, Geräusche-Quiz, Laserschuss-Spiel und Lichtschwert-Training. Am Ende bekommt jedes Kind seinen eigenen Jedipass.\nMaterial und Raumreinigung sind inklusive, du bringst nur die Kinder.",
-    "en": "Your party host leads the children through four missions: robot repair, a sound quiz, a laser target game and lightsaber training. At the end every child gets their own Jedi pass.\nMaterials and cleaning are included, you just bring the kids.",
-    "nl": "Jullie animator neemt de kinderen mee op vier missies: robotreparatie, geluidenquiz, laserschietspel en lichtzwaardtraining. Aan het eind krijgt elk kind een eigen Jedi-pas.\nMateriaal en schoonmaak zijn inbegrepen, jij neemt alleen de kinderen mee.",
-    "fr": "Votre animateur guide les enfants à travers quatre missions : réparation de robots, quiz sonore, jeu de tir laser et entraînement au sabre laser. À la fin, chaque enfant reçoit son propre passeport Jedi.\nLe matériel et le nettoyage de la salle sont compris : vous n’avez qu’à amener les enfants."
+    "de": "Euer Animateur führt die Kinder durch vier Jedi-Prüfungen: Roboter-Reparatur, Geräusche-Quiz, Laserschuss-Spiel und Lichtschwert-Training. Am Ende bekommt jedes Kind seinen eigenen Jedipass.\nMaterial und Raumreinigung sind inklusive, du bringst nur die Kinder.",
+    "en": "Your party host leads the children through four Jedi trials: robot repair, a sound quiz, a laser target game and lightsaber training. At the end every child gets their own Jedi pass.\nMaterials and cleaning are included, you just bring the kids.",
+    "nl": "Jullie animator neemt de kinderen mee op vier Jedi-proeven: robotreparatie, geluidenquiz, laserschietspel en lichtzwaardtraining. Aan het eind krijgt elk kind een eigen Jedi-pas.\nMateriaal en schoonmaak zijn inbegrepen, jij neemt alleen de kinderen mee.",
+    "fr": "Votre animateur guide les enfants à travers quatre épreuves Jedi : réparation de robots, quiz sonore, jeu de tir laser et entraînement au sabre laser. À la fin, chaque enfant reçoit son propre passeport Jedi.\nLe matériel et le nettoyage de la salle sont compris : vous n’avez qu’à amener les enfants."
    },
    "link": {
     "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/",
