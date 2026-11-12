@@ -50,8 +50,6 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 <link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261212">
 <style>
 /* Seitenspezifisch: Vermietung */
-.sheriff-panel{display:grid;place-items:center;text-align:center;gap:1.1rem;padding:2.8rem 1.8rem}
-.sheriff-panel svg{width:min(330px,100%);height:auto}
 .pick-chip{margin:0}
 .pick-chip span{font-family:'Inter',system-ui,sans-serif;font-weight:500;letter-spacing:0;text-transform:none}
 .fieldset-plain{border:0;padding:0;margin:0;min-width:0}
@@ -256,42 +254,8 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       </div>
       <hr class="divider-beam">
       <div class="grid-2">
-        <div class="card hud-panel sheriff-panel" data-reveal>
-          <h3>Unité 01 en service</h3>
-          <svg viewBox="0 0 260 150" role="img" aria-labelledby="sheriff-svg-title">
-            <title id="sheriff-svg-title">Illustration HUD stylisée d’une voiture de police américaine avec rampe lumineuse</title>
-            <!-- Lightbar-Glühen -->
-            <line x1="106" y1="6" x2="110" y2="13" stroke="#ff5964" stroke-width="2" stroke-linecap="round"/>
-            <line x1="120" y1="4" x2="120" y2="12" stroke="#ff5964" stroke-width="2" stroke-linecap="round"/>
-            <line x1="154" y1="6" x2="150" y2="13" stroke="#4d7bff" stroke-width="2" stroke-linecap="round"/>
-            <line x1="140" y1="4" x2="140" y2="12" stroke="#4d7bff" stroke-width="2" stroke-linecap="round"/>
-            <!-- Lightbar -->
-            <rect x="102" y="17" width="26" height="12" rx="3" fill="#ff5964"/>
-            <rect x="132" y="17" width="26" height="12" rx="3" fill="#4d7bff"/>
-            <rect x="96" y="30" width="68" height="6" rx="2" fill="#2a3350" stroke="#4de3ff" stroke-width="1.5"/>
-            <!-- Kabine -->
-            <path d="M84 64 L100 38 h60 l18 26 Z" fill="#0a0e1f" stroke="#4de3ff" stroke-width="2" stroke-linejoin="round"/>
-            <line x1="130" y1="40" x2="130" y2="62" stroke="#4de3ff" stroke-width="1.5"/>
-            <!-- Karosserie -->
-            <rect x="22" y="64" width="216" height="30" rx="9" fill="#2a3350" stroke="#4de3ff" stroke-width="2"/>
-            <line x1="104" y1="66" x2="104" y2="92" stroke="#4de3ff" stroke-width="1.2"/>
-            <line x1="160" y1="66" x2="160" y2="92" stroke="#4de3ff" stroke-width="1.2"/>
-            <!-- Sheriff-Stern auf der Tür -->
-            <polygon points="132,70 134.2,75.9 140.6,76.2 135.6,80.2 137.3,86.3 132,82.8 126.7,86.3 128.4,80.2 123.4,76.2 129.8,75.9" fill="#ff8c1f"/>
-            <!-- Front- und Heckleuchte -->
-            <rect x="231" y="69" width="7" height="6" rx="2" fill="#ff8c1f"/>
-            <rect x="22" y="69" width="6" height="6" rx="2" fill="#ff5964"/>
-            <!-- Räder -->
-            <circle cx="76" cy="98" r="17" fill="#05060f" stroke="#4de3ff" stroke-width="2"/>
-            <circle cx="76" cy="98" r="7" fill="#2a3350" stroke="#4de3ff" stroke-width="1.5"/>
-            <circle cx="188" cy="98" r="17" fill="#05060f" stroke="#4de3ff" stroke-width="2"/>
-            <circle cx="188" cy="98" r="7" fill="#2a3350" stroke="#4de3ff" stroke-width="1.5"/>
-            <!-- Fahrbahn + Tempo-Linien -->
-            <line x1="10" y1="122" x2="250" y2="122" stroke="rgba(77,227,255,.35)" stroke-width="2" stroke-dasharray="7 7"/>
-            <line x1="10" y1="72" x2="34" y2="72" stroke="#ff8c1f" stroke-width="2" stroke-linecap="round" opacity=".7"/>
-            <line x1="4" y1="82" x2="26" y2="82" stroke="#ff8c1f" stroke-width="2" stroke-linecap="round" opacity=".45"/>
-          </svg>
-          <p class="form-note">Illustration symbolique. L’original brille nettement plus.</p>
+        <div class="media-frame" data-reveal>
+          <img src="/sotg-vorschau/assets/img/vermietung-us-sheriff-polizeiauto-960.webp" srcset="/sotg-vorschau/assets/img/vermietung-us-sheriff-polizeiauto-480.webp 480w, /sotg-vorschau/assets/img/vermietung-us-sheriff-polizeiauto-960.webp 960w, /sotg-vorschau/assets/img/vermietung-us-sheriff-polizeiauto-1600.webp 1600w" sizes="(min-width: 860px) 50vw, 100vw" width="1600" height="1110" loading="lazy" decoding="async" alt="Voiture de shérif américaine noir et blanc avec rampe lumineuse rouge et bleue devant un cinéma">
         </div>
         <div data-reveal data-reveal-delay=".1">
           <h3>Voiture de shérif américaine</h3>
@@ -301,14 +265,14 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       </div>
       <div class="card-grid card-grid--2" style="margin-top:1.4rem">
         <div class="card hud-panel" data-reveal>
-          <img class="card__media card__media--tall" src="/sotg-vorschau/assets/img/vermietung-marshmallow-man-960.webp" srcset="/sotg-vorschau/assets/img/vermietung-marshmallow-man-480.webp 480w, /sotg-vorschau/assets/img/vermietung-marshmallow-man-960.webp 960w" sizes="(min-width: 860px) 45vw, 100vw" width="918" height="1319" loading="lazy" decoding="async" alt="Marshmallow Man gonflable géant avec col de marin, installé en extérieur">
+          <img class="card__media card__media--tall" src="/sotg-vorschau/assets/img/vermietung-marshmallow-man-960.webp" srcset="/sotg-vorschau/assets/img/vermietung-marshmallow-man-480.webp 480w, /sotg-vorschau/assets/img/vermietung-marshmallow-man-960.webp 960w" sizes="(min-width: 860px) 45vw, 100vw" width="1290" height="1735" loading="lazy" decoding="async" alt="Marshmallow Man gonflable géant avec col de marin, installé en extérieur">
           <h3>Marshmallow Man</h3>
           <p>Déco XXL gonflable, célèbre grâce à Ghostbusters : le géant le plus sympathique de l’histoire du cinéma, impossible à manquer, même de loin.</p>
         </div>
         <div class="card hud-panel" data-reveal data-reveal-delay=".08">
-          <img class="card__media card__media--tall" src="/sotg-vorschau/assets/img/vermietung-selfie-figurenbox-super-hero-960.webp" srcset="/sotg-vorschau/assets/img/vermietung-selfie-figurenbox-super-hero-480.webp 480w, /sotg-vorschau/assets/img/vermietung-selfie-figurenbox-super-hero-960.webp 960w" sizes="(min-width: 860px) 45vw, 100vw" width="918" height="1350" loading="lazy" decoding="async" alt="Photobox BD dans laquelle on entre, façon emballage de figurine, avec l’inscription Super Hero">
+          <img class="card__media card__media--tall" src="/sotg-vorschau/assets/img/vermietung-selfie-figurenbox-super-hero-960.webp" srcset="/sotg-vorschau/assets/img/vermietung-selfie-figurenbox-super-hero-480.webp 480w, /sotg-vorschau/assets/img/vermietung-selfie-figurenbox-super-hero-960.webp 960w" sizes="(min-width: 860px) 45vw, 100vw" width="2500" height="3360" loading="lazy" decoding="async" alt="Photobox BD dans laquelle on entre, façon emballage de figurine, avec l’inscription Super Hero">
           <h3>Box selfie « Super Hero »</h3>
-          <p>La cabine photo façon BD dans laquelle on entre : on s’installe, on prend la pose, on déclenche. Et chaque invité fait la couverture de sa propre BD.</p>
+          <p>La cabine photo façon BD dans laquelle on entre : on s’installe, on prend la pose, on déclenche. Et chaque invité fait la couverture de sa propre BD. La box existe aussi en version Star Wars.</p>
         </div>
       </div>
       <div class="pick-grid" data-pick-bereich="XXL Exponate" role="group" aria-label="Sélectionner des pièces XXL" style="margin-top:1.4rem" data-reveal>
