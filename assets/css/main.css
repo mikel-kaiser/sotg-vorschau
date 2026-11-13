@@ -1200,3 +1200,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
 }
 .tile__cta--info { color: var(--ink-dim); }
 .tile__cta--info::after { content: none; }
+/* Hall of Fame: drei kleinere Kostümfotos unter dem Hauptbild (12.11.2026) */
+.gallery.gallery--hof { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; margin-top: .7rem; }
+.gallery--hof a { aspect-ratio: 3 / 4; }
+.gallery--hof > :last-child:nth-child(odd) { grid-column: auto; aspect-ratio: 3 / 4; }
+section[aria-labelledby="k6-h"] .grid-2 { align-items: start; }
