@@ -1130,7 +1130,7 @@ body[data-page="kontakt"] .hero--sub .lead { color: var(--ink); text-shadow: 0 1
 @media (max-width: 480px) { .hud-label { letter-spacing: .14em; } }
 @media (max-width: 480px) { #guide .pick-grid .btn { padding-inline: .5rem; letter-spacing: .06em; overflow-wrap: normal; } }
 @media (max-width: 380px) { #guide .pick-grid { grid-template-columns: 1fr; } }
-@media (max-width: 699px) { .gallery > :last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 2 / 1; } }
+@media (max-width: 699px) { .gallery:not(:has(> :nth-child(3):last-child)) > :last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 2 / 1; } }
 @media (max-width: 1023px) { .hero--sub { padding-top: 2rem; } .hero__actions { margin-top: 1.4rem; } .hero__status { margin-top: 1rem; } }
 .partner-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: .8rem; }
 .partner-chip { min-height: 64px; }
@@ -1308,3 +1308,31 @@ h1 { hyphens: manual; -webkit-hyphens: manual; }
 .kenny-panel:focus { outline: none; }
 /* Kenny am Desktop: Fragen umbrechen statt waagerecht wischen (Maus) */
 @media (min-width: 1024px) and (min-height: 760px) { .kenny-chips { flex-wrap: wrap; overflow-x: visible; } }
+
+/* ===== Go-live 13.11.2026 (Sichtprüfung aller Seiten) ===== */
+/* Das ß von Orbitron sieht aus wie ein „B“ (lebensgroB, MaBstab): ß/ẞ aus Inter nehmen */
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/sotg-vorschau/assets/fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+00DF, U+1E9E;
+}
+/* Formularfelder deckend, damit nichts durchschimmert; Kalender-Symbol hell */
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], select, textarea {
+  background-color: #08101c; color-scheme: dark;
+}
+input[type="date"]:required:invalid:not(:focus) { color: var(--ink-dim); }
+/* Ausgewogene Umbrüche: kein einzelnes Wort allein in der letzten Zeile */
+h1, h2, h3, .hud-label, .btn, .stat__label, .status-chip, .lageplan__station span { text-wrap: balance; }
+p, li, dd, .lead, .form-note { text-wrap: pretty; }
+/* Lageplan-Vorschau auf dem Handy: ganzer Plan, Punkte erst im Vollbild */
+@media (max-width: 640px) {
+  .lageplan:not(.lageplan-dialog .lageplan) { overflow: visible; }
+  .lageplan:not(.lageplan-dialog .lageplan) .lageplan__stage { min-width: 0; }
+  .lageplan:not(.lageplan-dialog .lageplan) .lageplan__pin { display: none; }
+}
+/* Go-live 13.11. b: Sprachknöpfe des Führers brechen in schmalen Spalten nicht mehr aus */
+#guide .pick-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
+#guide .pick-grid .btn { min-width: 0; letter-spacing: .06em; }

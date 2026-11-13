@@ -22,7 +22,7 @@
     en: { open: 'Ask Kenny', title: 'Kenny', sub: 'Your museum robot', close: 'Close chat', ph: 'Your question …', send: 'Send',
           more: 'Other questions:', loading: 'Kenny is thinking …', error: 'My antenna has no signal right now. Please call us: +49 2161 406 37 90.',
           note: 'Kenny knows the most common questions. For anything else, call us on +49 2161 406 37 90.', you: 'You', label: 'Chat with Kenny' },
-    nl: { open: 'Vraag het Kenny', title: 'Kenny', sub: 'Jullie museumrobot', close: 'Chat sluiten', ph: 'Je vraag …', send: 'Versturen',
+    nl: { open: 'Vraag het aan Kenny', title: 'Kenny', sub: 'Jullie museumrobot', close: 'Chat sluiten', ph: 'Je vraag …', send: 'Versturen',
           more: 'Andere vragen:', loading: 'Kenny denkt na …', error: 'Mijn antenne heeft even geen bereik. Bel ons gerust: +49 2161 406 37 90.',
           note: 'Kenny kent de meest gestelde vragen. Voor al het andere bereik je ons op +49 2161 406 37 90.', you: 'Jij', label: 'Chat met Kenny' },
     fr: { open: 'Demandez à Kenny', title: 'Kenny', sub: 'Votre robot du musée', close: 'Fermer le chat', ph: 'Votre question …', send: 'Envoyer',

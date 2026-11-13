@@ -213,7 +213,7 @@
 
   /* Flughöhe mit möglichst viel freiem Himmel wählen: Bilder, Karten und
      Panels verdecken die Schiffe (sie liegen hinter dem Inhalt). */
-  var COVER = 'img,picture,video,iframe,.card,.tile,.ti-card,.hud-panel,.btn,.hero,.hero__media,.site-header,.kenny-launcher,.sticky-cta';
+  var COVER = 'img,picture,video,iframe,.card,.tile,.ti-card,.hud-panel,.btn,.hero,.hero__media,.site-header,.kenny-launcher,.sticky-cta,p,h1,h2,h3,h4,li,dt,dd,label,input,select,textarea,summary,details,blockquote,figure,table,form,.hud-label,.lageplan,.gallery,.status-chip,.site-footer';
   /* Liefert eine Höhe in vh mit genug freiem Himmel oder null (dann später nochmal versuchen) */
   function pickY(lo, hi) {
     var vw = window.innerWidth, vh = window.innerHeight, rects = [];
