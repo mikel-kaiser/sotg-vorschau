@@ -23,25 +23,25 @@
 
 window.SOTG_NEWS = {
   aktiv: true,
-  id: "feiertage-weihnachten-2026",
-  titel: "Gut zu wissen",
-  text: "An allen Feiertagen haben wir geöffnet, auch montags bis mittwochs von 12 bis 17 Uhr. Weihnachtspause: Vom 21. Dezember bis 1. Januar bleibt die Basis geschlossen, ab Samstag, 2. Januar, sind wir wieder für euch da.",
+  id: "betriebsferien-2026",
+  titel: "Betriebsferien",
+  text: "Wir machen vom 21.12.2026 bis 01.01.2027 Betriebsferien. Ab dem 2. Januar 2027 sind wir wieder für euch da.",
   linkText: "Tickets sichern",
   linkUrl: "https://shop.starsofthegalaxy.de/collections/tickets",
   gueltigBis: "2027-01-01",
   en: {
-    titel: "Good to know",
-    text: "We are open on all public holidays, including Monday to Wednesday from 12:00 to 17:00. Christmas break: we are closed from 21 December to 1 January and open again from Saturday 2 January.",
+    titel: "Holiday closure",
+    text: "We are closed for our annual holidays from 21 December 2026 to 1 January 2027. From 2 January 2027 we are here for you again.",
     linkText: "Get tickets"
   },
   nl: {
-    titel: "Goed om te weten",
-    text: "Op alle feestdagen zijn we geopend, ook op maandag tot en met woensdag van 12.00 tot 17.00 uur. Kerstpauze: van 21 december tot en met 1 januari zijn we gesloten, vanaf zaterdag 2 januari zijn we er weer.",
+    titel: "Bedrijfsvakantie",
+    text: "Van 21 december 2026 tot en met 1 januari 2027 hebben we bedrijfsvakantie. Vanaf 2 januari 2027 zijn we er weer voor jullie.",
     linkText: "Tickets kopen"
   },
   fr: {
-    titel: "Bon à savoir",
-    text: "Nous sommes ouverts tous les jours fériés, y compris du lundi au mercredi de 12 h à 17 h. Pause de Noël : nous sommes fermés du 21 décembre au 1er janvier et rouvrons le samedi 2 janvier.",
+    titel: "Congés annuels",
+    text: "Nous sommes en congés du 21\u00a0décembre 2026 au 1er\u00a0janvier 2027. Dès le 2\u00a0janvier 2027, nous sommes de nouveau là pour vous.",
     linkText: "Acheter des billets"
   }
 };
@@ -55,7 +55,7 @@ window.SOTG_NEWS = {
    die kommenden Jahre.
    Hier nur Ausnahmen eintragen, Datum immer als "JJJJ-MM-TT":
    - geschlossen: von/bis (beide Tage einschließlich) und ein Grund,
-     der im Öffnungsstatus erscheint ("Weihnachtspause · wieder geöffnet ab …").
+     der im Öffnungsstatus erscheint ("Betriebsferien · wieder geöffnet ab …").
    - zusaetzlichGeoeffnet: einzelne Extra-Tage mit Uhrzeit (volle Stunden).
    Vergangene Einträge stören nicht, können aber gelöscht werden.
    ================================================================ */
@@ -63,7 +63,7 @@ window.SOTG_NEWS = {
 window.SOTG_SONDERZEITEN = {
   geschlossen: [
     { von: "2026-12-21", bis: "2027-01-01",
-      grund: { de: "Weihnachtspause", en: "Christmas break", nl: "Kerstpauze", fr: "Pause de Noël" } }
+      grund: { de: "Betriebsferien", en: "Holiday closure", nl: "Bedrijfsvakantie", fr: "Congés annuels" } }
   ],
   zusaetzlichGeoeffnet: [
     /* Beispiel: { datum: "2027-01-04", von: 12, bis: 18 } */
