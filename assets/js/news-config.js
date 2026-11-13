@@ -49,9 +49,10 @@ window.SOTG_NEWS = {
 /* ================================================================
    SONDERZEITEN — Schließtage und zusätzliche Öffnungstage
    ----------------------------------------------------------------
-   Die normalen Zeiten (Do/Fr 12–18, Sa 10–18, So 12–17, auch an
-   Feiertagen, plus Ostermontag und Pfingstmontag 12–17 Uhr) kennt die
-   Website automatisch, auch für die kommenden Jahre.
+   Die normalen Zeiten (Do/Fr 12–18, Sa 10–18, So 12–17, an allen
+   Feiertagen geöffnet, Feiertage Mo–Mi 12–17 Uhr, geschlossen am
+   24., 25., 26. und 31.12.) kennt die Website automatisch, auch für
+   die kommenden Jahre.
    Hier nur Ausnahmen eintragen, Datum immer als "JJJJ-MM-TT":
    - geschlossen: von/bis (beide Tage einschließlich) und ein Grund,
      der im Öffnungsstatus erscheint ("Weihnachtspause · wieder geöffnet ab …").

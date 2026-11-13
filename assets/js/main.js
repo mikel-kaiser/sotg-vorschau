@@ -68,7 +68,8 @@
 
   /* ================= Öffnungszeiten =================
      Immer Do/Fr 12–18, Sa 10–18, So 12–17, auch an Feiertagen.
-     Zusätzlich geöffnet: Ostermontag und Pfingstmontag (12–17 Uhr).
+     Feiertage von Mo bis Mi: ebenfalls geöffnet, 12–17 Uhr (Thomas, 13.11.2026).
+     Immer geschlossen: 24.–26.12. und 31.12.
      Schließzeiten (z. B. Weihnachtspause) und Extra-Tage pflegt der Betreiber
      in /assets/js/news-config.js (window.SOTG_SONDERZEITEN). */
   var HOURS = { 0: [12, 17], 4: [12, 18], 5: [12, 18], 6: [10, 18] };
@@ -90,7 +91,7 @@
     weihnacht2: ['2. Weihnachtstag', 'Boxing Day', 'Tweede Kerstdag', 'Lendemain de Noël']
   };
   var LI = { de: 0, en: 1, nl: 2, fr: 3 }[LANG];
-  var EXTRA_OPEN = { ostermontag: true, pfingstmontag: true };
+  var CLOSED_MD = { '12-24': 1, '12-25': 1, '12-26': 1, '12-31': 1 }; // Weihnachten und Silvester
 
   function ymd(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
   function addDays(d, n) { var x = new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); return x; }
@@ -121,7 +122,8 @@
     }
     var holId = holidays(date.getFullYear())[key];
     var hours = HOURS[date.getDay()] || null;
-    if (!hours && holId && EXTRA_OPEN[holId]) hours = HOLIDAY_HOURS;
+    if (!hours && holId) hours = HOLIDAY_HOURS;
+    if (CLOSED_MD[key.slice(5)]) hours = null;
     var extra = cfg.zusaetzlichGeoeffnet || [];
     for (i = 0; i < extra.length; i++) {
       if (extra[i].datum === key && extra[i].von && extra[i].bis) hours = [extra[i].von, extra[i].bis];

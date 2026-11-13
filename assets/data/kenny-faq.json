@@ -175,10 +175,10 @@
     ]
    },
    "a": {
-    "de": "Ja! Donnerstag bis Sonntag haben wir auch an Feiertagen geöffnet, zum Beispiel an Karfreitag, Christi Himmelfahrt oder Allerheiligen.\nZusätzlich sind wir am Ostermontag und Pfingstmontag von 12–17 Uhr für dich da.",
-    "en": "Yes! Thursday to Sunday we're open on public holidays too, for example Good Friday, Ascension Day or All Saints' Day.\nWe're also open on Easter Monday and Whit Monday, 12:00–17:00.",
-    "nl": "Ja! Van donderdag tot en met zondag zijn we ook op feestdagen open, bijvoorbeeld op Goede Vrijdag, Hemelvaartsdag of Allerheiligen.\nDaarnaast zijn we op Tweede Paasdag en Tweede Pinksterdag open van 12.00–17.00 uur.",
-    "fr": "Oui ! Du jeudi au dimanche, nous sommes aussi ouverts les jours fériés, par exemple le Vendredi saint, l’Ascension ou la Toussaint.\nNous ouvrons en plus le lundi de Pâques et le lundi de Pentecôte, de 12 h à 17 h."
+    "de": "Ja! An allen Feiertagen haben wir geöffnet. Fällt einer auf Montag bis Mittwoch, zum Beispiel Ostermontag oder Pfingstmontag, sind wir von 12–17 Uhr für dich da.\nNur an Weihnachten und Silvester bleibt die Schleuse zu.",
+    "en": "Yes! We're open on every public holiday. If one falls on Monday to Wednesday, for example Easter Monday or Whit Monday, we're here for you 12:00–17:00.\nThe airlock only stays shut over Christmas and on New Year's Eve.",
+    "nl": "Ja! We zijn op alle feestdagen open. Valt er een op maandag tot en met woensdag, bijvoorbeeld Tweede Paasdag of Tweede Pinksterdag, dan zijn we er van 12.00–17.00 uur.\nAlleen met Kerstmis en op oudejaarsdag blijft de luchtsluis dicht.",
+    "fr": "Oui ! Nous sommes ouverts tous les jours fériés. S’il tombe du lundi au mercredi, par exemple le lundi de Pâques ou le lundi de Pentecôte, nous vous accueillons de 12 h à 17 h.\nLe sas reste fermé uniquement à Noël et le 31 décembre."
    },
    "link": {
     "de": "/sotg-vorschau/tickets/#zeiten",
@@ -337,10 +337,10 @@
     ]
    },
    "a": {
-    "de": "Kinder (3–15 Jahre) zahlen 12 €, Erwachsene 18 €, die Familienkarte kostet 50 €. Ermäßigt zahlst du 8 € (Kinder) bzw. 14 € (Erwachsene).\nJedes Ticket gilt für die komplette Ausstellung.",
-    "en": "Children (3–15) are €12, adults €18 and the family ticket is €50. Concessions are €8 (children) or €14 (adults).\nEvery ticket covers the entire exhibition.",
-    "nl": "Kinderen (3–15 jaar) betalen € 12, volwassenen € 18 en het gezinsticket kost € 50. Met korting betaal je € 8 (kinderen) of € 14 (volwassenen).\nElk ticket geldt voor de hele tentoonstelling.",
-    "fr": "Enfants (3 à 15 ans) : 12 €, adultes : 18 €, billet famille : 50 €. Le tarif réduit est de 8 € (enfants) ou 14 € (adultes).\nChaque billet donne accès à toute l’exposition."
+    "de": "Kinder (3–15 Jahre) zahlen 12 €, Erwachsene 18 €, die Familienkarte kostet 50 €. Ermäßigt zahlst du 8 € (Kinder) bzw. 14 € (Erwachsene). Kinder unter 3 Jahren sind frei.\nJedes Ticket gilt für die komplette Ausstellung.",
+    "en": "Children (3–15) are €12, adults €18 and the family ticket is €50. Concessions are €8 (children) or €14 (adults). Children under 3 go free.\nEvery ticket covers the entire exhibition.",
+    "nl": "Kinderen (3–15 jaar) betalen € 12, volwassenen € 18 en het gezinsticket kost € 50. Met korting betaal je € 8 (kinderen) of € 14 (volwassenen). Kinderen onder de 3 jaar zijn gratis.\nElk ticket geldt voor de hele tentoonstelling.",
+    "fr": "Enfants (3 à 15 ans) : 12 €, adultes : 18 €, billet famille : 50 €. Le tarif réduit est de 8 € (enfants) ou 14 € (adultes). Les enfants de moins de 3 ans entrent gratuitement.\nChaque billet donne accès à toute l’exposition."
    },
    "link": {
     "de": "/sotg-vorschau/tickets/#preise",
@@ -2274,10 +2274,10 @@
     ]
    },
    "a": {
-    "de": "Gastkinder wissen oft nicht, was sie schenken sollen. Darum geben wir euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit.\nAbgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück. Trag einfach im Buchungsformular ein, wie viele ihr möchtet.",
-    "en": "Guests often don't know what to give. So we hand you gift vouchers worth €5 or €10 in advance, on a sale-or-return basis.\nOn the day of the party you only pay for the ones that were sold, the rest come back to us. Just note how many you'd like in the booking form.",
-    "nl": "Gasten weten vaak niet wat ze moeten geven. Daarom geven we je vooraf cadeaubonnen van € 5 of € 10 mee in consignatie.\nOp de verjaardag reken je alleen af wat er verkocht is, de rest komt terug. Vul in het boekingsformulier gewoon in hoeveel je wilt.",
-    "fr": "Les petits invités ne savent souvent pas quoi offrir. C’est pourquoi nous vous remettons à l’avance des bons cadeaux de 5 € ou 10 € en dépôt-vente.\nLe jour de l’anniversaire, seuls les bons vendus sont facturés, le reste nous est rendu. Indiquez simplement le nombre souhaité dans le formulaire de réservation."
+    "de": "Gastkinder wissen oft nicht, was sie schenken sollen. Darum geben wir euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit. Die Gutscheine gelten für den Eintritt und für Einkäufe in unserem Shop.\nAbgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück. Trag einfach im Buchungsformular ein, wie viele ihr möchtet.",
+    "en": "Guests often don't know what to give. So we hand you gift vouchers worth €5 or €10 in advance, on a sale-or-return basis. The vouchers can be used for admission and for purchases in our shop.\nOn the day of the party you only pay for the ones that were sold, the rest come back to us. Just note how many you'd like in the booking form.",
+    "nl": "Gasten weten vaak niet wat ze moeten geven. Daarom geven we je vooraf cadeaubonnen van € 5 of € 10 mee in consignatie. De bonnen gelden voor de entree en voor aankopen in onze shop.\nOp de verjaardag reken je alleen af wat er verkocht is, de rest komt terug. Vul in het boekingsformulier gewoon in hoeveel je wilt.",
+    "fr": "Les petits invités ne savent souvent pas quoi offrir. C’est pourquoi nous vous remettons à l’avance des bons cadeaux de 5 € ou 10 € en dépôt-vente. Les bons sont valables pour l’entrée et pour les achats dans notre boutique.\nLe jour de l’anniversaire, seuls les bons vendus sont facturés, le reste nous est rendu. Indiquez simplement le nombre souhaité dans le formulaire de réservation."
    },
    "link": {
     "de": "/sotg-vorschau/geburtstage/galaktische-geburtstage/#buchung",
