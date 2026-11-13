@@ -21,16 +21,16 @@
   var P = [
     { id: 'eingang', x: 32.9, y: 88.8, lv: 'eg', img: 'neu-museum-eingang-abend',
       t: { de: 'Eingang & Kasse', en: 'Entrance & ticket desk', nl: 'Ingang & kassa', fr: 'Entrée & caisse' },
-      d: { de: 'Hier beginnt die Mission: Tickets gibt es online oder ohne Wartezeit direkt an der Kasse.', en: 'Your mission starts here: buy tickets online or right at the desk, no waiting.', nl: 'Hier begint je missie: tickets koop je online of zonder wachten aan de kassa.', fr: 'Votre mission commence ici : billets en ligne ou directement à la caisse, sans attente.' } },
+      d: { de: 'Hier beginnt die Mission: Tickets gibt es online oder ohne Wartezeit direkt an der Kasse.', en: 'Your mission starts here: buy tickets online or right at the desk, no waiting.', nl: 'Hier begint je missie: tickets koop je online of zonder wachten aan de kassa.', fr: 'Votre mission commence ici : billets en ligne ou directement à la caisse, sans attente.' } },
     { id: 'shop', x: 36.9, y: 77.4, lv: 'eg', img: 'neu-neon-schild-stars-of-the-galaxy',
       t: { de: 'Shop', en: 'Shop', nl: 'Shop', fr: 'Boutique' },
       d: { de: 'Figuren, Sammlerstücke und Souvenirs für die Heimreise durch den Hyperraum.', en: 'Figures, collectibles and souvenirs for the trip home through hyperspace.', nl: 'Figuren, verzamelobjecten en souvenirs voor de terugreis door de hyperruimte.', fr: 'Figurines, objets de collection et souvenirs pour le retour en hyperespace.' } },
     { id: 'spaceroom', x: 52.8, y: 76.5, lv: 'eg', img: 'neu-geburtstag-spaceroom-kinder', newimg: true,
       t: { de: 'Spaceroom', en: 'Spaceroom', nl: 'Spaceroom', fr: 'Spaceroom' },
-      d: { de: 'Unsere Kommandozentrale für Kindergeburtstage: hier werden junge Jedi ausgebildet.', en: 'Our command centre for kids’ birthday parties, where young Jedi are trained.', nl: 'Ons commandocentrum voor kinderfeestjes: hier worden jonge Jedi opgeleid.', fr: 'Notre centre de commande pour les anniversaires : ici, les jeunes Jedi sont formés.' } },
+      d: { de: 'Unsere Kommandozentrale für Kindergeburtstage: hier werden junge Jedi ausgebildet.', en: 'Our command centre for kids’ birthday parties, where young Jedi are trained.', nl: 'Ons commandocentrum voor kinderfeestjes: hier worden jonge Jedi opgeleid.', fr: 'Notre centre de commande pour les anniversaires : ici, les jeunes Jedi sont formés.' } },
     { id: 'cantina', x: 48.5, y: 67.7, lv: 'og', foto: true, img: 'neu-cantina-fotopoint', newimg: true,
       t: { de: 'Cantina', en: 'Cantina', nl: 'Cantina', fr: 'Cantina' },
-      d: { de: 'Fotopoint mit Atmosphäre: ein Platz am Tisch der berühmtesten Bar der Galaxis.', en: 'A photo point full of atmosphere: take a seat in the galaxy’s most famous bar.', nl: 'Fotopunt vol sfeer: neem plaats in de bekendste bar van het sterrenstelsel.', fr: 'Un point photo plein d’ambiance : prenez place dans le bar le plus célèbre de la galaxie.' } },
+      d: { de: 'Fotopoint mit Atmosphäre: ein Platz am Tisch der berühmtesten Bar der Galaxis.', en: 'A photo point full of atmosphere: take a seat in the galaxy’s most famous bar.', nl: 'Fotopunt vol sfeer: neem plaats in de bekendste bar van het sterrenstelsel.', fr: 'Un point photo plein d’ambiance : prenez place dans le bar le plus célèbre de la galaxie.' } },
     { id: 'lifesize', x: 39.3, y: 65.0, lv: 'og', img: 'neu-darth-vader-lichtschwert-karbonit', newimg: true,
       t: { de: 'Lifesize-Figuren', en: 'Life-size figures', nl: 'Levensgrote figuren', fr: 'Figurines grandeur nature' },
       d: { de: 'Helden und Schurken in Lebensgröße, so nah, dass man ihnen in die Augen schauen kann.', en: 'Heroes and villains at full size, close enough to look them in the eye.', nl: 'Helden en schurken op ware grootte, zo dichtbij dat je ze in de ogen kijkt.', fr: 'Héros et méchants grandeur nature, assez près pour les regarder dans les yeux.' } },
@@ -63,7 +63,7 @@
       d: { de: 'Hier steht der Starfighter in Lebensgröße, bewacht von Piloten des Imperiums.', en: 'Home of the life-size starfighter, guarded by Imperial pilots.', nl: 'Hier staat de starfighter op ware grootte, bewaakt door keizerlijke piloten.', fr: 'Ici se trouve le chasseur grandeur nature, gardé par des pilotes impériaux.' } },
     { id: 'hoth', x: 66.0, y: 29.6, lv: 'eg', img: 'neu-eiswelt-at-at-blau', newimg: true,
       t: { de: 'Eisplanet Hoth', en: 'Ice planet Hoth', nl: 'IJsplaneet Hoth', fr: 'Planète de glace Hoth' },
-      d: { de: 'Das Herzstück: das große Hoth-Diorama mit dem 5,80 Meter langen AT-AT.', en: 'The centrepiece: the big Hoth diorama with the 5.80-metre AT-AT.', nl: 'Het pronkstuk: het grote Hoth-diorama met de AT-AT van 5,80 meter.', fr: 'La pièce maîtresse : le grand diorama de Hoth avec l’AT-AT de 5,80 mètres.' } },
+      d: { de: 'Das Herzstück: das große Hoth-Diorama mit dem 5,80 Meter langen AT-AT.', en: 'The centrepiece: the big Hoth diorama with the 5.80-metre AT-AT.', nl: 'Het pronkstuk: het grote Hoth-diorama met de AT-AT van 5,80 meter.', fr: 'La pièce maîtresse : le grand diorama de Hoth avec l’AT-AT de 5,80 mètres.' } },
     { id: 'mandalorian', x: 59.6, y: 43.0, lv: 'eg', img: 'neu-mandalorianer-figur', newimg: true,
       t: { de: 'The Mandalorian', en: 'The Mandalorian', nl: 'The Mandalorian', fr: 'The Mandalorian' },
       d: { de: 'Der Kopfgeldjäger in voller Rüstung, mit seinem kleinen Begleiter in der Schwebewiege.', en: 'The bounty hunter in full armour, with his little companion in the floating pram.', nl: 'De premiejager in volle wapenrusting, met zijn kleine metgezel in de zwevende wieg.', fr: 'Le chasseur de primes en armure complète, avec son petit compagnon dans son berceau flottant.' } },
@@ -85,6 +85,7 @@
 
   function close() {
     card.hidden = true;
+    if (dlgBody) dlgBody.style.paddingBottom = '';
     if (current) { current.setAttribute('aria-expanded', 'false'); current.focus(); }
     current = null;
   }
@@ -95,7 +96,8 @@
     btn.setAttribute('aria-expanded', 'true');
     card.innerHTML = '';
     var fig = document.createElement('img');
-    fig.src = src(p, 480); fig.alt = ''; fig.width = 480; fig.height = 320; fig.loading = 'lazy'; fig.decoding = 'async';
+    fig.src = src(p, 480); fig.srcset = src(p, 480) + ' 480w, ' + src(p, 960) + ' 960w';
+    fig.sizes = '(max-width: 900px) 100vw, 360px'; fig.alt = ''; fig.decoding = 'async';
     var body = document.createElement('div'); body.className = 'lageplan__card-body';
     var h = document.createElement('h3'); h.textContent = L(p.t);
     var meta = document.createElement('p'); meta.className = 'lageplan__meta';
@@ -107,11 +109,41 @@
     body.appendChild(h); body.appendChild(meta); body.appendChild(d);
     card.appendChild(x); card.appendChild(fig); card.appendChild(body);
     card.setAttribute('aria-label', L(p.t));
-    // Karte neben den Punkt setzen (links/rechts je nach Position)
-    card.style.left = card.style.right = '';
-    if (p.x > 55) card.style.right = (100 - p.x + 2) + '%'; else card.style.left = (p.x + 2) + '%';
-    card.style.top = Math.min(Math.max(p.y - 20, 2), 52) + '%';
+    /* Handy (13.11.): im Vollbild-Plan als Leiste unten am Dialog, nicht im wischbaren Plan
+       (iOS schneidet feste Elemente in Scroll-Containern ab) */
+    var sheet = dlg && dlg.open && window.matchMedia('(max-width: 900px)').matches;
+    var host = sheet ? dlg : root;
+    if (card.parentNode !== host) host.appendChild(card);
+    card.classList.toggle('lageplan__card--sheet', !!sheet);
+    card.style.left = card.style.right = card.style.top = '';
     card.hidden = false;
+    card.scrollTop = 0;
+    function place() {
+      if (current !== btn || card.hidden) return;
+      if (sheet) {
+        dlgBody.style.paddingBottom = (card.offsetHeight + 16) + 'px';
+        /* Punkt im freien Bereich über der Leiste zeigen, falls er verdeckt oder außerhalb ist */
+        var r = btn.getBoundingClientRect(), cr = card.getBoundingClientRect(), br = dlgBody.getBoundingClientRect();
+        if (r.top < br.top + 10 || r.bottom > cr.top - 10) dlgBody.scrollTop += r.top - (br.top + (cr.top - br.top) / 2);
+        if (r.left < 10 || r.right > window.innerWidth - 10) root.scrollLeft += r.left - window.innerWidth / 2;
+        return;
+      }
+      if (dlgBody) dlgBody.style.paddingBottom = '';
+      if (getComputedStyle(card).position === 'static') return;
+      /* Karte neben den tatsächlichen Punkt setzen und in den sichtbaren Bereich klemmen (QA 13.11.) */
+      var rb = root.getBoundingClientRect(), pb = btn.getBoundingClientRect();
+      var w = card.offsetWidth, hh = card.offsetHeight, gap = 14;
+      var px = pb.left + pb.width / 2 - rb.left, py = pb.top + pb.height / 2 - rb.top;
+      var left = (pb.right + gap + w <= rb.right - 6) ? px + pb.width / 2 + gap : px - pb.width / 2 - gap - w;
+      left = Math.max(6, Math.min(left, rb.width - w - 6));
+      var visTop = dlg && dlg.open ? dlgBody.getBoundingClientRect().top : 0;
+      var minTop = Math.max(6, visTop + 8 - rb.top);
+      var maxTop = Math.min(rb.height - hh - 6, window.innerHeight - 8 - rb.top - hh);
+      var top = Math.max(minTop, Math.min(py - hh / 3, maxTop));
+      card.style.left = left + 'px'; card.style.top = top + 'px';
+    }
+    place();
+    fig.addEventListener('load', place);
   }
 
   var pins = {};
@@ -159,6 +191,7 @@
     });
     dlg.addEventListener('close', function () {
       if (current) close();
+      if (card.parentNode !== root) root.appendChild(card);
       home.parentNode.insertBefore(root, home.nextSibling);
       document.documentElement.style.overflow = '';
     });
@@ -211,7 +244,8 @@
     b.className = 'lageplan__station' + (p.foto ? ' lageplan__station--foto' : '');
     b.setAttribute('data-event', 'lageplan-station-' + p.id);
     var im = document.createElement('img');
-    im.src = src(p, 480); im.alt = ''; im.width = 480; im.height = 360; im.loading = 'lazy'; im.decoding = 'async';
+    im.src = src(p, 480); im.srcset = src(p, 240) + ' 240w, ' + src(p, 480) + ' 480w';
+    im.sizes = '(min-width: 900px) 190px, 62vw'; im.alt = ''; im.width = 480; im.height = 360; im.loading = 'lazy'; im.decoding = 'async';
     var s = document.createElement('span'); s.textContent = L(p.t);
     b.appendChild(im); b.appendChild(s);
     b.addEventListener('click', function (e) { e.stopPropagation(); openDialog(p.id); });

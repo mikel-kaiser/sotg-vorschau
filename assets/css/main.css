@@ -37,7 +37,7 @@
   --glass: rgba(13, 18, 38, .58);
   --glass-solid: #0d1226;
   --shadow: 0 18px 50px rgba(0, 0, 0, .55);
-  --font-display: 'Orbitron', 'Avenir Next', sans-serif;
+  --font-display: 'Orbitron', 'Inter', 'Avenir Next', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --wrap: 1180px;
   --bevel: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
@@ -878,7 +878,7 @@ h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; hyphenate-limit-chars: 13
 @media print { #shiplayer { display: none !important; } }
 
 /* ---------- Kenny, der Museumsroboter (FAQ-Chat, Kundenwunsch 06.11.2026) ---------- */
-.kenny-svg { display: block; width: 100%; height: 100%; }
+.kenny-svg { display: block; width: 100%; height: 100%; object-fit: contain; }
 .kenny-launcher {
   position: fixed; right: 18px; bottom: 18px; z-index: 150;
   display: inline-flex; align-items: center; gap: .55rem;
@@ -1205,3 +1205,106 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
 .gallery--hof a { aspect-ratio: 3 / 4; }
 .gallery--hof > :last-child:nth-child(odd) { grid-column: auto; aspect-ratio: 3 / 4; }
 section[aria-labelledby="k6-h"] .grid-2 { align-items: start; }
+/* Lageplan-Karten (13.11.2026, Feedback Thomas): Fotos ganz zeigen statt beschneiden,
+   auf dem Handy im Vollbild-Plan als Leiste am unteren Rand */
+.lageplan__card img, .lageplan-dialog .lageplan__card img {
+  width: 100%; height: auto; max-height: 240px; object-fit: contain; background: #05060f;
+}
+.lageplan-dialog > .lageplan__card--sheet {
+  position: fixed; left: 0 !important; right: 0 !important; bottom: 0; top: auto !important; z-index: 10;
+  width: auto; max-height: 72dvh; overflow-y: auto; overscroll-behavior: contain;
+  margin: 0; transform: none; clip-path: none; border-width: 1px 0 0; background: #080b18;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.lageplan-dialog > .lageplan__card--sheet img { max-height: min(34dvh, 340px); }
+.lageplan-dialog > .lageplan__card--sheet .lageplan__card-body { padding: 1rem 1.1rem 1.2rem; }
+.lageplan-dialog > .lageplan__card--sheet .lageplan__close { position: sticky; display: block; top: 8px; margin: 8px 8px -48px auto; }
+/* Kenny als echte Grafik (13.11.2026): beim Hüpfen winkt er kurz */
+.kenny-launcher .kenny-wave { display: none; }
+.kenny-launcher.is-waving .kenny-wave { display: block; }
+.kenny-launcher.is-waving .kenny-front { display: none; }
+.kenny-launcher .kenny-svg, .kenny-head__av, .kenny-msg__av, .kenny-walk { filter: drop-shadow(0 0 6px rgba(120, 200, 255, .35)); }
+/* Geburtstag: jede Prüfung mit Foto (13.11.2026, neue Fotos von Thomas) */
+.timeline--media { max-width: 1040px; }
+.timeline--media .timeline__step { display: grid; grid-template-columns: minmax(0, 1fr) 280px; grid-template-rows: auto 1fr; column-gap: 2rem; align-items: start; }
+.timeline--media .timeline__step > h3, .timeline--media .timeline__step > p { grid-column: 1; }
+.timeline__img {
+  grid-column: 2; grid-row: 1 / span 2; display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover;
+  border: 1px solid var(--line); clip-path: var(--bevel-sm); background: #0a0e1f;
+}
+@media (max-width: 759px) {
+  .timeline--media .timeline__step { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+  .timeline__img { grid-column: 1; grid-row: auto; margin-top: .9rem; max-width: 460px; }
+}
+/* Kenny mit Lichtschwert neben den Prüfungen (schwarzer Videogrund verschwindet per screen) */
+section[aria-labelledby="missionen-h"] > .wrap { position: relative; }
+.kenny-jedi { position: absolute; right: 3%; top: -1.5rem; width: 200px; height: auto; mix-blend-mode: screen; pointer-events: none; }
+@media (max-width: 1099px), (prefers-reduced-motion: reduce) { .kenny-jedi { display: none; } }
+/* QA 13.11.: sichtbarer Fokus auf den Lageplan-Punkten */
+.lageplan__pin:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+/* QA 13.11.: Hero-Text sofort sichtbar (kein Aufblitzen und Wiedereinblenden beim Laden) */
+.js .hero [data-reveal] { opacity: 1; transform: none; }
+
+/* ===== QA-Layout 13.11.2026 (Audit vor dem Livegang) ===== */
+/* Hero-Einleitung auf Fotos lesbar (wie Kontaktseite) */
+.hero .lead { color: var(--ink); text-shadow: 0 1px 2px rgba(5, 6, 15, .9), 0 0 18px rgba(5, 6, 15, .85); }
+.hero__media::after {
+  background:
+    linear-gradient(180deg, rgba(5, 6, 15, .78) 0%, rgba(5, 6, 15, .3) 34%, rgba(5, 6, 15, .45) 62%, var(--bg-0) 100%),
+    radial-gradient(90% 60% at 50% 100%, rgba(10, 14, 31, .5), transparent);
+}
+/* H1 nur an gesetzten Stellen trennen */
+h1 { hyphens: manual; -webkit-hyphens: manual; }
+/* Lange Wörter in Kennzahlen, Stationen und Panels trennen statt abschneiden */
+.stat__label, .lageplan__station span, .hud-panel h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
+/* Keine einzelne Kachel allein in der letzten Zeile */
+@media (min-width: 700px) and (max-width: 1279px) { .card-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 600px) and (max-width: 959px) {
+  .card-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid--3 > :last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - .65rem); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 641px) {
+  .lageplan__stations-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+  .lageplan__station { flex: 0 1 180px; }
+}
+/* Führer-Sprachknöpfe: Wort nicht mitten durchbrechen */
+#guide .pick-grid .btn { overflow-wrap: normal; padding-inline: .8rem; letter-spacing: .08em; }
+@media (max-width: 520px) { #guide .pick-grid { grid-template-columns: 1fr; } }
+/* HUD-Label: Linie bleibt neben dem Text */
+@media (max-width: 360px) { .hud-label { flex-wrap: nowrap; } }
+/* Mobil: Footer-Ende nicht unter Kenny und Sprachhinweis */
+@media (max-width: 1023px) { .site-footer { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); } }
+/* Kenny-Chat: deckend, auf kleinen Handys vollständig sichtbar */
+.kenny-panel { background: #080b18; }
+.kenny-log { min-height: 0; }
+.kenny-form, .kenny-note, .kenny-head { flex: none; }
+.kenny-chips { flex: none; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; padding-bottom: .7rem; }
+.kenny-chips__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } /* bleibt für Screenreader */
+.kenny-chip { flex: none; white-space: nowrap; }
+@media (max-width: 1023px) { .kenny-panel { max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); } }
+/* Lageplan-Leiste: feste Bildhöhe, damit der Abstand sofort stimmt; kurze Handys kleiner */
+.lageplan-dialog > .lageplan__card--sheet img { height: min(34dvh, 340px); max-height: none; }
+@media (max-height: 700px) { .lageplan-dialog > .lageplan__card--sheet img { height: 26dvh; } }
+/* Lightbox: Vor/Zurück (Knöpfe erzeugt main.js, QA 13.11.) */
+.lightbox__nav {
+  position: fixed; top: 50%; transform: translateY(-50%); z-index: 1;
+  display: grid; place-items: center;
+  width: 48px; height: 64px; padding: 0;
+  background: var(--glass-solid); color: var(--ink); border: 1px solid var(--line);
+  font-size: 2rem; line-height: 1; cursor: pointer; clip-path: var(--bevel-sm);
+}
+.lightbox__nav--prev { left: 18px; }
+.lightbox__nav--next { right: 18px; }
+.lightbox__nav[hidden] { display: none; }
+.lightbox__nav:hover, .lightbox__nav:focus-visible,
+.lightbox__close:hover, .lightbox__close:focus-visible { color: var(--cyan); border-color: var(--cyan); }
+@media (max-width: 640px) {
+  .lightbox__nav { width: 40px; height: 56px; font-size: 1.7rem; background: rgba(5, 6, 15, .72); }
+  .lightbox__nav--prev { left: 6px; }
+  .lightbox__nav--next { right: 6px; }
+}
+/* Kenny: auf dem Handy bekommt das Panel den Fokus statt des Eingabefelds */
+.kenny-panel:focus { outline: none; }
+/* Kenny am Desktop: Fragen umbrechen statt waagerecht wischen (Maus) */
+@media (min-width: 1024px) and (min-height: 760px) { .kenny-chips { flex-wrap: wrap; overflow-x: visible; } }

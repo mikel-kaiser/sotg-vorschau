@@ -5,9 +5,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seite nicht gefunden | Stars of the Galaxy</title>
+<link rel="preload" href="/sotg-vorschau/assets/fonts/orbitron-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/sotg-vorschau/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="robots" content="noindex">
 <link rel="icon" href="/sotg-vorschau/favicon.png" type="image/png">
-<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261108">
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261218">
 <style>
   .nf-wrap { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 24px 16px; }
   .nf-code { font-family: var(--font-display); font-size: clamp(3.4rem, 14vw, 7rem); color: var(--amber); letter-spacing: .08em; margin: 0; }
@@ -29,20 +31,21 @@
   </div>
 </main>
 <script>
-/* Eine 404-Datei für alle Sprachen: Text nach Adresse (/en/…, /nl/…) */
+/* Eine 404-Datei für alle Sprachen: Text nach Adresse (/en/…, /nl/…, /fr/…) */
 (function () {
-  var m = /^\/(en|nl)(\/|$)/.exec(location.pathname);
+  var m = /^\/(en|nl|fr)(\/|$)/.exec(location.pathname);
   if (!m) return;
   var t = {
     en: ['Page not found | Stars of the Galaxy', 'These coordinates lead into the void', 'The page you are looking for does not exist (any more). Don’t panic: the hyperspace jump back is just one click away.', 'Back to the home page', 'See tickets'],
-    nl: ['Pagina niet gevonden | Stars of the Galaxy', 'Deze coördinaten leiden naar het niets', 'De pagina die je zoekt bestaat niet (meer). Geen paniek: de hyperspace-sprong terug is maar één klik.', 'Naar de homepage', 'Tickets bekijken']
+    nl: ['Pagina niet gevonden | Stars of the Galaxy', 'Deze coördinaten leiden naar het niets', 'De pagina die je zoekt bestaat niet (meer). Geen paniek: de hyperspace-sprong terug is maar één klik.', 'Naar de homepage', 'Tickets bekijken'],
+    fr: ['Page introuvable | Stars of the Galaxy', 'Ces coordonnées mènent dans le vide', 'La page que vous cherchez n’existe pas (ou plus). Pas de panique : le saut en hyperespace pour revenir ne prend qu’un clic.', 'Retour à l’accueil', 'Voir les billets']
   }[m[1]];
   document.documentElement.lang = m[1];
   document.title = t[0];
   document.getElementById('nf-h').textContent = t[1];
   document.getElementById('nf-p').textContent = t[2];
   var h = document.getElementById('nf-home'); h.textContent = t[3]; h.href = '/' + m[1] + '/';
-  var k = document.getElementById('nf-tickets'); k.textContent = t[4]; k.href = '/' + m[1] + '/tickets/';
+  var k = document.getElementById('nf-tickets'); k.textContent = t[4]; k.href = '/' + m[1] + (m[1] === 'fr' ? '/billets/' : '/tickets/');
 })();
 </script>
 <script>document.addEventListener("submit",function(e){var f=e.target;if(!f||f.tagName!=="FORM"||!f.hasAttribute("data-transmission"))return;e.preventDefault();e.stopImmediatePropagation();var o=f.parentNode.querySelector(".transmission");if(o)o.remove();var d=document.createElement("div");d.className="transmission";d.setAttribute("role","status");d.innerHTML="<strong>&gt;&gt; Vorschau_</strong>"+"Diese Anfrage wurde nicht verschickt. Auf der fertigen Seite landet sie direkt bei euch im Postfach.";f.parentNode.insertBefore(d,f);d.scrollIntoView({block:"center"});},true);</script>

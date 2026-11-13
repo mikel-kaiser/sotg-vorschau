@@ -15,33 +15,33 @@
      Popup automatisch — so kann nichts Veraltetes hängen bleiben.
    - "linkText"/"linkUrl" sind optional: beide leer lassen (""),
      wenn kein Button gewünscht ist.
-   - "en" / "nl": Übersetzungen für die englische und niederländische
-     Website (optional). Fehlen sie oder ist "text" dort leer, sehen
+   - "en" / "nl" / "fr": Übersetzungen für die englische, niederländische
+     und französische Website (optional). Fehlen sie oder ist "text" dort leer, sehen
      Besucher dieser Sprachen die deutsche Meldung. Bei einer neuen
      Meldung also am besten mitübersetzen — oder die Blöcke leeren.
    ================================================================ */
 
 window.SOTG_NEWS = {
   aktiv: true,
-  id: "ferien-2026-herbst",
+  id: "feiertage-weihnachten-2026",
   titel: "Gut zu wissen",
-  text: "In den NRW-Schulferien haben wir immer Donnerstag bis Sonntag geöffnet. Tickets gibt es online oder jederzeit ohne Wartezeit an der Kasse.",
+  text: "An allen Feiertagen haben wir geöffnet, auch montags bis mittwochs von 12 bis 17 Uhr. Weihnachtspause: Vom 21. Dezember bis 1. Januar bleibt die Basis geschlossen, ab Samstag, 2. Januar, sind wir wieder für euch da.",
   linkText: "Tickets sichern",
   linkUrl: "https://shop.starsofthegalaxy.de/collections/tickets",
-  gueltigBis: "2026-12-31",
+  gueltigBis: "2027-01-01",
   en: {
     titel: "Good to know",
-    text: "During the school holidays in North Rhine-Westphalia (NRW) we are always open Thursday to Sunday. Get your tickets online or anytime at the ticket desk, with no waiting.",
+    text: "We are open on all public holidays, including Monday to Wednesday from 12:00 to 17:00. Christmas break: we are closed from 21 December to 1 January and open again from Saturday 2 January.",
     linkText: "Get tickets"
   },
   nl: {
     titel: "Goed om te weten",
-    text: "Tijdens de schoolvakanties in Noordrijn-Westfalen (NRW) zijn we altijd van donderdag tot en met zondag geopend. Tickets koop je online of gewoon aan de kassa, zonder wachttijd.",
+    text: "Op alle feestdagen zijn we geopend, ook op maandag tot en met woensdag van 12.00 tot 17.00 uur. Kerstpauze: van 21 december tot en met 1 januari zijn we gesloten, vanaf zaterdag 2 januari zijn we er weer.",
     linkText: "Tickets kopen"
   },
   fr: {
     titel: "Bon à savoir",
-    text: "Pendant les vacances scolaires de Rhénanie-du-Nord-Westphalie (NRW), nous sommes toujours ouverts du jeudi au dimanche. Achetez vos billets en ligne ou directement à la caisse, sans attente.",
+    text: "Nous sommes ouverts tous les jours fériés, y compris du lundi au mercredi de 12 h à 17 h. Pause de Noël : nous sommes fermés du 21 décembre au 1er janvier et rouvrons le samedi 2 janvier.",
     linkText: "Acheter des billets"
   }
 };

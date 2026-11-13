@@ -77,7 +77,7 @@
     de: {
       label: 'Cookie-Einstellungen', title: 'Diese Webseite verwendet Cookies',
       tabs: ['Zustimmung', 'Details', 'Über Cookies'], always: ' (immer aktiv)',
-      intro: 'Wir verwenden Cookies, um Inhalte anzubieten. Nur mit deiner Einwilligung messen wir außerdem Besuche und werten Werbung aus. Technisch notwendige Cookies sind immer aktiv. Deine Auswahl kannst du jederzeit über „Cookie-Einstellungen“ im Footer ändern.',
+      intro: 'Diese Website speichert derzeit nur technisch Notwendiges, zum Beispiel deine Auswahl hier. Kommen später Statistik- oder Marketing-Dienste dazu, laden sie erst nach deiner Einwilligung. Deine Auswahl kannst du jederzeit über „Cookie-Einstellungen“ im Footer ändern.',
       about: 'Cookies sind kleine Textdateien, die Websites in deinem Browser speichern. Notwendige Cookies halten die Seite am Laufen; alle anderen setzen wir nur mit deiner Einwilligung. Mehr dazu in unserer Datenschutzerklärung.',
       privacy: 'Zur Datenschutzerklärung', privacyUrl: '/sotg-vorschau/datenschutz/',
       deny: 'Ablehnen', select: 'Auswahl erlauben', all: 'Alle zulassen',
@@ -91,7 +91,7 @@
     en: {
       label: 'Cookie settings', title: 'This website uses cookies',
       tabs: ['Consent', 'Details', 'About cookies'], always: ' (always active)',
-      intro: 'We use cookies to provide our content. Only with your consent do we also measure visits and evaluate advertising. Strictly necessary cookies are always active. You can change your choice at any time via “Cookie settings” in the footer.',
+      intro: 'This website currently only stores what is technically necessary, such as your choice here. If statistics or marketing services are added later, they will only load with your consent. You can change your choice at any time via “Cookie settings” in the footer.',
       about: 'Cookies are small text files that websites store in your browser. Necessary cookies keep the site running; we only set all others with your consent. You can find out more in our privacy policy.',
       privacy: 'Read the privacy policy', privacyUrl: '/sotg-vorschau/en/privacy/',
       deny: 'Deny', select: 'Allow selection', all: 'Allow all',
@@ -105,7 +105,7 @@
     nl: {
       label: 'Cookie-instellingen', title: 'Deze website gebruikt cookies',
       tabs: ['Toestemming', 'Details', 'Over cookies'], always: ' (altijd actief)',
-      intro: 'We gebruiken cookies om onze content aan te bieden. Alleen met jouw toestemming meten we ook bezoeken en evalueren we advertenties. Strikt noodzakelijke cookies zijn altijd actief. Je kunt je keuze altijd wijzigen via „Cookie-instellingen” onderaan de pagina.',
+      intro: 'Deze website slaat op dit moment alleen technisch noodzakelijke gegevens op, zoals je keuze hier. Komen er later statistiek- of marketingdiensten bij, dan laden die pas na jouw toestemming. Je kunt je keuze altijd wijzigen via „Cookie-instellingen” onderaan de pagina.',
       about: 'Cookies zijn kleine tekstbestanden die websites in je browser opslaan. Noodzakelijke cookies houden de site draaiende; alle andere plaatsen we alleen met jouw toestemming. Meer hierover lees je in onze privacyverklaring.',
       privacy: 'Naar de privacyverklaring', privacyUrl: '/sotg-vorschau/nl/privacy/',
       deny: 'Weigeren', select: 'Selectie toestaan', all: 'Alles toestaan',
@@ -120,7 +120,7 @@
     fr: {
       label: 'Paramètres des cookies', title: 'Ce site utilise des cookies',
       tabs: ['Consentement', 'Détails', 'À propos des cookies'], always: ' (toujours actif)',
-      intro: 'Nous utilisons des cookies pour proposer nos contenus. Uniquement avec votre accord, nous mesurons aussi les visites et évaluons nos publicités. Les cookies strictement nécessaires sont toujours actifs. Vous pouvez modifier votre choix à tout moment via « Paramètres des cookies » en bas de page.',
+      intro: 'Ce site n’enregistre actuellement que ce qui est techniquement nécessaire, par exemple votre choix ici. Si des services de statistiques ou de marketing s’ajoutent plus tard, ils ne se chargeront qu’avec votre accord. Vous pouvez modifier votre choix à tout moment via « Paramètres des cookies » en bas de page.',
       about: 'Les cookies sont de petits fichiers texte que les sites enregistrent dans votre navigateur. Les cookies nécessaires font fonctionner le site ; tous les autres ne sont utilisés qu’avec votre accord. Pour en savoir plus, consultez notre politique de confidentialité.',
       privacy: 'Politique de confidentialité', privacyUrl: '/sotg-vorschau/fr/confidentialite/',
       deny: 'Refuser', select: 'Autoriser la sélection', all: 'Tout autoriser',
@@ -270,6 +270,15 @@
     /* Erstentscheidung ist Pflicht: Esc nur zulassen, wenn schon eine Wahl existiert */
     dlg.addEventListener('cancel', function (e) {
       if (!load()) e.preventDefault();
+    });
+    /* Chrome lässt beim zweiten Esc ohne Klick dazwischen kein preventDefault
+       mehr zu und schließt den Dialog trotzdem. Ohne gespeicherte Wahl kommt
+       das Banner deshalb sofort zurück. finish() speichert vor dem Schließen,
+       wer erneut über den Footer-Link öffnet, hat schon eine Wahl: dann bleibt Esc frei. */
+    dlg.addEventListener('close', function () {
+      var d = this;
+      if (load() || !d.isConnected) return;
+      try { d.showModal(); } catch (e) {}
     });
 
     document.body.appendChild(dlg);

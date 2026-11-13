@@ -2,13 +2,13 @@
  "version": 1,
  "greeting": {
   "de": "Piep, piep! Ich bin Kenny, der Roboter-Butler von Stars of the Galaxy. Frag mich alles rund um deinen Besuch, zum Beispiel nach Öffnungszeiten, Tickets oder Kindergeburtstagen.",
-  "en": "Beep, beep! I'm Kenny, the robot butler of Stars of the Galaxy. Ask me anything about your visit, such as opening hours, tickets or kids' birthday parties.",
+  "en": "Beep, beep! I’m Kenny, the robot butler of Stars of the Galaxy. Ask me anything about your visit, such as opening hours, tickets or kids' birthday parties.",
   "nl": "Piep, piep! Ik ben Kenny, de robotbutler van Stars of the Galaxy. Vraag me alles over je bezoek, bijvoorbeeld over openingstijden, tickets of kinderfeestjes.",
   "fr": "Bip, bip ! Je suis Kenny, le robot majordome de Stars of the Galaxy. Posez-moi vos questions sur votre visite : horaires, billets ou anniversaires d’enfants."
  },
  "fallback": {
   "de": "Hm, dazu finde ich in meinen Datenbanken leider nichts. Ruf das Team gern an unter +49 2161 406 37 90 oder schreib uns über die Kontaktseite.",
-  "en": "Hmm, I can't find anything about that in my data banks. Feel free to call the team on +49 2161 406 37 90 or write to us via the contact page.",
+  "en": "Hmm, I can’t find anything about that in my data banks. Feel free to call the team on +49 2161 406 37 90 or write to us via the contact page.",
   "nl": "Hm, daarover vind ik helaas niets in mijn databanken. Bel het team gerust op +49 2161 406 37 90 of stuur ons een bericht via de contactpagina.",
   "fr": "Hum, je ne trouve rien à ce sujet dans mes banques de données. N’hésitez pas à appeler l’équipe au +49 2161 406 37 90 ou à nous écrire via la page contact."
  },
@@ -42,7 +42,9 @@
      "montag",
      "dienstag",
      "mittwoch",
-     "geschlossen"
+     "geschlossen",
+     "-ostermontag",
+     "-pfingstmontag"
     ],
     "en": [
      "opening hours",
@@ -57,7 +59,9 @@
      "tuesday",
      "wednesday",
      "times",
-     "oppening"
+     "oppening",
+     "-easter monday",
+     "-whit monday"
     ],
     "nl": [
      "openingstijden",
@@ -71,7 +75,9 @@
      "maandag",
      "dinsdag",
      "woensdag",
-     "tijden"
+     "tijden",
+     "-paasmaandag",
+     "-pinkstermaandag"
     ],
     "fr": [
      "horaires",
@@ -85,14 +91,16 @@
      "ferme",
      "lundi",
      "mardi",
-     "mercredi"
+     "mercredi",
+     "-lundi de pâques",
+     "-lundi de pentecôte"
     ]
    },
    "a": {
-    "de": "Wir haben Do und Fr 12–18 Uhr, Sa 10–18 Uhr und So 12–17 Uhr geöffnet. Montag bis Mittwoch bleibt die Schleuse zu.\nOb gerade offen ist, zeigt dir der Öffnungsstatus oben auf der Seite.",
-    "en": "We're open Thu and Fri 12:00–18:00, Sat 10:00–18:00 and Sun 12:00–17:00. Monday to Wednesday the airlock stays shut.\nWhether we're open right now is shown in the opening status at the top of the page.",
-    "nl": "We zijn open op do en vr 12.00–18.00 uur, za 10.00–18.00 uur en zo 12.00–17.00 uur. Van maandag tot en met woensdag blijft de sluis dicht.\nOf we nu open zijn, zie je aan de openingsstatus bovenaan de pagina.",
-    "fr": "Nous sommes ouverts le jeudi et le vendredi de 12 h à 18 h, le samedi de 10 h à 18 h et le dimanche de 12 h à 17 h. Du lundi au mercredi, le sas reste fermé.\nLe statut d’ouverture en haut de la page vous indique si nous sommes ouverts en ce moment."
+    "de": "Wir haben Do und Fr 12–18 Uhr, Sa 10–18 Uhr und So 12–17 Uhr geöffnet. Montag bis Mittwoch bleibt die Schleuse zu, außer an Feiertagen: Dann haben wir von 12 bis 17 Uhr geöffnet.\nOb gerade offen ist, zeigt dir der Öffnungsstatus oben auf der Seite.",
+    "en": "We’re open Thu and Fri 12:00–18:00, Sat 10:00–18:00 and Sun 12:00–17:00. Monday to Wednesday the airlock stays shut, except on public holidays, when we’re open 12:00 to 17:00.\nWhether we’re open right now is shown in the opening status at the top of the page.",
+    "nl": "We zijn open op do en vr 12.00–18.00 uur, za 10.00–18.00 uur en zo 12.00–17.00 uur. Van maandag tot en met woensdag blijft de sluis dicht, behalve op feestdagen: dan zijn we open van 12.00 tot 17.00 uur.\nOf we nu open zijn, zie je aan de openingsstatus bovenaan de pagina.",
+    "fr": "Nous sommes ouverts le jeudi et le vendredi de 12 h à 18 h, le samedi de 10 h à 18 h et le dimanche de 12 h à 17 h. Du lundi au mercredi, le sas reste fermé, sauf les jours fériés : nous ouvrons alors de 12 h à 17 h.\nLe statut d’ouverture en haut de la page vous indique si nous sommes ouverts en ce moment."
    },
    "link": {
     "de": "/sotg-vorschau/tickets/#zeiten",
@@ -176,8 +184,8 @@
    },
    "a": {
     "de": "Ja! An allen Feiertagen haben wir geöffnet. Fällt einer auf Montag bis Mittwoch, zum Beispiel Ostermontag oder Pfingstmontag, sind wir von 12–17 Uhr für dich da.\nNur an Weihnachten und Silvester bleibt die Schleuse zu.",
-    "en": "Yes! We're open on every public holiday. If one falls on Monday to Wednesday, for example Easter Monday or Whit Monday, we're here for you 12:00–17:00.\nThe airlock only stays shut over Christmas and on New Year's Eve.",
-    "nl": "Ja! We zijn op alle feestdagen open. Valt er een op maandag tot en met woensdag, bijvoorbeeld Tweede Paasdag of Tweede Pinksterdag, dan zijn we er van 12.00–17.00 uur.\nAlleen met Kerstmis en op oudejaarsdag blijft de luchtsluis dicht.",
+    "en": "Yes! We’re open on every public holiday. If one falls on Monday to Wednesday, for example Easter Monday or Whit Monday, we’re here for you 12:00–17:00.\nThe airlock only stays shut over Christmas and on New Year’s Eve.",
+    "nl": "Ja! We zijn op alle feestdagen open. Valt er een op maandag tot en met woensdag, bijvoorbeeld Tweede Paasdag of Tweede Pinksterdag, dan zijn we er van 12.00 tot 17.00 uur.\nAlleen met Kerstmis en op oudejaarsdag blijft de luchtsluis dicht.",
     "fr": "Oui ! Nous sommes ouverts tous les jours fériés. S’il tombe du lundi au mercredi, par exemple le lundi de Pâques ou le lundi de Pentecôte, nous vous accueillons de 12 h à 17 h.\nLe sas reste fermé uniquement à Noël et le 31 décembre."
    },
    "link": {
@@ -280,7 +288,8 @@
      "ticketpreis",
      "tickets",
      "ticket",
-     "karte",
+     "eintrittskarte",
+     "eintrittskarten",
      "erwachsene",
      "kinderpreis",
      "wie viel",
@@ -425,10 +434,10 @@
     ]
    },
    "a": {
-    "de": "Die Familienkarte kostet 50 € für 2 Erwachsene + 2 Kinder oder 1 Erwachsenen + 3 Kinder, damit spart ihr bis zu 10 €.\nSie gilt auch als Gruppenticket für 2 Erwachsene + 2 Kinder, egal ob Familie, Freunde oder Nachbarn.",
-    "en": "The family ticket is €50 for 2 adults + 2 children or 1 adult + 3 children, saving you up to €10.\nIt also works as a group ticket for any 2 adults + 2 children, whether you're family, friends or neighbours.",
-    "nl": "Het gezinsticket kost € 50 voor 2 volwassenen + 2 kinderen of 1 volwassene + 3 kinderen. Zo bespaar je tot € 10.\nHet geldt ook als groepsticket voor 2 volwassenen + 2 kinderen, of je nu familie, vrienden of buren bent.",
-    "fr": "Le billet famille coûte 50 € pour 2 adultes + 2 enfants ou 1 adulte + 3 enfants, soit jusqu’à 10 € d’économie.\nIl vaut aussi comme billet de groupe pour 2 adultes + 2 enfants, que vous soyez en famille, entre amis ou entre voisins."
+    "de": "Die Familienkarte kostet 50 € für 2 Erwachsene + 2 Kinder oder 1 Erwachsenen + 3 Kinder, damit spart ihr bis zu 10 €.\nSie gilt auch als Gruppenticket für 2 Erwachsene + 2 Kinder oder 1 Erwachsenen + 3 Kinder, egal ob Familie, Freunde oder Nachbarn.",
+    "en": "The family ticket is €50 for 2 adults + 2 children or 1 adult + 3 children, saving you up to €10.\nIt also works as a group ticket for any 2 adults + 2 children or 1 adult + 3 children, whether you’re family, friends or neighbours.",
+    "nl": "Het gezinsticket kost € 50 voor 2 volwassenen + 2 kinderen of 1 volwassene + 3 kinderen. Zo bespaar je tot € 10.\nHet geldt ook als groepsticket voor 2 volwassenen + 2 kinderen of 1 volwassene + 3 kinderen, of je nu familie, vrienden of buren bent.",
+    "fr": "Le billet famille coûte 50 € pour 2 adultes + 2 enfants ou 1 adulte + 3 enfants, soit jusqu’à 10 € d’économie.\nIl vaut aussi comme billet de groupe pour 2 adultes + 2 enfants ou 1 adulte + 3 enfants, que vous soyez en famille, entre amis ou entre voisins."
    },
    "link": {
     "de": "/sotg-vorschau/tickets/#preise",
@@ -576,7 +585,10 @@
      "queue",
      "waiting",
      "shop",
-     "purchase"
+     "purchase",
+     "book tickets",
+     "buy tickets",
+     "tickets online"
     ],
     "nl": [
      "online",
@@ -659,7 +671,7 @@
      "hours",
      "hour",
      "visit length",
-     "allow",
+     "allow for",
      "plan",
      "long",
      "take"
@@ -691,7 +703,7 @@
    },
    "a": {
     "de": "Eine feste Zeit gibt es nicht: Manche ziehen zügig durch, Fans bleiben deutlich länger, denn auf über 1.200 m² gibt es viel zu entdecken. Plan lieber etwas Puffer ein, das Hoth-Diorama lässt niemanden so schnell wieder los.",
-    "en": "There's no set time: some visitors move through quickly, fans stay much longer, as there's plenty to discover across more than 1,200 m². Best to allow a little extra time, because the Hoth diorama doesn't let anyone go in a hurry.",
+    "en": "There’s no set time: some visitors move through quickly, fans stay much longer, as there’s plenty to discover across more than 1,200 m². Best to allow a little extra time, because the Hoth diorama doesn’t let anyone go in a hurry.",
     "nl": "Een vaste tijd is er niet: sommigen lopen er vlot doorheen, fans blijven veel langer, want op ruim 1.200 m² is er veel te ontdekken. Plan wat extra tijd in, het Hoth-diorama laat niemand snel los.",
     "fr": "Il n’y a pas de durée fixe : certains visiteurs avancent vite, les fans restent bien plus longtemps, car il y a beaucoup à découvrir sur plus de 1 200 m². Prévoyez une petite marge, le diorama de Hoth ne laisse personne repartir si vite."
    }
@@ -719,7 +731,13 @@
      "öpnv",
      "berliner platz",
      "mönchengladbach",
-     "moenchengladbach"
+     "moenchengladbach",
+     "öffentliche verkehrsmittel",
+     "öffis",
+     "hinkommen",
+     "regionalbahn",
+     "finde ich euch",
+     "wo seid ihr"
     ],
     "en": [
      "address",
@@ -735,7 +753,9 @@
      "public transport",
      "berliner platz",
      "mönchengladbach",
-     "monchengladbach"
+     "monchengladbach",
+     "by train",
+     "by bus"
     ],
     "nl": [
      "adres",
@@ -751,7 +771,9 @@
      "openbaar vervoer",
      "berliner platz",
      "mönchengladbach",
-     "venlo"
+     "venlo",
+     "met de trein",
+     "met de bus"
     ],
     "fr": [
      "adresse",
@@ -766,12 +788,15 @@
      "bus",
      "transports",
      "berliner platz",
-     "mönchengladbach"
+     "mönchengladbach",
+     "en train",
+     "en bus",
+     "vous trouver"
     ]
    },
    "a": {
     "de": "Du findest uns am Berliner Platz 10, 41061 Mönchengladbach, direkt am Hauptbahnhof. Vom Gleis sind es nur wenige Gehminuten bis zur Museumstür.",
-    "en": "You'll find us at Berliner Platz 10, 41061 Mönchengladbach, Germany, right next to Mönchengladbach Hauptbahnhof (main station). It's just a few minutes' walk from the platform to our door.",
+    "en": "You’ll find us at Berliner Platz 10, 41061 Mönchengladbach, Germany, right next to Mönchengladbach Hauptbahnhof (main station). It’s just a few minutes' walk from the platform to our door.",
     "nl": "Je vindt ons aan de Berliner Platz 10, 41061 Mönchengladbach (Duitsland), naast Mönchengladbach Hauptbahnhof (centraal station). Vanaf het perron ben je in een paar minuten lopen bij de deur.",
     "fr": "Vous nous trouverez au Berliner Platz 10, 41061 Mönchengladbach (Allemagne), à deux pas de la gare centrale (Hauptbahnhof) de Mönchengladbach. Depuis le quai, il ne faut que quelques minutes à pied."
    },
@@ -809,7 +834,10 @@
      "coupon",
      "lüpertzender",
      "anreise mit dem auto",
-     "parkn"
+     "parkn",
+     "parkmöglichkeit",
+     "parkmöglichkeiten",
+     "parkgelegenheit"
     ],
     "en": [
      "parking",
@@ -822,7 +850,9 @@
      "parking fee",
      "coupon",
      "drive",
-     "driving"
+     "driving",
+     "can i park",
+     "where to park"
     ],
     "nl": [
      "parkeren",
@@ -834,7 +864,10 @@
      "parkeerkosten",
      "coupon",
      "rijden",
-     "met de auto"
+     "met de auto",
+     "parkeer",
+     "parkeergelegenheid",
+     "parkeermogelijkheid"
     ],
     "fr": [
      "parking",
@@ -851,7 +884,7 @@
    },
    "a": {
     "de": "Direkt vorm Gebäude gibt es kostenlose Parkbuchten, gegenüber einen größeren Parkplatz mit Parkscheinautomat und rund 100 m entfernt ein Parkhaus.\nTipp: Für das Parkdeck Lüpertzender Str. 86 bekommst du an der Kasse einen Rabatt-Coupon (erste Stunde frei, danach 2 € pro Stunde).",
-    "en": "There are free parking bays right outside the building, a larger car park (pay and display) opposite and a multi-storey car park about 100 m away.\nTip: for the Lüpertzender Str. 86 car park you'll get a discount coupon at the ticket desk (first hour free, then €2 per hour).",
+    "en": "There are free parking bays right outside the building, a larger car park (pay and display) opposite and a multi-storey car park about 100 m away.\nTip: for the Lüpertzender Str. 86 car park you’ll get a discount coupon at the ticket desk (first hour free, then €2 per hour).",
     "nl": "Direct voor het gebouw zijn gratis parkeervakken, aan de overkant ligt een grotere parkeerplaats met parkeerautomaat en op zo’n 100 m een parkeergarage.\nTip: voor het parkeerdek Lüpertzender Str. 86 krijg je aan de kassa een kortingscoupon (eerste uur gratis, daarna € 2 per uur).",
     "fr": "Vous trouverez des places gratuites juste devant le bâtiment, un grand parking payant (horodateur) en face et un parking couvert à environ 100 m.\nAstuce : pour le parking Lüpertzender Str. 86, vous recevez à la caisse un coupon de réduction (première heure gratuite, puis 2 € de l’heure)."
    },
@@ -924,7 +957,8 @@
      "lift",
      "drempel",
      "slecht ter been",
-     "gelijkvloers"
+     "gelijkvloers",
+     "wandelwagen"
     ],
     "fr": [
      "accessible",
@@ -945,7 +979,7 @@
    },
    "a": {
     "de": "Am Eingang warten vier Stufen, am Anfang der Ausstellung eine Treppe. Leichte Rollstühle und Kinderwagen können getragen werden, danach sind rund 80 % der Ausstellung ebenerdig befahrbar.\nDer Bereich mit Kostümsammlung und Eiswelt liegt hinter zwei Treppen und ist nicht rollstuhlgerecht.",
-    "en": "There are four steps at the entrance and a staircase at the start of the exhibition. Light wheelchairs and prams can be carried, and after that around 80% of the exhibition is step-free.\nThe area with the costume collection and the ice world is behind two staircases and isn't wheelchair-accessible.",
+    "en": "There are four steps at the entrance and a staircase at the start of the exhibition. Light wheelchairs and prams can be carried, and after that around 80% of the exhibition is step-free.\nThe area with the costume collection and the ice world is behind two staircases and isn’t wheelchair-accessible.",
     "nl": "Bij de ingang zijn vier treden en aan het begin van de tentoonstelling een trap. Lichte rolstoelen en kinderwagens kunnen worden gedragen, daarna is ongeveer 80% van de tentoonstelling gelijkvloers.\nHet deel met de kostuumcollectie en de ijswereld ligt achter twee trappen en is niet rolstoeltoegankelijk.",
     "fr": "Quatre marches vous attendent à l’entrée et un escalier au début de l’exposition. Les fauteuils roulants légers et les poussettes peuvent être portés. Ensuite, environ 80 % de l’exposition est de plain-pied.\nLa partie consacrée à la collection de costumes et au monde de glace se trouve derrière deux escaliers et n’est pas accessible en fauteuil roulant."
    },
@@ -1034,7 +1068,7 @@
    },
    "a": {
     "de": "Ja, im Weltraum ist es kalt: Unser Museum ist unbeheizt. Zieh dich an wie für eine Expedition auf einen Eisplaneten, dann hältst du es locker bis zum letzten Exponat aus.",
-    "en": "Yes, space is cold: our museum is unheated. Dress as if you're off on an expedition to an ice planet and you'll easily last until the very last exhibit.",
+    "en": "Yes, space is cold: our museum is unheated. Dress as if you’re off on an expedition to an ice planet and you’ll easily last until the very last exhibit.",
     "nl": "Ja, in de ruimte is het koud: ons museum is onverwarmd. Kleed je warm aan, alsof je op expeditie gaat naar een ijsplaneet, dan hou je het makkelijk vol tot het laatste object.",
     "fr": "Oui, il fait froid dans l’espace : notre musée n’est pas chauffé. Habillez-vous comme pour une expédition sur une planète de glace et vous tiendrez sans peine jusqu’à la dernière pièce."
    }
@@ -1072,7 +1106,8 @@
      "lead",
      "leash",
      "cat",
-     "cats"
+     "cats",
+     "dog-friendly"
     ],
     "nl": [
      "hond",
@@ -1254,7 +1289,7 @@
    },
    "a": {
     "de": "Auf über 1.200 m² warten ein 5,80 Meter langer AT-AT im großen Hoth-Diorama, über 50 lebensgroße Figuren, Han Solo in Karbonit, eine Darth-Vader-Animatronik, die sich wirklich bewegt, und ein LEGO-Sternenzerstörer aus 400.000 Steinen.\nGanz neu: ein lebensgroßer Starfighter im imperialen Hangar.",
-    "en": "Across more than 1,200 m² you'll find a 5.80-metre AT-AT in the big Hoth diorama, over 50 life-size figures, Han Solo in carbonite, a Darth Vader animatronic that really moves and a LEGO Star Destroyer built from 400,000 bricks.\nBrand new: a life-size starfighter in the Imperial hangar.",
+    "en": "Across more than 1,200 m² you’ll find a 5.80-metre AT-AT in the big Hoth diorama, over 50 life-size figures, Han Solo in carbonite, a Darth Vader animatronic that really moves and a LEGO Star Destroyer built from 400,000 bricks.\nBrand new: a life-size starfighter in the Imperial hangar.",
     "nl": "Op ruim 1.200 m² wachten een 5,80 meter lange AT-AT in het grote Hoth-diorama, meer dan 50 levensgrote figuren, Han Solo in carboniet, een Darth Vader-animatronic die echt beweegt en een LEGO Star Destroyer van 400.000 steentjes.\nGloednieuw: een levensgrote starfighter in de keizerlijke hangar.",
     "fr": "Sur plus de 1 200 m² vous attendent un AT-AT de 5,80 mètres dans le grand diorama de Hoth, plus de 50 figurines grandeur nature, Han Solo dans la carbonite, un animatronique de Dark Vador qui bouge vraiment et un Destroyer stellaire LEGO de 400 000 briques.\nNouveauté : un chasseur stellaire grandeur nature dans le hangar impérial."
    },
@@ -1398,7 +1433,8 @@
      "audiotour",
      "audiogids",
      "vertaling",
-     "lezen"
+     "lezen",
+     "gids+taal"
     ],
     "fr": [
      "guide numérique",
@@ -1413,7 +1449,8 @@
      "polonais",
      "allemand",
      "audioguide",
-     "traduction"
+     "traduction",
+     "guide+langue"
     ]
    },
    "a": {
@@ -1498,7 +1535,7 @@
    },
    "a": {
     "de": "Das ist mein Zuhause! In der kostenlosen AR-App SnoopIT erkläre ich dir die Highlights direkt auf deinem Display: Raumschiffe starten, Droiden erwachen. Am besten installierst du sie schon vor dem Besuch.",
-    "en": "That's where I live! In the free AR app SnoopIT I walk you through the highlights right on your screen: starships take off, droids wake up. Best to install it before your visit.",
+    "en": "That’s where I live! In the free AR app SnoopIT I walk you through the highlights right on your screen: starships take off, droids wake up. Best to install it before your visit.",
     "nl": "Daar woon ik! In de gratis AR-app SnoopIT vertel ik je alles over de highlights, gewoon op je scherm: ruimteschepen stijgen op, droids komen tot leven. Installeer hem het liefst al vóór je bezoek.",
     "fr": "C’est là que j’habite ! Dans l’appli AR gratuite SnoopIT, je vous présente les temps forts directement sur votre écran : les vaisseaux décollent, les droïdes se réveillent. Idéalement, installez-la avant votre visite."
    },
@@ -1695,7 +1732,9 @@
      "betreuung",
      "prüfung",
      "prüfungen",
-     "jedi-prüfung"
+     "jedi-prüfung",
+     "erleben+geburtstag",
+     "was machen+geburtstag"
     ],
     "en": [
      "programme",
@@ -1712,7 +1751,8 @@
      "robot",
      "games",
      "trial",
-     "trials"
+     "trials",
+     "do at the party"
     ],
     "nl": [
      "programma",
@@ -1748,7 +1788,8 @@
      "passeport jedi",
      "épreuve",
      "épreuves",
-     "epreuves"
+     "epreuves",
+     "font les enfants"
     ]
    },
    "a": {
@@ -1895,7 +1936,9 @@
      "datum",
      "wann feiern",
      "12:30",
-     "15:00"
+     "15:00",
+     "wann+geburtstag",
+     "wann+feiern"
     ],
     "en": [
      "date",
@@ -1909,7 +1952,9 @@
      "start time",
      "surcharge",
      "slot",
-     "when"
+     "when",
+     "when+party",
+     "when+birthday"
     ],
     "nl": [
      "datum",
@@ -1923,7 +1968,9 @@
      "starttijd",
      "toeslag",
      "wanneer",
-     "tijdslot"
+     "tijdslot",
+     "wanneer+feest",
+     "wanneer+verjaardag"
     ],
     "fr": [
      "date",
@@ -1937,7 +1984,8 @@
      "jour de semaine",
      "supplément",
      "supplement",
-     "quand"
+     "quand",
+     "quand+anniversaire"
     ]
    },
    "a": {
@@ -1972,8 +2020,11 @@
      "torte",
      "kuchen",
      "geburtstagstorte",
-     "mitbringen",
-     "eigenes essen",
+     "mitbringen+geburtstag",
+     "mitbringen+feier",
+     "mitbringen+party",
+     "eigenes essen+geburtstag",
+     "eigenes essen+feier",
      "allergie",
      "allergien",
      "unverträglichkeit",
@@ -1986,8 +2037,10 @@
     "en": [
      "cake",
      "birthday cake",
-     "bring",
-     "own food",
+     "bring+birthday",
+     "bring+party",
+     "own food+birthday",
+     "own food+party",
      "allergy",
      "allergies",
      "intolerance",
@@ -2001,8 +2054,10 @@
     "nl": [
      "taart",
      "verjaardagstaart",
-     "meenemen",
-     "eigen eten",
+     "meenemen+feest",
+     "meenemen+verjaardag",
+     "eigen eten+feest",
+     "eigen eten+verjaardag",
      "allergie",
      "allergieën",
      "allergieen",
@@ -2017,8 +2072,9 @@
      "gâteau",
      "gateau",
      "gâteau d'anniversaire",
-     "apporter",
-     "propre nourriture",
+     "apporter+anniversaire",
+     "apporter+fete",
+     "propre nourriture+anniversaire",
      "allergie",
      "allergies",
      "intolérance",
@@ -2031,7 +2087,7 @@
    },
    "a": {
     "de": "Beides klären wir am liebsten vorab persönlich. Schreib uns vor der Buchung eine Mail an info@starsofthegalaxy.de, dann besprechen wir, was bei eurer Feier möglich ist.",
-    "en": "We'd rather sort both out with you personally beforehand. Send us an email at info@starsofthegalaxy.de before booking and we'll talk through what's possible for your party.",
+    "en": "We’d rather sort both out with you personally beforehand. Send us an email at info@starsofthegalaxy.de before booking and we’ll talk through what’s possible for your party.",
     "nl": "Beide stemmen we het liefst vooraf persoonlijk af. Stuur ons vóór je boeking een mail via info@starsofthegalaxy.de, dan bespreken we wat er bij jullie feestje kan.",
     "fr": "Nous préférons en discuter avec vous au préalable. Écrivez-nous avant la réservation à info@starsofthegalaxy.de et nous verrons ensemble ce qui est possible pour votre fête."
    }
@@ -2058,7 +2114,11 @@
      "zuckerfrei",
      "koffeinfrei",
      "saft",
-     "hunger"
+     "hunger",
+     "-mitbringen",
+     "essen+geburtstag",
+     "trinken+geburtstag",
+     "getränke+geburtstag"
     ],
     "en": [
      "food",
@@ -2073,7 +2133,12 @@
      "sugar-free",
      "caffeine-free",
      "juice",
-     "eat"
+     "eat",
+     "-bring",
+     "food+birthday",
+     "food+party",
+     "drinks+birthday",
+     "drinks+party"
     ],
     "nl": [
      "eten",
@@ -2088,7 +2153,11 @@
      "hotdogs",
      "suikervrij",
      "cafeïnevrij",
-     "sap"
+     "sap",
+     "-meenemen",
+     "eten+feest",
+     "eten+verjaardag",
+     "drinken+feest"
     ],
     "fr": [
      "manger",
@@ -2103,7 +2172,13 @@
      "hot-dog",
      "hot dog",
      "sans sucre",
-     "sans caféine"
+     "sans caféine",
+     "-apporter",
+     "manger+anniversaire",
+     "boire+anniversaire",
+     "boissons+anniversaire",
+     "mange t on",
+     "boit on"
     ]
    },
    "a": {
@@ -2275,7 +2350,7 @@
    },
    "a": {
     "de": "Gastkinder wissen oft nicht, was sie schenken sollen. Darum geben wir euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit. Die Gutscheine gelten für den Eintritt und für Einkäufe in unserem Shop.\nAbgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück. Trag einfach im Buchungsformular ein, wie viele ihr möchtet.",
-    "en": "Guests often don't know what to give. So we hand you gift vouchers worth €5 or €10 in advance, on a sale-or-return basis. The vouchers can be used for admission and for purchases in our shop.\nOn the day of the party you only pay for the ones that were sold, the rest come back to us. Just note how many you'd like in the booking form.",
+    "en": "Guests often don’t know what to give. So we hand you gift vouchers worth €5 or €10 in advance, on a sale-or-return basis. The vouchers can be used for admission and for purchases in our shop.\nOn the day of the party you only pay for the ones that were sold, the rest come back to us. Just note how many you’d like in the booking form.",
     "nl": "Gasten weten vaak niet wat ze moeten geven. Daarom geven we je vooraf cadeaubonnen van € 5 of € 10 mee in consignatie. De bonnen gelden voor de entree en voor aankopen in onze shop.\nOp de verjaardag reken je alleen af wat er verkocht is, de rest komt terug. Vul in het boekingsformulier gewoon in hoeveel je wilt.",
     "fr": "Les petits invités ne savent souvent pas quoi offrir. C’est pourquoi nous vous remettons à l’avance des bons cadeaux de 5 € ou 10 € en dépôt-vente. Les bons sont valables pour l’entrée et pour les achats dans notre boutique.\nLe jour de l’anniversaire, seuls les bons vendus sont facturés, le reste nous est rendu. Indiquez simplement le nombre souhaité dans le formulaire de réservation."
    },
@@ -2313,7 +2388,9 @@
      "telefonisch",
      "anrufen",
      "frage",
-     "wie buche"
+     "wie buche",
+     "buche+geburtstag",
+     "buchen+geburtstag"
     ],
     "en": [
      "book",
@@ -2327,7 +2404,11 @@
      "booking form",
      "by phone",
      "call",
-     "question"
+     "question",
+     "book+party",
+     "book+birthday",
+     "book+kids party",
+     "book a kids"
     ],
     "nl": [
      "boeken",
@@ -2341,7 +2422,10 @@
      "boekingsformulier",
      "telefonisch",
      "bellen",
-     "vraag"
+     "vraag",
+     "boek+feest",
+     "boeken+feest",
+     "boek+kinderfeest"
     ],
     "fr": [
      "réserver",
@@ -2354,12 +2438,13 @@
      "par téléphone",
      "appeler",
      "question",
-     "comment réserver"
+     "comment réserver",
+     "reserver+anniversaire"
     ]
    },
    "a": {
     "de": "Gebucht wird ausschließlich schriftlich über das Buchungsformular auf der Geburtstagsseite, eine Reservierung per Telefon ist nicht möglich.\nErst mal nur eine Frage? Dann schreib uns lieber über das Kontaktformular oder ruf an: +49 2161 406 37 90.",
-    "en": "Bookings are made in writing only, using the booking form on our birthday page. We can't take reservations by phone.\nJust have a question for now? Then use our contact form or give us a call: +49 2161 406 37 90.",
+    "en": "Bookings are made in writing only, using the booking form on our birthday page. We can’t take reservations by phone.\nJust have a question for now? Then use our contact form or give us a call: +49 2161 406 37 90.",
     "nl": "Boeken kan alleen schriftelijk via het boekingsformulier op de pagina over kinderfeestjes, telefonisch reserveren is niet mogelijk.\nEerst alleen een vraag? Stuur ons dan liever een bericht via het contactformulier of bel: +49 2161 406 37 90.",
     "fr": "La réservation se fait uniquement par écrit, via le formulaire de la page anniversaires. Il n’est pas possible de réserver par téléphone.\nVous avez juste une question pour l’instant ? Écrivez-nous plutôt via le formulaire de contact ou appelez-nous : +49 2161 406 37 90."
    },
@@ -2484,7 +2569,10 @@
      "space cantina",
      "gruppe erwachsene",
      "lichtschwert duell",
-     "jga tour"
+     "jga tour",
+     "jga+kostet",
+     "jga+kosten",
+     "jga+preis"
     ],
     "en": [
      "hen party",
@@ -2588,7 +2676,9 @@
      "film shoot",
      "sheriff car",
      "halloween",
-     "europe"
+     "europe",
+     "hire+figures",
+     "rent+figures"
     ],
     "nl": [
      "huren",
@@ -2605,7 +2695,8 @@
      "sheriffauto",
      "halloween",
      "decoratie",
-     "europa"
+     "europa",
+     "huren+figuren"
     ],
     "fr": [
      "louer",
@@ -2622,14 +2713,15 @@
      "voiture de shérif",
      "halloween",
      "décor",
-     "europe"
+     "europe",
+     "louer+figurines"
     ]
    },
    "a": {
-    "de": "Ja! Wir vermieten 26 lebensgroße Filmfiguren, Raumschiff-Modelle, XXL-Exponate wie ein US-Sheriff-Car und Halloween-Kulissen, für Messe, Firmenevent, Hochzeit oder Dreh. Anfragen aus ganz Europa sind willkommen.\nFiguren, Modelle und XXL-Exponate kalkulieren wir individuell, die Halloween-Deko hat feste Tagespreise.",
-    "en": "Yes! We hire out 26 life-size film figures, starship models, XXL exhibits such as a US sheriff car and Halloween sets, for trade fairs, corporate events, weddings or film shoots. Enquiries from all over Europe are welcome.\nFigures, models and XXL exhibits are priced individually, the Halloween decorations have fixed day rates.",
-    "nl": "Ja! We verhuren 26 levensgrote filmfiguren, ruimteschipmodellen, XXL-objecten zoals een Amerikaanse sheriffauto en halloweendecors, voor beurs, bedrijfsevent, bruiloft of filmopname. Aanvragen uit heel Europa zijn welkom.\nFiguren, modellen en XXL-objecten berekenen we op maat, de halloweendecoratie heeft vaste dagprijzen.",
-    "fr": "Oui ! Nous louons 26 figurines de cinéma grandeur nature, des maquettes de vaisseaux, des pièces XXL comme une voiture de shérif américaine et des décors d’Halloween, pour salons, événements d’entreprise, mariages ou tournages. Les demandes de toute l’Europe sont les bienvenues.\nLes figurines, maquettes et pièces XXL sont chiffrées au cas par cas, la déco Halloween a des tarifs journaliers fixes."
+    "de": "Ja! Wir vermieten lebensgroße Filmfiguren, Raumschiff-Modelle, XXL-Exponate wie ein US-Sheriff-Car und Halloween-Kulissen, für Messe, Firmenevent, Hochzeit oder Dreh. Anfragen aus ganz Europa sind willkommen.\nFiguren, Modelle und XXL-Exponate kalkulieren wir individuell, die Halloween-Deko hat feste Tagespreise.",
+    "en": "Yes! We hire out life-size film figures, starship models, XXL exhibits such as a US sheriff car and Halloween sets, for trade fairs, corporate events, weddings or film shoots. Enquiries from all over Europe are welcome.\nFigures, models and XXL exhibits are priced individually, the Halloween decorations have fixed day rates.",
+    "nl": "Ja! We verhuren levensgrote filmfiguren, ruimteschipmodellen, XXL-objecten zoals een Amerikaanse sheriffauto en halloweendecors, voor beurs, bedrijfsevent, bruiloft of filmopname. Aanvragen uit heel Europa zijn welkom.\nFiguren, modellen en XXL-objecten berekenen we op maat, de halloweendecoratie heeft vaste dagprijzen.",
+    "fr": "Oui ! Nous louons des figurines de cinéma grandeur nature, des maquettes de vaisseaux, des pièces XXL comme une voiture de shérif américaine et des décors d’Halloween, pour salons, événements d’entreprise, mariages ou tournages. Les demandes de toute l’Europe sont les bienvenues.\nLes figurines, maquettes et pièces XXL sont chiffrées au cas par cas, la déco Halloween a des tarifs journaliers fixes."
    },
    "link": {
     "de": "/sotg-vorschau/vermietung/#anfrage",
@@ -2666,7 +2758,8 @@
      "schreiben",
      "kontaktformular",
      "nachricht",
-     "frage"
+     "frage",
+     "erreiche"
     ],
     "en": [
      "contact",
@@ -2717,7 +2810,7 @@
    },
    "a": {
     "de": "Ruf uns an unter +49 2161 406 37 90, am besten zu den Öffnungszeiten, oder schreib an info@starsofthegalaxy.de. Auf der Kontaktseite findest du auch unser Formular.",
-    "en": "Call us on +49 2161 406 37 90, ideally during opening hours, or email info@starsofthegalaxy.de. You'll also find our contact form on the contact page.",
+    "en": "Call us on +49 2161 406 37 90, ideally during opening hours, or email info@starsofthegalaxy.de. You’ll also find our contact form on the contact page.",
     "nl": "Bel ons op +49 2161 406 37 90, het liefst tijdens de openingstijden, of mail naar info@starsofthegalaxy.de. Op de contactpagina vind je ook ons formulier.",
     "fr": "Appelez-nous au +49 2161 406 37 90, de préférence pendant les heures d’ouverture, ou écrivez à info@starsofthegalaxy.de. Vous trouverez aussi notre formulaire sur la page contact."
    },
@@ -2795,7 +2888,7 @@
    },
    "a": {
     "de": "Fanartikel findest du in unserem Merch-Shop online.",
-    "en": "You'll find merchandise in our online merch shop (in German).",
+    "en": "You’ll find merchandise in our online merch shop (in German).",
     "nl": "Merchandise vind je in onze online merchshop (in het Duits).",
     "fr": "Vous trouverez nos produits dérivés dans notre boutique en ligne (en allemand)."
    },
@@ -2875,7 +2968,7 @@
    },
    "a": {
     "de": "Ich bin Kenny, der Roboter-Butler von Stars of the Galaxy. In der AR-App SnoopIT führe ich dich durch die Ausstellung, und hier beantworte ich deine Fragen rund um den Besuch.",
-    "en": "I'm Kenny, the robot butler of Stars of the Galaxy. In the AR app SnoopIT I guide you through the exhibition, and here I answer your questions about your visit.",
+    "en": "I’m Kenny, the robot butler of Stars of the Galaxy. In the AR app SnoopIT I guide you through the exhibition, and here I answer your questions about your visit.",
     "nl": "Ik ben Kenny, de robotbutler van Stars of the Galaxy. In de AR-app SnoopIT leid ik je door de tentoonstelling, en hier beantwoord ik je vragen over je bezoek.",
     "fr": "Je suis Kenny, le robot majordome de Stars of the Galaxy. Dans l’appli SnoopIT, je vous guide à travers l’exposition, et ici je réponds à vos questions sur votre visite."
    }

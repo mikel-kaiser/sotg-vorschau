@@ -57,14 +57,14 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
 @media (min-width:860px){.buchung-grid{grid-template-columns:1.4fr 1fr}}
 .buchung-steps{margin:0;padding-left:1.2rem;display:grid;gap:.6rem}
 </style>
-<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261215">
+<link rel="stylesheet" href="/sotg-vorschau/assets/css/main.css?v=20261218">
 <script defer src="/sotg-vorschau/assets/js/vendor/gsap.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/sotg-vorschau/assets/js/starfield.js"></script>
-<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261215"></script>
-<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261215"></script>
-<script defer src="/sotg-vorschau/assets/js/main.js?v=20261215"></script>
-<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261215"></script>
+<script defer src="/sotg-vorschau/assets/js/consent.js?v=20261218"></script>
+<script defer src="/sotg-vorschau/assets/js/news-config.js?v=20261218"></script>
+<script defer src="/sotg-vorschau/assets/js/main.js?v=20261218"></script>
+<script defer src="/sotg-vorschau/assets/js/kenny.js?v=20261218"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product",
 "name":"Galaktischer Kindergeburtstag",
@@ -118,7 +118,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       <div class="hero__inner">
         <p class="hud-label hero__kicker" data-reveal>Galaktische Geburtstage · Mönchengladbach</p>
         <h1 data-reveal data-reveal-delay=".08">Dein Kind wird Jedi. Um den Rest kümmern wir uns.</h1>
-        <p class="lead" data-reveal data-reveal-delay=".16">Der Rundum-Sorglos-Geburtstag: kein Bastelmarathon, keine zuckersüße Limo-Schlacht, kein Aufräumen um 18 Uhr. Unser Animateur übernimmt die Ausbildung. Material und Raumreinigung sind inklusive. Du bringst nur die Kinder.</p>
+        <p class="lead" data-reveal data-reveal-delay=".16">Der Rundum-Sorglos-Geburtstag: kein Bastelmarathon, keine zuckersüße Limo-Schlacht, kein Aufräumen um 18 Uhr. Unser Animateur übernimmt die Ausbildung. Material und Raumreinigung sind inklusive. Du bringst nur die Kinder.</p>
         <div class="hero__actions" data-reveal data-reveal-delay=".24">
           <a class="btn btn--primary" href="#buchung" data-event="cta-geburtstag-hero">Geburtstag buchen</a>
           <a class="btn btn--ghost" href="#pakete">Pakete vergleichen</a>
@@ -131,32 +131,49 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
   <!-- ===== Ablauf: Die Missionen ===== -->
   <section class="section" aria-labelledby="missionen-h">
     <div class="wrap">
+      <video class="kenny-jedi" data-src="/sotg-vorschau/assets/video/kenny-lichtschwert.mp4" poster="/sotg-vorschau/assets/img/video-kenny-lichtschwert-poster.webp"
+             width="352" height="520" muted loop playsinline preload="none" aria-hidden="true"></video>
       <div class="section-head" data-reveal>
         <p class="hud-label">Sektor 01 · Prüfungsbriefing</p>
         <h2 id="missionen-h">Vier Prüfungen bis zum Jedi-Meister</h2>
         <p class="lead">Euer Animateur führt die Crew mitten durchs Sci-Fi-Museum, von Station zu Station. Kein Kind sitzt rum, kein Elternteil muss Spiele erklären.</p>
       </div>
       <hr class="divider-beam">
-      <div class="timeline" data-reveal>
+      <div class="timeline timeline--media" data-reveal>
         <div class="timeline__step">
           <h3>Prüfung 01 · Roboter-Reparatur</h3>
           <p>Schraubenzieher statt Schultüte: Die Nachwuchs-Techniker setzen gemeinsam kleine Droiden zusammen und bringen sie wieder auf Kurs.</p>
+          <img class="timeline__img" src="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-480.webp" srcset="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-960.webp 960w"
+               sizes="(min-width: 760px) 280px, 92vw" width="1600" height="1067"
+               loading="lazy" decoding="async" alt="Kindergeburtstag im Spaceroom: Kinder in Jedi-Umhängen am runden Tisch mit Droiden">
         </div>
         <div class="timeline__step">
           <h3>Prüfung 02 · Geräusche-Quiz „Erkenne die Galaxis“</h3>
           <p>Ohren auf: Welches Brummen gehört zu welchem Raumschiff, welches Piepsen zu welchem Droiden? Hier gewinnen die besten Zuhörer.</p>
+          <img class="timeline__img" src="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-480.webp" srcset="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-960.webp 960w"
+               sizes="(min-width: 760px) 280px, 92vw" width="1600" height="1067"
+               loading="lazy" decoding="async" alt="Geburtstagsgruppe in Jedi-Umhängen sitzt im Spaceroom auf weißen Cockpitsesseln und schaut gespannt auf einen Bildschirm">
         </div>
         <div class="timeline__step">
           <h3>Prüfung 03 · Laserschuss-Spiel</h3>
           <p>Ruhige Hand, gutes Auge: Beim Zielen zeigt sich, wer das Zeug zum Piloten hat.</p>
+          <img class="timeline__img" src="/sotg-vorschau/assets/img/neu-geburtstag-laserschuss-training-480.webp" srcset="/sotg-vorschau/assets/img/neu-geburtstag-laserschuss-training-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-laserschuss-training-960.webp 960w"
+               sizes="(min-width: 760px) 280px, 92vw" width="1600" height="1067"
+               loading="lazy" decoding="async" alt="Kinder in Jedi-Umhängen zielen beim Laserschuss-Spiel konzentriert mit einem Spielzeug-Blaster">
         </div>
         <div class="timeline__step">
           <h3>Prüfung 04 · Lichtschwert-Training</h3>
           <p>Mit leuchtenden Klingen üben die Padawane Haltung und Duell. Das wird das Fotomotiv des Tages, ganz ohne blaue Flecken.</p>
+          <img class="timeline__img" src="/sotg-vorschau/assets/img/neu-geburtstag-lichtschwert-strahlen-480.webp" srcset="/sotg-vorschau/assets/img/neu-geburtstag-lichtschwert-strahlen-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-lichtschwert-strahlen-960.webp 960w"
+               sizes="(min-width: 760px) 280px, 92vw" width="1600" height="1067"
+               loading="lazy" decoding="async" alt="Drei Kinder in Kapuzenumhängen halten beim Training leuchtende Lichtschwerter">
         </div>
         <div class="timeline__step">
           <h3>Ziel · Ein echter Jedi</h3>
           <p>Die Kinder meistern alle Aufgaben im Team. Am Ende gibt es noch ein persönliches Lob vom weisen Yoda.</p>
+          <img class="timeline__img" src="/sotg-vorschau/assets/img/neu-geburtstag-jedi-pruefung-pass-480.webp" srcset="/sotg-vorschau/assets/img/neu-geburtstag-jedi-pruefung-pass-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-jedi-pruefung-pass-960.webp 960w"
+               sizes="(min-width: 760px) 280px, 92vw" width="1600" height="1067"
+               loading="lazy" decoding="async" alt="Junge im Jedi-Umhang zeigt stolz seinen Jedipass für die Prüfungen">
         </div>
       </div>
     </div>
@@ -211,8 +228,8 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       </div>
       <div class="card hud-panel" id="extras" data-reveal style="margin-top:1.6rem">
         <h3>Extras für die Crew</h3>
-        <p><strong>Geschenktüten für 5 € pro Stück.</strong> Inhalt im Wert von über 10 €: eine LEGO-kompatible Figur und Sammelkarten, Kindertattoos, Minifiguren zum Bemalen und Süßigkeiten. Das ideale Mitgebsel für jedes Crew-Mitglied.</p>
-        <p><strong>Gutscheine für die Gastkinder.</strong> Die Gäste wissen nicht, was sie schenken sollen? Wir geben euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit. Die Gutscheine gelten für den Eintritt und für Einkäufe in unserem Shop. Abgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück.</p>
+        <p><strong>Geschenktüten für 5 € pro Stück.</strong> Inhalt im Wert von über 10 €: eine LEGO-kompatible Figur und Sammelkarten, Kindertattoos, Minifiguren zum Bemalen und Süßigkeiten. Das ideale Mitgebsel für jedes Crew-Mitglied.</p>
+        <p><strong>Gutscheine für die Gastkinder.</strong> Die Gäste wissen nicht, was sie schenken sollen? Wir geben euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit. Die Gutscheine gelten für den Eintritt und für Einkäufe in unserem Shop. Abgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück.</p>
         <p class="form-note">Beides wählt ihr einfach mit im <a href="#buchung">Buchungsformular</a> aus.</p>
       </div>
     </div>
@@ -234,7 +251,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         <div class="card hud-panel" data-reveal data-reveal-delay=".08">
           <h3>Termine</h3>
           <table class="info-table">
-            <tr><th scope="row">Samstags</th><td>12:30 &amp; 15:00 Uhr</td></tr>
+            <tr><th scope="row">Samstags</th><td>12:30 &amp; 15:00 Uhr</td></tr>
             <tr><th scope="row">Wochentags</th><td>nach Absprache</td></tr>
             <tr><th scope="row">Sonntags</th><td>gegen Aufpreis, nach Absprache</td></tr>
           </table>
@@ -261,19 +278,19 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
       </div>
       <hr class="divider-beam">
       <div class="gallery" data-reveal>
-        <a href="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-1600.webp" data-srcset="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-960.webp 960w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-1600.webp 1600w">
-          <img src="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-480.webp"
-                 srcset="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-960.webp 960w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-tisch-1600.webp 1600w"
-               sizes="(min-width: 1100px) 390px, (min-width: 700px) 33vw, 50vw" width="800" height="534"
+        <a href="/sotg-vorschau/assets/img/neu-geburtstag-lichtschwerter-trio-1600.webp" data-srcset="/sotg-vorschau/assets/img/neu-geburtstag-lichtschwerter-trio-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-lichtschwerter-trio-960.webp 960w, /sotg-vorschau/assets/img/neu-geburtstag-lichtschwerter-trio-1600.webp 1600w">
+          <img src="/sotg-vorschau/assets/img/neu-geburtstag-lichtschwerter-trio-480.webp"
+                 srcset="/sotg-vorschau/assets/img/neu-geburtstag-lichtschwerter-trio-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-lichtschwerter-trio-960.webp 960w"
+               sizes="(min-width: 1100px) 390px, (min-width: 700px) 33vw, 50vw" width="800" height="533"
                loading="lazy" decoding="async"
-               alt="Kindergeburtstag im Spaceroom: Kinder in Jedi-Umhängen am runden Tisch mit Droiden">
+               alt="Drei lachende Kinder in Jedi-Umhängen mit leuchtend grünen Lichtschwertern">
         </a>
-        <a href="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-1600.webp" data-srcset="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-960.webp 960w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-1600.webp 1600w">
-          <img src="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-480.webp"
-                 srcset="/sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-960.webp 960w, /sotg-vorschau/assets/img/neu-geburtstag-spaceroom-kinder-1600.webp 1600w"
-               sizes="(min-width: 1100px) 390px, (min-width: 700px) 33vw, 50vw" width="800" height="534"
+        <a href="/sotg-vorschau/assets/img/neu-geburtstag-blaster-crew-1600.webp" data-srcset="/sotg-vorschau/assets/img/neu-geburtstag-blaster-crew-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-blaster-crew-960.webp 960w, /sotg-vorschau/assets/img/neu-geburtstag-blaster-crew-1600.webp 1600w">
+          <img src="/sotg-vorschau/assets/img/neu-geburtstag-blaster-crew-480.webp"
+                 srcset="/sotg-vorschau/assets/img/neu-geburtstag-blaster-crew-480.webp 480w, /sotg-vorschau/assets/img/neu-geburtstag-blaster-crew-960.webp 960w"
+               sizes="(min-width: 1100px) 390px, (min-width: 700px) 33vw, 50vw" width="800" height="533"
                loading="lazy" decoding="async"
-               alt="Geburtstagsgruppe in Jedi-Umhängen sitzt im Spaceroom auf weißen Cockpitsesseln und schaut gespannt auf einen Bildschirm">
+               alt="Geburtstagscrew in Jedi-Umhängen steht mit Spielzeug-Blastern bereit für das Laserschuss-Spiel">
         </a>
         <a href="/sotg-vorschau/assets/img/cantina-bar-leuchtende-becher-480.webp" data-srcset="/sotg-vorschau/assets/img/cantina-bar-leuchtende-becher-480.webp 480w">
           <img src="/sotg-vorschau/assets/img/cantina-bar-leuchtende-becher-480.webp"
@@ -290,7 +307,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         </a>
         <a href="/sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-1600.webp" data-srcset="/sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-480.webp 480w, /sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-960.webp 960w, /sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-1600.webp 1600w">
           <img src="/sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-480.webp"
-                 srcset="/sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-480.webp 480w, /sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-960.webp 960w, /sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-1600.webp 1600w"
+                 srcset="/sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-480.webp 480w, /sotg-vorschau/assets/img/neu-lichtschwert-duell-familie-960.webp 960w"
                sizes="(min-width: 1100px) 390px, (min-width: 700px) 33vw, 50vw" width="800" height="600"
                loading="lazy" decoding="async"
                alt="Mädchen im Jedi-Kostüm kreuzt beim Lichtschwert-Training ihr leuchtendes Schwert mit dem des Trainers in der Eiswelt">
@@ -349,7 +366,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         </details>
         <details>
           <summary>Geht auch ein anderer Tag als Samstag?</summary>
-          <div><p>Die festen Startzeiten sind samstags um 12:30 und 15:00 Uhr. Wochentags feiern wir nach Absprache, sonntags nach Absprache gegen Aufpreis. Tragt euren Wunschtermin einfach ins <a href="#buchung">Buchungsformular</a> ein, wir melden uns per E-Mail.</p></div>
+          <div><p>Die festen Startzeiten sind samstags um 12:30 und 15:00 Uhr. Wochentags feiern wir nach Absprache, sonntags nach Absprache gegen Aufpreis. Tragt euren Wunschtermin einfach ins <a href="#buchung">Buchungsformular</a> ein, wir melden uns per E-Mail.</p></div>
         </details>
         <details>
           <summary>Wir verspäten uns oder haben kurzfristig eine Frage. Was tun?</summary>
@@ -361,11 +378,11 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
         </details>
         <details>
           <summary>Was steckt in den Geschenktüten?</summary>
-          <div><p>Für 5 € pro Tüte bekommt ihr Inhalt im Wert von über 10 €: eine LEGO-kompatible Figur und Sammelkarten, Kindertattoos, Minifiguren zum Bemalen und Süßigkeiten. Ideal als Mitgebsel für die Gäste. Die Anzahl wählt ihr direkt im <a href="#buchung">Buchungsformular</a>.</p></div>
+          <div><p>Für 5 € pro Tüte bekommt ihr Inhalt im Wert von über 10 €: eine LEGO-kompatible Figur und Sammelkarten, Kindertattoos, Minifiguren zum Bemalen und Süßigkeiten. Ideal als Mitgebsel für die Gäste. Die Anzahl wählt ihr direkt im <a href="#buchung">Buchungsformular</a>.</p></div>
         </details>
         <details>
           <summary>Die Gäste wissen nicht, was sie schenken sollen. Habt ihr eine Idee?</summary>
-          <div><p>Ja: Gutscheine für die Gastkinder. Wir geben euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit. Die Gutscheine gelten für den Eintritt und für Einkäufe in unserem Shop. Abgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück. Tragt im Formular einfach ein, wie viele ihr ungefähr braucht.</p></div>
+          <div><p>Ja: Gutscheine für die Gastkinder. Wir geben euch vorab Geschenkgutscheine über 5 € oder 10 € auf Kommission mit. Die Gutscheine gelten für den Eintritt und für Einkäufe in unserem Shop. Abgerechnet wird am Geburtstag nur, was verkauft wurde, der Rest kommt zurück. Tragt im Formular einfach ein, wie viele ihr ungefähr braucht.</p></div>
         </details>
       </div>
     </div>
@@ -392,9 +409,9 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <label for="b-paket">Paket</label>
             <select id="b-paket" name="paket" required>
               <option value="" disabled selected>Bitte wählen</option>
-              <option value="Standard (219 €)">Standard (219 €)</option>
-              <option value="Medium (279 €)">Medium (279 €)</option>
-              <option value="Deluxe (349 €)">Deluxe (349 €)</option>
+              <option value="Standard (219 €)">Standard (219 €)</option>
+              <option value="Medium (279 €)">Medium (279 €)</option>
+              <option value="Deluxe (349 €)">Deluxe (349 €)</option>
             </select>
           </div>
           <div>
@@ -405,8 +422,8 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <label for="b-uhrzeit">Uhrzeit</label>
             <select id="b-uhrzeit" name="uhrzeit" required>
               <option value="" disabled selected>Bitte wählen</option>
-              <option>Samstag 12:30 Uhr</option>
-              <option>Samstag 15:00 Uhr</option>
+              <option>Samstag 12:30 Uhr</option>
+              <option>Samstag 15:00 Uhr</option>
               <option>Wochentag nach Absprache</option>
               <option>Sonntag nach Absprache, mit Aufpreis</option>
             </select>
@@ -424,12 +441,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <input type="text" id="b-alter" name="alter" inputmode="numeric" placeholder="z. B. 7">
           </div>
           <div>
-            <label for="b-geschenktueten">Geschenktüten (5 € pro Stück)</label>
+            <label for="b-geschenktueten">Geschenktüten (5 € pro Stück)</label>
             <select id="b-geschenktueten" name="geschenktueten">
               <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
               <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
             </select>
-            <p class="form-note" style="margin:.35rem 0 0">Inhalt im Wert von über 10 €, ideal als Mitgebsel.</p>
+            <p class="form-note" style="margin:.35rem 0 0">Inhalt im Wert von über 10 €, ideal als Mitgebsel.</p>
           </div>
           <div>
             <label for="b-gutscheine">Gutscheine für Gastkinder (optional)</label>
@@ -453,7 +470,7 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
             <textarea id="b-nachricht" name="message" placeholder="Allergien, Sonderwünsche, Fragen: alles hier rein."></textarea>
           </div>
           <div class="span-2">
-            <button class="btn btn--primary" type="submit" data-label="Verbindlich buchen">Verbindlich buchen</button>
+            <button class="btn btn--primary" type="submit" data-label="Zahlungspflichtig buchen">Zahlungspflichtig buchen</button>
             <p class="form-note" style="margin-top:.9rem">Deine Buchung ist verbindlich, sobald wir sie per E-Mail bestätigen. Schau zur Sicherheit auch in deinen Spam-Ordner.</p>
           </div>
         </form>
@@ -546,12 +563,12 @@ h1,h2,h3{font-family:'Orbitron',sans-serif;line-height:1.14;color:#fff;margin:0 
     <div>
       <h4>Öffnungszeiten</h4>
       <table class="info-table">
-        <tr data-day="4"><th scope="row">Do</th><td>12 – 18 Uhr</td></tr>
-        <tr data-day="5"><th scope="row">Fr</th><td>12 – 18 Uhr</td></tr>
-        <tr data-day="6"><th scope="row">Sa</th><td>10 – 18 Uhr</td></tr>
-        <tr data-day="0"><th scope="row">So</th><td>12 – 17 Uhr</td></tr>
+        <tr data-day="4"><th scope="row">Do</th><td>12 – 18 Uhr</td></tr>
+        <tr data-day="5"><th scope="row">Fr</th><td>12 – 18 Uhr</td></tr>
+        <tr data-day="6"><th scope="row">Sa</th><td>10 – 18 Uhr</td></tr>
+        <tr data-day="0"><th scope="row">So</th><td>12 – 17 Uhr</td></tr>
       </table>
-      <p class="form-note">An allen Feiertagen geöffnet, auch montags bis mittwochs <span class="nowrap">(12 – 17 Uhr)</span>. An Weihnachten und Silvester geschlossen.</p>
+      <p class="form-note">An allen Feiertagen geöffnet, auch montags bis mittwochs <span class="nowrap">(12 – 17 Uhr)</span>. An Weihnachten und Silvester geschlossen.</p>
     </div>
     <div>
       <h4>Navigation</h4>

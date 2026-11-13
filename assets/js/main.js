@@ -181,18 +181,62 @@
     if (c !== lastCompact && header) { header.classList.toggle('is-compact', c); lastCompact = c; }
   }, { passive: true });
 
+  /* Mobiles Menü (Hamburger bis 1439 px): Esc schließt, Fokus springt beim Öffnen
+     auf den ersten Link und kehrt beim Schließen zum Knopf zurück. Solange es offen
+     ist, sind main, Footer und die schwebenden Elemente inert und Tab kreist
+     zwischen Knopf und Menülinks. */
   var toggle = document.querySelector('.nav-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var open = document.body.classList.toggle('nav-open');
+  var siteNav = document.querySelector('.site-nav');
+  if (toggle && siteNav) {
+    var NAV_LABEL = {
+      de: ['Menü öffnen', 'Menü schließen'], en: ['Open menu', 'Close menu'],
+      nl: ['Menu openen', 'Menu sluiten'], fr: ['Ouvrir le menu', 'Fermer le menu']
+    }[LANG];
+    var navMq = window.matchMedia('(max-width: 1439px)');
+    var navItems = function () {
+      return [toggle].concat(Array.prototype.slice.call(siteNav.querySelectorAll('a[href], button:not([disabled])')));
+    };
+    var setNav = function (open, refocus) {
+      document.body.classList.toggle('nav-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.querySelectorAll('.site-nav a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        document.body.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', NAV_LABEL[open ? 1 : 0]);
+      Array.prototype.forEach.call(document.body.children, function (el) {
+        if (el.contains(toggle) || /^(SCRIPT|DIALOG|NOSCRIPT)$/.test(el.tagName)) return;
+        if (open) {
+          if (!el.inert) { el.inert = true; el.setAttribute('data-nav-inert', ''); }
+        } else if (el.hasAttribute('data-nav-inert')) {
+          el.inert = false; el.removeAttribute('data-nav-inert');
+        }
       });
+      if (open) {
+        /* Das Menü blendet per visibility-Transition ein: im ersten Frame ist
+           es noch nicht fokussierbar, darum bis zu ~20 Frames nachfassen */
+        var first = navItems()[1], tries = 0;
+        var focusFirst = function () {
+          if (!first || !document.body.classList.contains('nav-open')) return;
+          first.focus();
+          if (document.activeElement !== first && ++tries < 20) requestAnimationFrame(focusFirst);
+        };
+        focusFirst();
+      } else if (refocus) toggle.focus();
+    };
+    toggle.addEventListener('click', function () {
+      setNav(!document.body.classList.contains('nav-open'), true);
     });
+    siteNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setNav(false, false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!document.body.classList.contains('nav-open')) return;
+      if (e.key === 'Escape') { e.preventDefault(); setNav(false, true); return; }
+      if (e.key !== 'Tab') return;
+      var items = navItems(), i = items.indexOf(document.activeElement);
+      e.preventDefault();
+      items[i === -1 ? 0 : (i + (e.shiftKey ? -1 : 1) + items.length) % items.length].focus();
+    });
+    /* Fenster auf Desktop-Breite gezogen: Overlay gibt es dort nicht, also schließen */
+    var navMqChange = function () { if (!navMq.matches && document.body.classList.contains('nav-open')) setNav(false, false); };
+    if (navMq.addEventListener) navMq.addEventListener('change', navMqChange); else if (navMq.addListener) navMq.addListener(navMqChange);
   }
 
   /* ================= GSAP Scroll-Storytelling ================= */
@@ -277,22 +321,77 @@
   });
 
   /* ================= Galerie-Lightbox ================= */
+  /* Blättert mit ‹ ›, Pfeiltasten und Wischen innerhalb derselben .gallery.
+     Die Knöpfe entstehen hier (Klassen lightbox__nav, --prev, --next) und
+     verschwinden, wenn die Galerie nur ein Bild hat. */
   var lb = document.getElementById('lightbox');
   if (lb && typeof lb.showModal === 'function') {
     var lbImg = lb.querySelector('img');
     var lbCap = lb.querySelector('figcaption');
+    var LB_LABEL = {
+      de: ['Vorheriges Bild', 'Nächstes Bild'], en: ['Previous image', 'Next image'],
+      nl: ['Vorige afbeelding', 'Volgende afbeelding'], fr: ['Image précédente', 'Image suivante']
+    }[LANG];
+    var lbBtn = function (dir, label, sym) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'lightbox__nav lightbox__nav--' + dir;
+      b.setAttribute('aria-label', label);
+      b.textContent = sym;
+      lb.appendChild(b);
+      return b;
+    };
+    var lbPrev = lbBtn('prev', LB_LABEL[0], '‹');
+    var lbNext = lbBtn('next', LB_LABEL[1], '›');
+    var lbSet = [], lbIdx = 0, lbSwiped = 0;
+    var lbShow = function (i) {
+      lbIdx = (i + lbSet.length) % lbSet.length;
+      var a = lbSet[lbIdx], img = a.querySelector('img');
+      /* Altes Bild sofort entfernen und erst nach dem Laden zeigen,
+         sonst steht kurz das vorige Bild unter der neuen Bildunterschrift */
+      lbImg.style.visibility = 'hidden';
+      lbImg.removeAttribute('srcset');
+      lbImg.removeAttribute('src');
+      lbImg.alt = img ? img.alt : '';
+      if (lbCap) lbCap.textContent = img ? img.alt : '';
+      var ss = a.getAttribute('data-srcset');
+      if (ss) lbImg.srcset = ss;
+      lbImg.src = a.getAttribute('href');
+    };
+    var lbReveal = function () { lbImg.style.visibility = ''; };
+    lbImg.addEventListener('load', lbReveal);
+    lbImg.addEventListener('error', lbReveal);
+    lbPrev.addEventListener('click', function () { lbShow(lbIdx - 1); });
+    lbNext.addEventListener('click', function () { lbShow(lbIdx + 1); });
     document.querySelectorAll('.gallery a').forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault();
-        var img = a.querySelector('img');
-        lbImg.src = a.getAttribute('href');
-        lbImg.srcset = a.getAttribute('data-srcset') || '';
-        lbImg.alt = img ? img.alt : '';
-        if (lbCap) lbCap.textContent = img ? img.alt : '';
+        lbSet = Array.prototype.slice.call(a.closest('.gallery').querySelectorAll('a'));
+        lbPrev.hidden = lbNext.hidden = lbSet.length < 2;
+        lbShow(lbSet.indexOf(a));
         lb.showModal();
       });
     });
+    lb.addEventListener('keydown', function (e) {
+      if (lbSet.length < 2 || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+      e.preventDefault();
+      lbShow(lbIdx + (e.key === 'ArrowRight' ? 1 : -1));
+    });
+    var lbX = null, lbY = 0;
+    lb.addEventListener('touchstart', function (e) {
+      if (e.touches.length === 1) { lbX = e.touches[0].clientX; lbY = e.touches[0].clientY; } else lbX = null;
+    }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (lbX === null || lbSet.length < 2) return;
+      var t = e.changedTouches[0], dx = t.clientX - lbX, dy = t.clientY - lbY;
+      lbX = null;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        lbSwiped = Date.now();
+        lbShow(lbIdx + (dx < 0 ? 1 : -1));
+      }
+    }, { passive: true });
     lb.addEventListener('click', function (e) {
+      if (e.target.closest('.lightbox__nav') || Date.now() - lbSwiped < 500) return;
       var r = lbImg.getBoundingClientRect();
       var inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
       if (!inside || e.target.classList.contains('lightbox__close')) lb.close();
@@ -494,6 +593,7 @@
           fig.className = 'ti-card';
           var stars = document.createElement('p');
           stars.className = 'ti-card__stars';
+          stars.setAttribute('role', 'img');
           stars.setAttribute('aria-label', (rv.rating || 5) + T.stars);
           stars.textContent = '★★★★★'.slice(0, Math.max(1, Math.min(5, rv.rating || 5)));
           var q = document.createElement('blockquote');
@@ -529,10 +629,23 @@
         var page = 0, per = 1, timer = 0, paused = reduced, hover = false;
         function perPage() { return window.innerWidth >= 1100 ? 4 : (window.innerWidth >= 700 ? 2 : 1); }
         function pages() { return Math.max(1, Math.ceil(reviews.length / per)); }
-        function render() {
+        function fill(pg) {
           stage.innerHTML = '';
+          for (var i = pg * per; i < Math.min(reviews.length, pg * per + per); i++) stage.appendChild(card(reviews[i]));
+        }
+        var measuredFor = '';
+        function render() {
           stage.style.setProperty('--rv-cols', per);
-          for (var i = page * per; i < Math.min(reviews.length, page * per + per); i++) stage.appendChild(card(reviews[i]));
+          /* QA 13.11.: Höhe der höchsten Seite vorab messen, damit der Wechsel nichts verschiebt */
+          var key = per + 'x' + stage.clientWidth;
+          if (stage.isConnected && measuredFor !== key) {
+            stage.style.minHeight = '';
+            var maxH = 0;
+            for (var pg = 0; pg < pages(); pg++) { fill(pg); maxH = Math.max(maxH, stage.offsetHeight); }
+            stage.style.minHeight = maxH + 'px';
+            measuredFor = key;
+          }
+          fill(page);
           count.textContent = (page + 1) + ' / ' + pages();
         }
         function go(dir) {
@@ -564,7 +677,7 @@
         var rz;
         window.addEventListener('resize', function () {
           clearTimeout(rz);
-          rz = setTimeout(function () { var n = perPage(); if (n !== per) { per = n; page = 0; render(); schedule(); } }, 200);
+          rz = setTimeout(function () { var n = perPage(); if (n !== per) { per = n; page = 0; render(); schedule(); } else { measuredFor = ''; render(); } }, 200);
         });
         per = perPage();
         band.innerHTML = '';
@@ -572,53 +685,38 @@
         band.appendChild(stage);
         band.appendChild(controls);
         render();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measuredFor = ''; render(); });
         setPaused(paused);
       })
       .catch(function () { /* statischer Fallback im Markup bleibt stehen */ });
   }
 
-  /* ---------- Video-Facade: lädt erst nach Klick.
-     Liegt eine eigene Videodatei unter data-video-src (z. B.
-     /assets/video/snoopit.mp4) auf dem Server, wird sie nativ abgespielt —
-     sonst Fallback auf YouTube (nocookie). Der Button wird durch einen
-     Container ERSETZT (iframe/video im Button wäre ungültiges HTML). ---------- */
-  document.querySelectorAll('.video-facade[data-video]').forEach(function (btn) {
+  /* ---------- Video-Facade: lädt erst nach Klick die eigene Videodatei
+     (data-video-src, z. B. /assets/video/snoopit.mp4). Kein YouTube mehr.
+     Der Button wird durch einen Container ERSETZT (video im Button wäre ungültig). ---------- */
+  document.querySelectorAll('.video-facade[data-video-src]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var id = btn.getAttribute('data-video');
-      var localSrc = btn.getAttribute('data-video-src');
       var title = btn.getAttribute('data-video-title') || 'Video';
-      function mount(el) {
-        var wrap = document.createElement('div');
-        wrap.className = btn.className; /* Hoch-/Querformat-Variante behalten */
-        wrap.style.cursor = 'default';
-        wrap.appendChild(el);
-        btn.replaceWith(wrap);
-        try { el.focus(); } catch (e) {}
-      }
-      function youtube() {
-        if (!/^[A-Za-z0-9_-]{6,20}$/.test(id || '')) return;
-        var f = document.createElement('iframe');
-        f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
-        f.title = title;
-        f.allow = 'autoplay; encrypted-media; picture-in-picture';
-        f.setAttribute('allowfullscreen', '');
-        mount(f);
-      }
-      if (localSrc && window.fetch) {
-        fetch(localSrc, { method: 'HEAD' }).then(function (r) {
-          if (!r.ok) throw new Error(r.status);
-          var v = document.createElement('video');
-          v.src = localSrc;
-          v.controls = true;
-          v.autoplay = true;
-          v.playsInline = true;
-          v.setAttribute('aria-label', title);
-          v.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;background:#000';
-          mount(v);
-        }).catch(youtube);
-      } else {
-        youtube();
-      }
+      var v = document.createElement('video');
+      v.src = btn.getAttribute('data-video-src');
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.setAttribute('aria-label', title);
+      /* Fassadenbild als Poster: iOS zeigt sonst bis zum ersten Frame nur Schwarz */
+      var still = btn.querySelector('img');
+      if (still) v.poster = still.currentSrc || still.src;
+      v.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;background:#000';
+      var wrap = document.createElement('div');
+      wrap.className = btn.className; /* Hoch-/Querformat-Variante behalten */
+      wrap.style.cursor = 'default';
+      wrap.appendChild(v);
+      btn.replaceWith(wrap);
+      /* autoplay allein reicht auf iOS nicht: play() direkt in der Klick-Geste starten.
+         Lehnt der Browser ab, bleiben die Steuerelemente zum Selbststarten. */
+      var pr = v.play();
+      if (pr && pr.catch) pr.catch(function () {});
+      try { v.focus(); } catch (e) {}
     }, { once: true });
   });
 
@@ -704,4 +802,14 @@
   new IntersectionObserver(function (e) {
     document.body.classList.toggle('hero-cta-visible', e[0].isIntersecting);
   }).observe(ha);
+})();
+
+/* Kenny mit Lichtschwert (Geburtstag): Video erst laden, wenn sichtbar und Platz da ist */
+(function () {
+  var v = document.querySelector('video.kenny-jedi[data-src]');
+  if (!v || !window.matchMedia || !window.matchMedia('(min-width: 1100px) and (prefers-reduced-motion: no-preference)').matches) return;
+  function go() { if (v.getAttribute('src')) return; v.src = v.getAttribute('data-src'); var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
+  if (!('IntersectionObserver' in window)) { go(); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { go(); io.disconnect(); } }); }, { rootMargin: '200px' });
+  io.observe(v);
 })();

@@ -30,22 +30,14 @@
           note: 'Kenny connaît les questions les plus fréquentes. Pour le reste : +49 2161 406 37 90.', you: 'Vous', label: 'Discuter avec Kenny' }
   }[LANG];
 
-  /* Kenny als eigene Vektor-Zeichnung (nach dem Foto aus der SnoopIT-App) */
-  var SVG = '<svg class="kenny-svg" viewBox="0 0 64 76" aria-hidden="true" focusable="false">' +
-    '<line x1="20" y1="14" x2="18" y2="5" stroke="#9aa7c4" stroke-width="2" stroke-linecap="round"/>' +
-    '<line x1="44" y1="14" x2="46" y2="5" stroke="#9aa7c4" stroke-width="2" stroke-linecap="round"/>' +
-    '<path d="M11 38a21 21 0 0 1 42 0v3H11z" fill="#eef0f7" stroke="#aab4cc" stroke-width="1.2"/>' +
-    '<rect x="26" y="15" width="12" height="2.6" rx="1.3" fill="#2b3d73"/>' +
-    '<circle cx="24.5" cy="28" r="6.4" fill="#141a2b" stroke="#aab4cc" stroke-width="1.5"/>' +
-    '<circle cx="39.5" cy="28" r="6.4" fill="#141a2b" stroke="#aab4cc" stroke-width="1.5"/>' +
-    '<circle class="kenny-eye" cx="26.5" cy="26.3" r="1.5" fill="#ff5a4a"/><circle class="kenny-eye" cx="41.5" cy="26.3" r="1.5" fill="#ff5a4a"/>' +
-    '<g fill="#5f6c8f"><circle cx="29" cy="36" r=".9"/><circle cx="32" cy="36" r=".9"/><circle cx="35" cy="36" r=".9"/></g>' +
-    '<rect x="11" y="41" width="42" height="4" fill="#cdd3e2"/>' +
-    '<rect x="14" y="45" width="36" height="24" rx="9" fill="#eef0f7" stroke="#aab4cc" stroke-width="1.2"/>' +
-    '<path d="M32 45l-3.4 4 3.4 16 3.4-16z" fill="#23408f"/><path d="M29.4 45h5.2l-1 2.6h-3.2z" fill="#1a2f6b"/>' +
-    '<rect x="5" y="47" width="8" height="14" rx="4" fill="#dfe3ee" stroke="#aab4cc"/><rect x="51" y="47" width="8" height="14" rx="4" fill="#dfe3ee" stroke="#aab4cc"/>' +
-    '<rect x="20" y="68" width="8" height="6" rx="2" fill="#2b3d73"/><rect x="36" y="68" width="8" height="6" rx="2" fill="#2b3d73"/>' +
-    '</svg>';
+  /* Kenny: echte Grafik aus der SnoopIT-App (von Thomas, 13.11.2026), freigestellt */
+  function kennyImg(name, w, cls) {
+    return '<img class="kenny-svg' + (cls ? ' ' + cls : '') + '" src="/sotg-vorschau/assets/img/' + name + '-120.webp"' +
+      ' srcset="/sotg-vorschau/assets/img/' + name + '-120.webp 1x, /assets/img/' + name + '-240.webp 2x"' +
+      ' width="' + w + '" height="120" alt="" decoding="async">';
+  }
+  var SVG = kennyImg('kenny-roboter', 98);
+  var WAVE = kennyImg('kenny-roboter-winkt', 117);
   window.SOTG = window.SOTG || {};
   window.SOTG.kennySVG = SVG;
 
@@ -67,16 +59,35 @@
   function L(o) { return (o && (o[LANG] || o.de)) || ''; }
   function byId(id) { for (var i = 0; i < kb.items.length; i++) if (kb.items[i].id === id) return kb.items[i]; return null; }
 
+  /* Stichwörter in kenny-faq.json (keywords je Sprache, deutsche zählen überall mit):
+       "hund"         ab 4 Zeichen auch als Wortteil, kürzer nur als ganzes Wort.
+                      Ein ganzes Wort zählt mindestens 4 Punkte, damit auch zug, bus, dog, app allein reichen.
+       "wie viel"     Mehrwort-Treffer sind präziser: +6.
+       "torte+mitbringen"  zählt nur, wenn alle Teile vorkommen: Summe der Teile +6.
+       "-mitbringen"  steht das Wort in der Frage, scheidet der Eintrag ganz aus.
+     Gewonnen hat der Eintrag mit den meisten Punkten, ab 4 Punkten; sonst kommt der Fallback. */
+  function hit(nq, nk) {
+    if (!nk) return 0;
+    if (nq.indexOf(' ' + nk + ' ') !== -1) return Math.max(4, Math.min(nk.length, 10));
+    return nk.length >= 4 && nq.indexOf(nk) !== -1 ? Math.min(nk.length, 10) : 0;
+  }
   function match(q) {
     var nq = ' ' + norm(q) + ' ', best = null, bestScore = 0;
     kb.items.forEach(function (it) {
-      var score = 0;
+      var score = 0, out = false;
       var kws = (it.keywords && (it.keywords[LANG] || [])).concat(LANG !== 'de' && it.keywords ? (it.keywords.de || []) : []);
       kws.forEach(function (k) {
-        var nk = norm(k);
-        if (!nk) return;
-        if (nk.length >= 4 ? nq.indexOf(nk) !== -1 : nq.indexOf(' ' + nk + ' ') !== -1) score += Math.min(nk.length, 10) + (nk.indexOf(' ') !== -1 ? 6 : 0); // Mehrwort-Treffer sind präziser
+        k = String(k);
+        if (k.charAt(0) === '-') { if (hit(nq, norm(k.slice(1)))) out = true; return; }
+        if (k.indexOf('+') !== -1) {
+          var sum = 0, all = k.split('+').every(function (p) { var s = hit(nq, norm(p)); sum += s; return s > 0; });
+          if (all) score += sum + 6;
+          return;
+        }
+        var nk = norm(k), s = hit(nq, nk);
+        if (s) score += s + (nk.indexOf(' ') !== -1 ? 6 : 0);
       });
+      if (out) return;
       norm(L(it.q)).split(' ').forEach(function (w) { if (w.length >= 5 && nq.indexOf(w) !== -1) score += 2; });
       if (score > bestScore) { bestScore = score; best = it; }
     });
@@ -100,12 +111,14 @@
     }
     m.appendChild(b);
     log.appendChild(m);
-    log.scrollTop = log.scrollHeight;
+    toEnd();
     return m;
   }
+  /* Neue Vorschlags-Chips verkleinern den Verlauf: danach erneut ans Ende scrollen */
+  function toEnd() { log.scrollTop = log.scrollHeight; }
   function showChips(ids) {
     chips.innerHTML = '';
-    if (!ids.length) return;
+    if (!ids.length) { toEnd(); return; }
     var lbl = document.createElement('span'); lbl.className = 'kenny-chips__label'; lbl.textContent = UI.more; chips.appendChild(lbl);
     ids.forEach(function (id) {
       var it = byId(id); if (!it) return;
@@ -113,6 +126,7 @@
       c.addEventListener('click', function () { ask(L(it.q), it); });
       chips.appendChild(c);
     });
+    toEnd();
   }
   function answer(it) {
     addMsg('bot', L(it.a), it.link ? { href: L(it.link), text: L(it.linkText) } : null);
@@ -143,9 +157,10 @@
     panel.id = 'kenny-panel';
     panel.setAttribute('role', 'dialog');
     panel.setAttribute('aria-label', UI.label);
+    panel.tabIndex = -1; /* Fokusziel beim Öffnen auf dem Handy */
     panel.hidden = true;
     panel.innerHTML =
-      '<div class="kenny-head"><span class="kenny-head__av">' + SVG + '</span>' +
+      '<div class="kenny-head"><span class="kenny-head__av">' + WAVE + '</span>' +
       '<div><strong>' + UI.title + '</strong><span>' + UI.sub + '</span></div>' +
       '<button type="button" class="kenny-close" aria-label="' + UI.close + '">×</button></div>' +
       '<div class="kenny-log" aria-live="polite"></div>' +
@@ -162,7 +177,13 @@
     panel.querySelector('.kenny-form').addEventListener('submit', function (e) {
       e.preventDefault(); var q = input.value; input.value = ''; ask(q);
     });
-    panel.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  }
+  /* Esc schließt den Chat, egal wo der Fokus gerade steht (nur solange er offen ist).
+     Liegt ein modaler Dialog darüber (Cookie-Banner, Lightbox), gehört Esc diesem. */
+  function onKey(e) {
+    if (e.key !== 'Escape' || !panel || panel.hidden) return;
+    if (document.querySelector('dialog[open]')) return;
+    close();
   }
   function open() {
     if (!panel) build();
@@ -170,13 +191,18 @@
     panel.hidden = false;
     launcher.setAttribute('aria-expanded', 'true');
     document.body.classList.add('kenny-open');
+    document.addEventListener('keydown', onKey);
     loadKB().then(function () {
       if (!log.childNodes.length) { addMsg('bot', L(kb.greeting)); showChips((kb.suggestions || []).slice(0, 5)); }
-      input.focus();
+      /* Eingabefeld nur am großen Bildschirm vorfokussieren: auf dem Handy
+         würde sonst sofort die Tastatur den halben Chat verdecken (iOS) */
+      if (window.matchMedia('(min-width: 1024px)').matches) input.focus();
+      else panel.focus({ preventScroll: true });
     }).catch(function () { if (!log.childNodes.length) addMsg('bot', UI.error); });
   }
   function close() {
     if (!panel) return;
+    document.removeEventListener('keydown', onKey);
     panel.hidden = true;
     launcher.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('kenny-open');
@@ -190,10 +216,13 @@
     launcher.setAttribute('aria-controls', 'kenny-panel');
     launcher.setAttribute('aria-expanded', 'false');
     launcher.setAttribute('data-event', 'kenny-open');
-    launcher.innerHTML = SVG + '<span>' + UI.open + '</span>';
+    launcher.innerHTML = SVG.replace('kenny-svg"', 'kenny-svg kenny-front"') + WAVE.replace('kenny-svg"', 'kenny-svg kenny-wave"') + '<span>' + UI.open + '</span>';
     launcher.addEventListener('click', function () { (panel && !panel.hidden) ? close() : open(); });
     document.body.appendChild(launcher);
-    if (!reduced) setTimeout(function () { launcher.classList.add('is-waving'); }, 2500);
+    if (!reduced) setTimeout(function () {
+      launcher.classList.add('is-waving');
+      setTimeout(function () { launcher.classList.remove('is-waving'); }, 3400);
+    }, 2500);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

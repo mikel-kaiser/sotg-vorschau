@@ -11,7 +11,7 @@
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
 
-  var W = 0, H = 0, DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0, DPR = 1; /* QA 13.11.: Sterne sind 1 bis 2 px groß, volle Pixeldichte kostet nur Akku */
   var layers = [];          // 3 Parallax-Ebenen
   var meteors = [];         // aktive Sternschnuppen
   var pointer = { x: 0, y: 0, tx: 0, ty: 0 }; // geglättete Maus-Parallaxe
